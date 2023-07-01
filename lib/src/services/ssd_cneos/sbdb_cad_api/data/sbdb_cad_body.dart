@@ -21,6 +21,8 @@ class SbdbCadBody with _$SbdbCadBody {
     required String code,
   }) = SbdbCad400Body;
 
+  // coverage:ignore-start
   factory SbdbCadBody.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadBodyFromJson(json);
+  // coverage:ignore-end
 }
