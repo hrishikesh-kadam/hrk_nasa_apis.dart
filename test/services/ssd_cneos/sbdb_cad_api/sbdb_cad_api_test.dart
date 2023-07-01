@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:hrk_logging/hrk_logging.dart';
 import 'package:hrk_nasa_apis/src/services/ssd_cneos/sbdb_cad_api/data/sbdb_cad_body.dart';
 import 'package:hrk_nasa_apis/src/services/ssd_cneos/sbdb_cad_api/sbdb_cad_api.dart';
+import 'package:hrk_nasa_apis/src/services/ssd_cneos/ssd_cneos.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
@@ -9,6 +10,11 @@ void main() {
   group('SbdbCadApi', () {
     late SbdbCadApi api;
     late Logger log;
+    final Uri docUrl = Uri(
+      scheme: SsdCneos.baseUrl.scheme,
+      host: SsdCneos.baseUrl.host,
+      path: 'doc/cad.html',
+    );
 
     setUpAll(() {
       configureHrkLogging();
@@ -29,7 +35,7 @@ void main() {
             String message =
                 '${SbdbCadApi.displayName} version is now ${sbdbCad200Body.signature.version}'
                 ', tested on ${SbdbCadApi.version}'
-                ', See ${SbdbCadApi.docUrl}';
+                ', See $docUrl';
             log.warning(message);
           }
           if (sbdbCad200Body.count <= 0) {

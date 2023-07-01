@@ -8,6 +8,9 @@ linter:
     directives_ordering: true
 
 analyzer:
+  exclude:
+    # TODO(hrishikesh-kadam): Check if this can be solved by using preamble
+    - '**.g.dart'
   errors:
     todo: ignore
 
