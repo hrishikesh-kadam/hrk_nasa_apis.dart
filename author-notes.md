@@ -2,4 +2,6 @@
 
 ## TODOs
 
-- 
+- README.md
+- License
+- Contribution
