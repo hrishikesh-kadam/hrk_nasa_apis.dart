@@ -2,5 +2,7 @@
 
 ## TODOs
 
-- CI scripts
-- Coverage badge
+- Require apporval for all other collaborators
+- Codecov graph token
+- Export statements
+- Dependabot
