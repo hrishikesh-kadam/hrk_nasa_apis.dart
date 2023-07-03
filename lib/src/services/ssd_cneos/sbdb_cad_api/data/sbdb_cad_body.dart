@@ -1,5 +1,3 @@
-// ignore_for_file: invalid_annotation_target
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../data/signature.dart';
 import 'sbdb_cad_data.dart';
@@ -13,16 +11,8 @@ class SbdbCadBody with _$SbdbCadBody {
     required Signature signature,
     required int count,
     required List<SbdbCadData>? data,
-  }) = SbdbCad200Body;
+  }) = _SbdbCadBody;
 
-  factory SbdbCadBody.four00({
-    required String message,
-    @JsonKey(name: 'moreInfo') required String moreInfo,
-    required String code,
-  }) = SbdbCad400Body;
-
-  // coverage:ignore-start
   factory SbdbCadBody.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadBodyFromJson(json);
-  // coverage:ignore-end
 }

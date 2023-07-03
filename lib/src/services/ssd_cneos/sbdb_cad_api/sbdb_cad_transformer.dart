@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 
-import '../../../utility/utility.dart';
-import 'sbdb_cad_api.dart';
+import '../../../../nasa_apis.dart';
 
 class SbdbCadTransformer extends BackgroundTransformer {
   @override
@@ -13,16 +12,11 @@ class SbdbCadTransformer extends BackgroundTransformer {
       options,
       response,
     );
-    final serializableMap = SbdbCadApi.serializableMap;
-    if (serializableMap.keys.contains(response.statusCode)) {
-      var json = transformedResponse as JsonMap;
-      if (response.statusCode == 200) {
-        json = transform200Response(json);
-      }
-      FromJsonFunction fromJsonFunction = serializableMap[response.statusCode]!;
-      return fromJsonFunction(json);
+    if (response.statusCode.is2xx()) {
+      final json = transform200Response(transformedResponse as JsonMap);
+      return SbdbCadBody.fromJson(json);
     }
-    return transformResponse;
+    return transformedResponse;
   }
 
   JsonMap transform200Response(JsonMap json) {
