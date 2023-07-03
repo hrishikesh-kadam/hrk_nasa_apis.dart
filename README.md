@@ -14,32 +14,39 @@ and the Flutter guide for
 [![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg)](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart)
 
-Dart client for NASA Open APIs by HRK.
+Dart client for [NASA Open APIs][].
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Based on [dio][] HTTP client
+- NASA Open APIs implemented
+  - [SBDB Close-Approach Data API][]
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
 ```console
-dart pub add 'hrk_nasa_apis:{"git":"https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart"}'
+dart pub add hrk_nasa_apis
 ```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:dio/dio.dart';
+import 'package:hrk_nasa_apis/nasa_apis.dart';
+
+void main() async {
+  final sbdbCadApi = SbdbCadApi();
+  try {
+    Response<SbdbCadBody> response = await sbdbCadApi.get();
+    final sbdbCadBody = response.data!;
+    print('count = ${sbdbCadBody.count}');
+  } on Exception catch (e) {
+    print(e);
+  }
+}
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+[NASA Open APIs]: https://api.nasa.gov
+[dio]: https://pub.dev/packages/dio
+[SBDB Close-Approach Data API]: https://ssd-api.jpl.nasa.gov/doc/cad.html
