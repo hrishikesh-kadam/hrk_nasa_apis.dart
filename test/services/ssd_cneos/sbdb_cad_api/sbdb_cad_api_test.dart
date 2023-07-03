@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:hrk_logging/hrk_logging.dart';
-import 'package:hrk_nasa_apis/nasa_apis.dart';
+import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';

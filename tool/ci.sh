@@ -28,4 +28,6 @@ lcov --list coverage/lcov.info
 dart pub global activate pana
 dart pub global run pana --no-warning
 
+dart pub publish --dry-run
+
 git status -s

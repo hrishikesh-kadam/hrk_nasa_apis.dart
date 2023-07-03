@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:hrk_nasa_apis/nasa_apis.dart';
+import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 
 void main() async {
   final sbdbCadApi = SbdbCadApi();

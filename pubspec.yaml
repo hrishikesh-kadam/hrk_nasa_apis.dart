@@ -1,9 +1,11 @@
 name: hrk_nasa_apis
+version: 0.1.0-pre.1
+
 description: >-
   A library to integrate NASA Open APIs based on `dio` HTTP client
 repository: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart
-publish_to: none
-version: 0.1.0
+topics:
+  - nasa
 
 environment:
   sdk: ^3.0.0
@@ -11,8 +13,7 @@ environment:
 dependencies:
   dio: ^5.2.1+1
   freezed_annotation: ^2.2.0
-  hrk_logging:
-    git: https://github.com/hrishikesh-kadam/hrk_logging.dart
+  hrk_logging: ^0.1.0-pre.1
   json_annotation: ^4.8.1
 
 dev_dependencies:
