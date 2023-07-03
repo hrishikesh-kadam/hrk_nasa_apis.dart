@@ -3,6 +3,9 @@ targets:
     builders:
       source_gen|combining_builder:
         options:
+          # pana not using analyzer rules from analysis_options.yaml
+          ignore_for_file:
+            - non_constant_identifier_names
           preamble: // coverage:ignore-file
       # https://github.com/google/json_serializable.dart/tree/master/json_serializable#build-configuration
       json_serializable:

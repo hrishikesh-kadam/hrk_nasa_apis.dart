@@ -14,11 +14,11 @@ and the Flutter guide for
 [![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg)](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart)
 
-Dart client for [NASA Open APIs][].
+A library to integrate [NASA Open APIs][] based on [`dio`][] HTTP client.
 
 ## Features
 
-- Based on [dio][] HTTP client
+- Based on [`dio`][] HTTP client
 - NASA Open APIs implemented
   - [SBDB Close-Approach Data API][]
 
@@ -48,5 +48,5 @@ void main() async {
 
 
 [NASA Open APIs]: https://api.nasa.gov
-[dio]: https://pub.dev/packages/dio
+[`dio`]: https://pub.dev/packages/dio
 [SBDB Close-Approach Data API]: https://ssd-api.jpl.nasa.gov/doc/cad.html

@@ -1,5 +1,6 @@
 name: hrk_nasa_apis
-description: Dart client for NASA Open APIs by HRK.
+description: >-
+  A library to integrate NASA Open APIs based on `dio` HTTP client
 repository: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart
 publish_to: none
 version: 0.1.0

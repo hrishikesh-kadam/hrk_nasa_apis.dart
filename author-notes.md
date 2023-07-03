@@ -2,7 +2,7 @@
 
 ## TODOs
 
-- documentation
 - pana
+- documentation
 - README.md
 - Contribution
