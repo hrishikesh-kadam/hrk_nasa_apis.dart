@@ -2,6 +2,8 @@
 
 ## TODOs
 
+- example
+- documentation
+- pana
 - README.md
-- License
 - Contribution
