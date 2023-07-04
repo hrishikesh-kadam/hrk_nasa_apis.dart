@@ -54,14 +54,3 @@ if [[ ! -x $(command -v lcov) ]]; then
   fi
   lcov --version
 fi
-
-if [[ ! -x $(command -v webpinfo) ]]; then
-  if [[ $(uname -s) =~ ^"Linux" ]]; then
-    sudo apt install webp
-  elif [[ $(uname -s) =~ ^"Darwin" ]]; then
-    brew install webp
-  elif [[ $(uname -s) =~ ^"MINGW" ]]; then
-    choco install webp
-  fi
-  webpinfo -version
-fi

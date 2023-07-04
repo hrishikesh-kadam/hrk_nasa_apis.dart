@@ -6,7 +6,7 @@ dart pub get
 
 dart format --output none --set-exit-if-changed .
 
-dart analyze
+dart analyze --fatal-infos
 
 dart pub global activate coverage
 
