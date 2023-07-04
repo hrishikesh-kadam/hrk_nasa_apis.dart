@@ -1,3 +1,7 @@
+## 0.1.0-pre.3
+
+- Import JsonMap, FromJsonFunction from hrk_batteries
+
 ## 0.1.0-pre.2
 
 - Integrate hrk_batteries dependency

@@ -1,5 +1,5 @@
 name: hrk_nasa_apis
-version: 0.1.0-pre.2
+version: 0.1.0-pre.3
 
 description: >-
   A library to integrate NASA Open APIs based on dio HTTP client
@@ -13,7 +13,7 @@ environment:
 dependencies:
   dio: ^5.2.1+1
   freezed_annotation: ^2.2.0
-  hrk_batteries: ^0.1.0-dev.3
+  hrk_batteries: ^0.1.0-pre.5
   hrk_logging: ^0.1.0-pre.2
   json_annotation: ^4.8.1
 
