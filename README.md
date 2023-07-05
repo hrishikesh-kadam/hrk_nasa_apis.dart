@@ -13,6 +13,7 @@ and the Flutter guide for
 
 [![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg)](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart)
+[![pub package](https://img.shields.io/pub/v/hrk_nasa_apis.svg)](https://pub.dev/packages/hrk_nasa_apis)
 
 A library to integrate [NASA Open APIs][] based on [`dio`][] HTTP client.
 
