@@ -2,4 +2,4 @@
 
 ## TODOs
 
-- 
+- CORS issue

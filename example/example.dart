@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'package:dio/dio.dart';
 import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 
 void main() async {

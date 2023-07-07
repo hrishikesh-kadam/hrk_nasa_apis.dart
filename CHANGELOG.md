@@ -1,3 +1,7 @@
+## 0.1.0-pre.5
+
+- Export dio package
+
 ## 0.1.0-pre.4
 
 - Integrate hrk_analysis

@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:hrk_logging/hrk_logging.dart';
 import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 
