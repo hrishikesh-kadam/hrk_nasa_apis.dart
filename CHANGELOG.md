@@ -1,3 +1,7 @@
+## 0.1.0-pre.6
+
+- 
+
 ## 0.1.0-pre.5
 
 - Export dio package
