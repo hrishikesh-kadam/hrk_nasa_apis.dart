@@ -28,7 +28,9 @@ mixin _$SbdbCadData {
   String get distMin => throw _privateConstructorUsedError;
   String get distMax => throw _privateConstructorUsedError;
   String get vRel => throw _privateConstructorUsedError;
-  String get vInf => throw _privateConstructorUsedError;
+
+  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  String? get vInf => throw _privateConstructorUsedError;
   String get tSigmaF => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
   String? get h => throw _privateConstructorUsedError;
@@ -57,7 +59,7 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       String distMin,
       String distMax,
       String vRel,
-      String vInf,
+      String? vInf,
       String tSigmaF,
       String? body,
       String? h,
@@ -87,7 +89,7 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     Object? distMin = null,
     Object? distMax = null,
     Object? vRel = null,
-    Object? vInf = null,
+    Object? vInf = freezed,
     Object? tSigmaF = null,
     Object? body = freezed,
     Object? h = freezed,
@@ -128,10 +130,10 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
               as String,
-      vInf: null == vInf
+      vInf: freezed == vInf
           ? _value.vInf
           : vInf // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       tSigmaF: null == tSigmaF
           ? _value.tSigmaF
           : tSigmaF // ignore: cast_nullable_to_non_nullable
@@ -177,7 +179,7 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       String distMin,
       String distMax,
       String vRel,
-      String vInf,
+      String? vInf,
       String tSigmaF,
       String? body,
       String? h,
@@ -205,7 +207,7 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
     Object? distMin = null,
     Object? distMax = null,
     Object? vRel = null,
-    Object? vInf = null,
+    Object? vInf = freezed,
     Object? tSigmaF = null,
     Object? body = freezed,
     Object? h = freezed,
@@ -246,10 +248,10 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
               as String,
-      vInf: null == vInf
+      vInf: freezed == vInf
           ? _value.vInf
           : vInf // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       tSigmaF: null == tSigmaF
           ? _value.tSigmaF
           : tSigmaF // ignore: cast_nullable_to_non_nullable
@@ -290,7 +292,7 @@ class _$_SbdbCadData implements _SbdbCadData {
       required this.distMin,
       required this.distMax,
       required this.vRel,
-      required this.vInf,
+      this.vInf,
       required this.tSigmaF,
       this.body,
       this.h,
@@ -317,8 +319,10 @@ class _$_SbdbCadData implements _SbdbCadData {
   final String distMax;
   @override
   final String vRel;
+
+  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
   @override
-  final String vInf;
+  final String? vInf;
   @override
   final String tSigmaF;
   @override
@@ -406,7 +410,7 @@ abstract class _SbdbCadData implements SbdbCadData {
       required final String distMin,
       required final String distMax,
       required final String vRel,
-      required final String vInf,
+      final String? vInf,
       required final String tSigmaF,
       final String? body,
       final String? h,
@@ -434,7 +438,9 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   String get vRel;
   @override
-  String get vInf;
+
+  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  String? get vInf;
   @override
   String get tSigmaF;
   @override

@@ -20,7 +20,7 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
       distMin: json['dist_min'] as String,
       distMax: json['dist_max'] as String,
       vRel: json['v_rel'] as String,
-      vInf: json['v_inf'] as String,
+      vInf: json['v_inf'] as String?,
       tSigmaF: json['t_sigma_f'] as String,
       body: json['body'] as String?,
       h: json['h'] as String?,

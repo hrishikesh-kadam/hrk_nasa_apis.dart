@@ -4,6 +4,8 @@ set -e -o pipefail
 
 dart pub get
 
+dart run build_runner build --delete-conflicting-outputs
+
 dart format --output none --set-exit-if-changed .
 
 dart analyze --fatal-infos
@@ -30,4 +32,4 @@ dart pub global run pana --no-warning
 
 dart pub publish --dry-run
 
-git status -s
+git diff --stat --exit-code

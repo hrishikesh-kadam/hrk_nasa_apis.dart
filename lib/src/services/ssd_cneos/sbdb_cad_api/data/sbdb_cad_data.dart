@@ -14,7 +14,9 @@ class SbdbCadData with _$SbdbCadData {
     required String distMin,
     required String distMax,
     required String vRel,
-    required String vInf,
+
+    /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+    String? vInf,
     required String tSigmaF,
     String? body,
     String? h,

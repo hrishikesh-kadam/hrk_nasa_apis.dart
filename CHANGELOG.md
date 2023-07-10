@@ -1,3 +1,7 @@
+## 0.2.0
+
+- Make vRel nullable in SbdbCadData
+
 ## 0.1.0
 
 - Promote v0.1.0-pre.5 to v0.1.0
