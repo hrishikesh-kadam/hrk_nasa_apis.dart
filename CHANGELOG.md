@@ -1,3 +1,10 @@
+## 0.3.0
+
+- Add `rawBody` in `SbdbCadBody` to preserve original json  
+  If new fields are added in the upcoming versions of the API then consumers 
+  won't have to wait till the release of new version of this client library
+- Add `SbdbCadQueryParameters`
+
 ## 0.2.0
 
 - Make vRel nullable in SbdbCadData

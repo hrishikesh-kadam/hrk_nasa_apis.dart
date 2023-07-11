@@ -14,13 +14,14 @@ class SbdbCadTransformer extends BackgroundTransformer {
       response,
     );
     if (response.statusCode.is2xx()) {
+      transformedResponse['raw_body'] = JsonMap.from(transformedResponse);
       final json = transform200Response(transformedResponse as JsonMap);
       return SbdbCadBody.fromJson(json);
     }
     return transformedResponse;
   }
 
-  JsonMap transform200Response(JsonMap json) {
+  static JsonMap transform200Response(JsonMap json) {
     if (json['count'] <= 0) {
       return json;
     }

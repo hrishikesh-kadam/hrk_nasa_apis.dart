@@ -23,22 +23,25 @@ mixin _$SbdbCadBody {
   Signature get signature => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
   List<SbdbCadData>? get data => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get rawBody => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            Signature signature, int count, List<SbdbCadData>? data)
+    required TResult Function(Signature signature, int count,
+            List<SbdbCadData>? data, Map<String, dynamic>? rawBody)
         two00,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Signature signature, int count, List<SbdbCadData>? data)?
+    TResult? Function(Signature signature, int count, List<SbdbCadData>? data,
+            Map<String, dynamic>? rawBody)?
         two00,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Signature signature, int count, List<SbdbCadData>? data)?
+    TResult Function(Signature signature, int count, List<SbdbCadData>? data,
+            Map<String, dynamic>? rawBody)?
         two00,
     required TResult orElse(),
   }) =>
@@ -71,7 +74,11 @@ abstract class $SbdbCadBodyCopyWith<$Res> {
           SbdbCadBody value, $Res Function(SbdbCadBody) then) =
       _$SbdbCadBodyCopyWithImpl<$Res, SbdbCadBody>;
   @useResult
-  $Res call({Signature signature, int count, List<SbdbCadData>? data});
+  $Res call(
+      {Signature signature,
+      int count,
+      List<SbdbCadData>? data,
+      Map<String, dynamic>? rawBody});
 
   $SignatureCopyWith<$Res> get signature;
 }
@@ -92,6 +99,7 @@ class _$SbdbCadBodyCopyWithImpl<$Res, $Val extends SbdbCadBody>
     Object? signature = null,
     Object? count = null,
     Object? data = freezed,
+    Object? rawBody = freezed,
   }) {
     return _then(_value.copyWith(
       signature: null == signature
@@ -106,6 +114,10 @@ class _$SbdbCadBodyCopyWithImpl<$Res, $Val extends SbdbCadBody>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<SbdbCadData>?,
+      rawBody: freezed == rawBody
+          ? _value.rawBody
+          : rawBody // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ) as $Val);
   }
 
@@ -126,7 +138,11 @@ abstract class _$$_SbdbCadBodyCopyWith<$Res>
       __$$_SbdbCadBodyCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Signature signature, int count, List<SbdbCadData>? data});
+  $Res call(
+      {Signature signature,
+      int count,
+      List<SbdbCadData>? data,
+      Map<String, dynamic>? rawBody});
 
   @override
   $SignatureCopyWith<$Res> get signature;
@@ -146,6 +162,7 @@ class __$$_SbdbCadBodyCopyWithImpl<$Res>
     Object? signature = null,
     Object? count = null,
     Object? data = freezed,
+    Object? rawBody = freezed,
   }) {
     return _then(_$_SbdbCadBody(
       signature: null == signature
@@ -160,6 +177,10 @@ class __$$_SbdbCadBodyCopyWithImpl<$Res>
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<SbdbCadData>?,
+      rawBody: freezed == rawBody
+          ? _value._rawBody
+          : rawBody // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -170,8 +191,10 @@ class _$_SbdbCadBody implements _SbdbCadBody {
   _$_SbdbCadBody(
       {required this.signature,
       required this.count,
-      required final List<SbdbCadData>? data})
-      : _data = data;
+      required final List<SbdbCadData>? data,
+      required final Map<String, dynamic>? rawBody})
+      : _data = data,
+        _rawBody = rawBody;
 
   factory _$_SbdbCadBody.fromJson(Map<String, dynamic> json) =>
       _$$_SbdbCadBodyFromJson(json);
@@ -190,9 +213,19 @@ class _$_SbdbCadBody implements _SbdbCadBody {
     return EqualUnmodifiableListView(value);
   }
 
+  final Map<String, dynamic>? _rawBody;
+  @override
+  Map<String, dynamic>? get rawBody {
+    final value = _rawBody;
+    if (value == null) return null;
+    if (_rawBody is EqualUnmodifiableMapView) return _rawBody;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   String toString() {
-    return 'SbdbCadBody.two00(signature: $signature, count: $count, data: $data)';
+    return 'SbdbCadBody.two00(signature: $signature, count: $count, data: $data, rawBody: $rawBody)';
   }
 
   @override
@@ -203,13 +236,18 @@ class _$_SbdbCadBody implements _SbdbCadBody {
             (identical(other.signature, signature) ||
                 other.signature == signature) &&
             (identical(other.count, count) || other.count == count) &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other._rawBody, _rawBody));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, signature, count,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(
+      runtimeType,
+      signature,
+      count,
+      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(_rawBody));
 
   @JsonKey(ignore: true)
   @override
@@ -220,31 +258,33 @@ class _$_SbdbCadBody implements _SbdbCadBody {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            Signature signature, int count, List<SbdbCadData>? data)
+    required TResult Function(Signature signature, int count,
+            List<SbdbCadData>? data, Map<String, dynamic>? rawBody)
         two00,
   }) {
-    return two00(signature, count, data);
+    return two00(signature, count, data, rawBody);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Signature signature, int count, List<SbdbCadData>? data)?
+    TResult? Function(Signature signature, int count, List<SbdbCadData>? data,
+            Map<String, dynamic>? rawBody)?
         two00,
   }) {
-    return two00?.call(signature, count, data);
+    return two00?.call(signature, count, data, rawBody);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Signature signature, int count, List<SbdbCadData>? data)?
+    TResult Function(Signature signature, int count, List<SbdbCadData>? data,
+            Map<String, dynamic>? rawBody)?
         two00,
     required TResult orElse(),
   }) {
     if (two00 != null) {
-      return two00(signature, count, data);
+      return two00(signature, count, data, rawBody);
     }
     return orElse();
   }
@@ -289,7 +329,8 @@ abstract class _SbdbCadBody implements SbdbCadBody {
   factory _SbdbCadBody(
       {required final Signature signature,
       required final int count,
-      required final List<SbdbCadData>? data}) = _$_SbdbCadBody;
+      required final List<SbdbCadData>? data,
+      required final Map<String, dynamic>? rawBody}) = _$_SbdbCadBody;
 
   factory _SbdbCadBody.fromJson(Map<String, dynamic> json) =
       _$_SbdbCadBody.fromJson;
@@ -300,6 +341,8 @@ abstract class _SbdbCadBody implements SbdbCadBody {
   int get count;
   @override
   List<SbdbCadData>? get data;
+  @override
+  Map<String, dynamic>? get rawBody;
   @override
   @JsonKey(ignore: true)
   _$$_SbdbCadBodyCopyWith<_$_SbdbCadBody> get copyWith =>

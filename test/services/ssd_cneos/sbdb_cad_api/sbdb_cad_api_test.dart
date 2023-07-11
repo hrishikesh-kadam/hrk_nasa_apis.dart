@@ -5,7 +5,7 @@ import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
 void main() {
-  group('SbdbCadApi', () {
+  group('$SbdbCadApi', () {
     late SbdbCadApi api;
     late Logger log;
     final Uri docUrl = Uri(
@@ -36,14 +36,17 @@ void main() {
                 ', See $docUrl';
             log.warning(message);
           }
-          if (sbdbCadBody.count <= 0) {
+          expect(sbdbCadBody.count, greaterThanOrEqualTo(0));
+          if (sbdbCadBody.count == 0) {
             expect(sbdbCadBody.data, isNull);
+            expect(sbdbCadBody.rawBody!['count'], 0);
           } else {
             expect(sbdbCadBody.data, isNotNull);
             expect(sbdbCadBody.data!.first.fullname, isNull);
             expect(sbdbCadBody.data!.first.body, isNull);
             expect(sbdbCadBody.data!.first.diameter, isNull);
             expect(sbdbCadBody.data!.first.diameterSigma, isNull);
+            expect(sbdbCadBody.rawBody!['count'], greaterThan(0));
           }
         });
 
