@@ -26,7 +26,7 @@ void main() {
     group('get', () {
       group('200', () {
         test('default', () async {
-          Response<SbdbCadBody> response = await api.get();
+          final Response<SbdbCadBody> response = await api.get();
           expect(response.data, isNotNull);
           final sbdbCadBody = response.data!;
           if (sbdbCadBody.signature.version != SbdbCadApi.version) {
@@ -51,10 +51,9 @@ void main() {
         });
 
         test('fullname', () async {
-          Response<SbdbCadBody> response = await api.get(
-            queryParameters: {
-              'fullname': true,
-            },
+          final queryParameters = SbdbCadQueryParameters()..fullname = true;
+          final Response<SbdbCadBody> response = await api.get(
+            queryParameters: queryParameters.toJson(),
           );
           expect(response.data, isNotNull);
           final sbdbCadBody = response.data!;
@@ -64,10 +63,9 @@ void main() {
         });
 
         test('body', () async {
-          Response<SbdbCadBody> response = await api.get(
-            queryParameters: {
-              'body': 'ALL',
-            },
+          final queryParameters = SbdbCadQueryParameters()..body = 'ALL';
+          final Response<SbdbCadBody> response = await api.get(
+            queryParameters: queryParameters.toJson(),
           );
           expect(response.data, isNotNull);
           final sbdbCadBody = response.data!;
@@ -79,10 +77,9 @@ void main() {
 
       test('400', () async {
         try {
+          final queryParameters = SbdbCadQueryParameters()..body = 'Pandora';
           await api.get(
-            queryParameters: {
-              'body': 'Pandora',
-            },
+            queryParameters: queryParameters.toJson(),
           );
         } on DioException catch (e) {
           expect(e.response, isNotNull);

@@ -17,7 +17,7 @@ void main() async {
 
     // queryParameters example
     SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters();
-    queryParameters.dateMin = '2023-07-01';
+    queryParameters.dateMin = dateFormatter.format(DateTime(2023, 7, 1));
     response = await sbdbCadApi.get(
       queryParameters: queryParameters.toJson(),
     );

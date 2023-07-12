@@ -10,6 +10,7 @@ A library to integrate [NASA Open APIs][] based on [`dio`][] HTTP client.
 - NASA Open APIs implemented
   - [SBDB Close-Approach Data API][]
 - Preserves original JSON Body
+- Refer my [Postman Public Workspace][] for convenience
 
 ## Getting started
 
@@ -37,7 +38,7 @@ void main() async {
 
     // queryParameters example
     SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters();
-    queryParameters.dateMin = '2023-07-01';
+    queryParameters.dateMin = dateFormatter.format(DateTime(2023, 7, 1));
     response = await sbdbCadApi.get(
       queryParameters: queryParameters.toJson(),
     );
@@ -52,3 +53,4 @@ void main() async {
 [NASA Open APIs]: https://api.nasa.gov
 [`dio`]: https://pub.dev/packages/dio
 [SBDB Close-Approach Data API]: https://ssd-api.jpl.nasa.gov/doc/cad.html
+[Postman Public Workspace]: https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis

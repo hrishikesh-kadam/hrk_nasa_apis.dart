@@ -1,6 +1,7 @@
-## 0.4.0-dev
+## 0.4.0
 
-- 
+- Add `dateFormatter` and `dateTimeFormatter`
+- Add Postman Public Workspace Link in README.md
 
 ## 0.3.0
 

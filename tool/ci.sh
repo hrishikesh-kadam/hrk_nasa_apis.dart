@@ -2,7 +2,7 @@
 
 set -e -o pipefail
 
-dart pub get
+dart pub upgrade
 
 dart run build_runner build --delete-conflicting-outputs
 
