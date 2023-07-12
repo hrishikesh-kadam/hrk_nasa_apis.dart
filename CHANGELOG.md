@@ -1,3 +1,7 @@
+## 0.4.1
+
+- Fix `intl` package dependency constraint
+
 ## 0.4.0
 
 - Add `dateFormatter` and `dateTimeFormatter`
