@@ -1,3 +1,8 @@
+## 0.4.2
+
+- Integrate `dio` v5.3.0 changes
+  - Fix analysis info `avoid_renaming_method_parameters`
+
 ## 0.4.1
 
 - Fix `intl` package dependency constraint

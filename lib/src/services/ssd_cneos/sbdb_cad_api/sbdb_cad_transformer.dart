@@ -7,18 +7,19 @@ class SbdbCadTransformer extends BackgroundTransformer {
   @override
   Future<dynamic> transformResponse(
     RequestOptions options,
-    ResponseBody response,
+    ResponseBody responseBody,
   ) async {
-    final transformedResponse = await super.transformResponse(
+    final transformedResponseBody = await super.transformResponse(
       options,
-      response,
+      responseBody,
     );
-    if (response.statusCode.is2xx()) {
-      transformedResponse['raw_body'] = JsonMap.from(transformedResponse);
-      final json = transform200Response(transformedResponse as JsonMap);
+    if (responseBody.statusCode.is2xx()) {
+      transformedResponseBody['raw_body'] =
+          JsonMap.from(transformedResponseBody);
+      final json = transform200Response(transformedResponseBody as JsonMap);
       return SbdbCadBody.fromJson(json);
     }
-    return transformedResponse;
+    return transformedResponseBody;
   }
 
   static JsonMap transform200Response(JsonMap json) {
