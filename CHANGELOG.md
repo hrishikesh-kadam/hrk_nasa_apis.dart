@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Set `include_if_null: false` for json_serializable
+
 ## 0.4.2
 
 - Integrate `dio` v5.3.0 changes

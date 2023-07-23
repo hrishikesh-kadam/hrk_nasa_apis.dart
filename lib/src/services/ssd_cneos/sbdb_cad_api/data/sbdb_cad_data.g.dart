@@ -29,21 +29,30 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
       fullname: json['fullname'] as String?,
     );
 
-Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) =>
-    <String, dynamic>{
-      'des': instance.des,
-      'orbit_id': instance.orbitId,
-      'jd': instance.jd,
-      'cd': instance.cd,
-      'dist': instance.dist,
-      'dist_min': instance.distMin,
-      'dist_max': instance.distMax,
-      'v_rel': instance.vRel,
-      'v_inf': instance.vInf,
-      't_sigma_f': instance.tSigmaF,
-      'body': instance.body,
-      'h': instance.h,
-      'diameter': instance.diameter,
-      'diameter_sigma': instance.diameterSigma,
-      'fullname': instance.fullname,
-    };
+Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
+  final val = <String, dynamic>{
+    'des': instance.des,
+    'orbit_id': instance.orbitId,
+    'jd': instance.jd,
+    'cd': instance.cd,
+    'dist': instance.dist,
+    'dist_min': instance.distMin,
+    'dist_max': instance.distMax,
+    'v_rel': instance.vRel,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('v_inf', instance.vInf);
+  val['t_sigma_f'] = instance.tSigmaF;
+  writeNotNull('body', instance.body);
+  writeNotNull('h', instance.h);
+  writeNotNull('diameter', instance.diameter);
+  writeNotNull('diameter_sigma', instance.diameterSigma);
+  writeNotNull('fullname', instance.fullname);
+  return val;
+}

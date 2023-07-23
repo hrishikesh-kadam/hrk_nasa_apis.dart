@@ -11,3 +11,4 @@ targets:
       json_serializable:
         options:
           field_rename: snake
+          include_if_null: false

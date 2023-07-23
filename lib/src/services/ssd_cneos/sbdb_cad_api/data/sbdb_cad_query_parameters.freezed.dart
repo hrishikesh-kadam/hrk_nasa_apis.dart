@@ -482,7 +482,7 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.kebab, includeIfNull: false)
+@JsonSerializable(fieldRename: FieldRename.kebab)
 class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
   _$_SbdbCadQueryParameters(
       {this.dateMin,

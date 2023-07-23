@@ -20,10 +20,19 @@ _$_SbdbCadBody _$$_SbdbCadBodyFromJson(Map<String, dynamic> json) =>
       rawBody: json['raw_body'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_SbdbCadBodyToJson(_$_SbdbCadBody instance) =>
-    <String, dynamic>{
-      'signature': instance.signature,
-      'count': instance.count,
-      'data': instance.data,
-      'raw_body': instance.rawBody,
-    };
+Map<String, dynamic> _$$_SbdbCadBodyToJson(_$_SbdbCadBody instance) {
+  final val = <String, dynamic>{
+    'signature': instance.signature,
+    'count': instance.count,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('data', instance.data);
+  writeNotNull('raw_body', instance.rawBody);
+  return val;
+}

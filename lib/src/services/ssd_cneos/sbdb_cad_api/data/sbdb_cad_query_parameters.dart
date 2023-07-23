@@ -9,7 +9,6 @@ part 'sbdb_cad_query_parameters.g.dart';
 class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   @JsonSerializable(
     fieldRename: FieldRename.kebab,
-    includeIfNull: false,
   )
   factory SbdbCadQueryParameters({
     String? dateMin,
