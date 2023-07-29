@@ -12,8 +12,7 @@ void main() {
       });
 
       test('non-empty', () {
-        final sbdbCadQueryParameters = SbdbCadQueryParameters();
-        sbdbCadQueryParameters.dateMin = dateMin;
+        final sbdbCadQueryParameters = SbdbCadQueryParameters(dateMin: dateMin);
         final queryParameters = sbdbCadQueryParameters.toJson();
         expect(queryParameters, isNotEmpty);
         expect(queryParameters['date-min'], dateMin);

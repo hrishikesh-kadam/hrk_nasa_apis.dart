@@ -1,3 +1,7 @@
+## 0.6.0
+
+- Make `SbdbCadQueryParameters` immutable
+
 ## 0.5.0
 
 - Set `include_if_null: false` for json_serializable

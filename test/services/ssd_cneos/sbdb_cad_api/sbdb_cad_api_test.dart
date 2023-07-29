@@ -51,7 +51,7 @@ void main() {
         });
 
         test('fullname', () async {
-          final queryParameters = SbdbCadQueryParameters()..fullname = true;
+          final queryParameters = SbdbCadQueryParameters(fullname: true);
           final Response<SbdbCadBody> response = await api.get(
             queryParameters: queryParameters.toJson(),
           );
@@ -63,7 +63,7 @@ void main() {
         });
 
         test('body', () async {
-          final queryParameters = SbdbCadQueryParameters()..body = 'ALL';
+          final queryParameters = SbdbCadQueryParameters(body: 'ALL');
           final Response<SbdbCadBody> response = await api.get(
             queryParameters: queryParameters.toJson(),
           );
@@ -77,7 +77,7 @@ void main() {
 
       test('400', () async {
         try {
-          final queryParameters = SbdbCadQueryParameters()..body = 'Pandora';
+          final queryParameters = SbdbCadQueryParameters(body: 'Pandora');
           await api.get(
             queryParameters: queryParameters.toJson(),
           );

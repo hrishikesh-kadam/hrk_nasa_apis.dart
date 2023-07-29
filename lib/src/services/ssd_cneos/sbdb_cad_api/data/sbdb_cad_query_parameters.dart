@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'sbdb_cad_query_parameters.freezed.dart';
 part 'sbdb_cad_query_parameters.g.dart';
 
-@unfreezed
+@freezed
 class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   @JsonSerializable(
     fieldRename: FieldRename.kebab,

@@ -16,8 +16,9 @@ void main() async {
     print('count from rawBody = ${sbdbCadBody.rawBody!['count']}');
 
     // queryParameters example
-    SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters();
-    queryParameters.dateMin = dateFormatter.format(DateTime(2023, 7, 1));
+    SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters(
+      dateMin: dateFormatter.format(DateTime(2023, 7, 1)),
+    );
     response = await sbdbCadApi.get(
       queryParameters: queryParameters.toJson(),
     );

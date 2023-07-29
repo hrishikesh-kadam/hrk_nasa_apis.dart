@@ -22,63 +22,34 @@ SbdbCadQueryParameters _$SbdbCadQueryParametersFromJson(
 /// @nodoc
 mixin _$SbdbCadQueryParameters {
   String? get dateMin => throw _privateConstructorUsedError;
-  set dateMin(String? value) => throw _privateConstructorUsedError;
   String? get dateMax => throw _privateConstructorUsedError;
-  set dateMax(String? value) => throw _privateConstructorUsedError;
   String? get distMin => throw _privateConstructorUsedError;
-  set distMin(String? value) => throw _privateConstructorUsedError;
   String? get distMax => throw _privateConstructorUsedError;
-  set distMax(String? value) => throw _privateConstructorUsedError;
   String? get minDistMin => throw _privateConstructorUsedError;
-  set minDistMin(String? value) => throw _privateConstructorUsedError;
   String? get minDistMax => throw _privateConstructorUsedError;
-  set minDistMax(String? value) => throw _privateConstructorUsedError;
   String? get hMin => throw _privateConstructorUsedError;
-  set hMin(String? value) => throw _privateConstructorUsedError;
   double? get hMax => throw _privateConstructorUsedError;
-  set hMax(double? value) => throw _privateConstructorUsedError;
   double? get vInfMin => throw _privateConstructorUsedError;
-  set vInfMin(double? value) => throw _privateConstructorUsedError;
   double? get vInfMax => throw _privateConstructorUsedError;
-  set vInfMax(double? value) => throw _privateConstructorUsedError;
   double? get vRelMin => throw _privateConstructorUsedError;
-  set vRelMin(double? value) => throw _privateConstructorUsedError;
   double? get vRelMax => throw _privateConstructorUsedError;
-  set vRelMax(double? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
   String? get orbitClass => throw _privateConstructorUsedError;
-  @JsonKey(name: 'class')
-  set orbitClass(String? value) => throw _privateConstructorUsedError;
   bool? get pha => throw _privateConstructorUsedError;
-  set pha(bool? value) => throw _privateConstructorUsedError;
   bool? get nea => throw _privateConstructorUsedError;
-  set nea(bool? value) => throw _privateConstructorUsedError;
   bool? get commet => throw _privateConstructorUsedError;
-  set commet(bool? value) => throw _privateConstructorUsedError;
   bool? get neaCommet => throw _privateConstructorUsedError;
-  set neaCommet(bool? value) => throw _privateConstructorUsedError;
   bool? get neo => throw _privateConstructorUsedError;
-  set neo(bool? value) => throw _privateConstructorUsedError;
   String? get kind => throw _privateConstructorUsedError;
-  set kind(String? value) => throw _privateConstructorUsedError;
   int? get spk => throw _privateConstructorUsedError;
-  set spk(int? value) => throw _privateConstructorUsedError;
   String? get des => throw _privateConstructorUsedError;
-  set des(String? value) => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
-  set body(String? value) => throw _privateConstructorUsedError;
   String? get sort => throw _privateConstructorUsedError;
-  set sort(String? value) => throw _privateConstructorUsedError;
   double? get limit => throw _privateConstructorUsedError;
-  set limit(double? value) => throw _privateConstructorUsedError;
   double? get limitFrom => throw _privateConstructorUsedError;
-  set limitFrom(double? value) => throw _privateConstructorUsedError;
   bool? get totalOnly => throw _privateConstructorUsedError;
-  set totalOnly(bool? value) => throw _privateConstructorUsedError;
   bool? get diameter => throw _privateConstructorUsedError;
-  set diameter(bool? value) => throw _privateConstructorUsedError;
   bool? get fullname => throw _privateConstructorUsedError;
-  set fullname(bool? value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -518,67 +489,144 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
       _$$_SbdbCadQueryParametersFromJson(json);
 
   @override
-  String? dateMin;
+  final String? dateMin;
   @override
-  String? dateMax;
+  final String? dateMax;
   @override
-  String? distMin;
+  final String? distMin;
   @override
-  String? distMax;
+  final String? distMax;
   @override
-  String? minDistMin;
+  final String? minDistMin;
   @override
-  String? minDistMax;
+  final String? minDistMax;
   @override
-  String? hMin;
+  final String? hMin;
   @override
-  double? hMax;
+  final double? hMax;
   @override
-  double? vInfMin;
+  final double? vInfMin;
   @override
-  double? vInfMax;
+  final double? vInfMax;
   @override
-  double? vRelMin;
+  final double? vRelMin;
   @override
-  double? vRelMax;
+  final double? vRelMax;
   @override
   @JsonKey(name: 'class')
-  String? orbitClass;
+  final String? orbitClass;
   @override
-  bool? pha;
+  final bool? pha;
   @override
-  bool? nea;
+  final bool? nea;
   @override
-  bool? commet;
+  final bool? commet;
   @override
-  bool? neaCommet;
+  final bool? neaCommet;
   @override
-  bool? neo;
+  final bool? neo;
   @override
-  String? kind;
+  final String? kind;
   @override
-  int? spk;
+  final int? spk;
   @override
-  String? des;
+  final String? des;
   @override
-  String? body;
+  final String? body;
   @override
-  String? sort;
+  final String? sort;
   @override
-  double? limit;
+  final double? limit;
   @override
-  double? limitFrom;
+  final double? limitFrom;
   @override
-  bool? totalOnly;
+  final bool? totalOnly;
   @override
-  bool? diameter;
+  final bool? diameter;
   @override
-  bool? fullname;
+  final bool? fullname;
 
   @override
   String toString() {
     return 'SbdbCadQueryParameters(dateMin: $dateMin, dateMax: $dateMax, distMin: $distMin, distMax: $distMax, minDistMin: $minDistMin, minDistMax: $minDistMax, hMin: $hMin, hMax: $hMax, vInfMin: $vInfMin, vInfMax: $vInfMax, vRelMin: $vRelMin, vRelMax: $vRelMax, orbitClass: $orbitClass, pha: $pha, nea: $nea, commet: $commet, neaCommet: $neaCommet, neo: $neo, kind: $kind, spk: $spk, des: $des, body: $body, sort: $sort, limit: $limit, limitFrom: $limitFrom, totalOnly: $totalOnly, diameter: $diameter, fullname: $fullname)';
   }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SbdbCadQueryParameters &&
+            (identical(other.dateMin, dateMin) || other.dateMin == dateMin) &&
+            (identical(other.dateMax, dateMax) || other.dateMax == dateMax) &&
+            (identical(other.distMin, distMin) || other.distMin == distMin) &&
+            (identical(other.distMax, distMax) || other.distMax == distMax) &&
+            (identical(other.minDistMin, minDistMin) ||
+                other.minDistMin == minDistMin) &&
+            (identical(other.minDistMax, minDistMax) ||
+                other.minDistMax == minDistMax) &&
+            (identical(other.hMin, hMin) || other.hMin == hMin) &&
+            (identical(other.hMax, hMax) || other.hMax == hMax) &&
+            (identical(other.vInfMin, vInfMin) || other.vInfMin == vInfMin) &&
+            (identical(other.vInfMax, vInfMax) || other.vInfMax == vInfMax) &&
+            (identical(other.vRelMin, vRelMin) || other.vRelMin == vRelMin) &&
+            (identical(other.vRelMax, vRelMax) || other.vRelMax == vRelMax) &&
+            (identical(other.orbitClass, orbitClass) ||
+                other.orbitClass == orbitClass) &&
+            (identical(other.pha, pha) || other.pha == pha) &&
+            (identical(other.nea, nea) || other.nea == nea) &&
+            (identical(other.commet, commet) || other.commet == commet) &&
+            (identical(other.neaCommet, neaCommet) ||
+                other.neaCommet == neaCommet) &&
+            (identical(other.neo, neo) || other.neo == neo) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.spk, spk) || other.spk == spk) &&
+            (identical(other.des, des) || other.des == des) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.limitFrom, limitFrom) ||
+                other.limitFrom == limitFrom) &&
+            (identical(other.totalOnly, totalOnly) ||
+                other.totalOnly == totalOnly) &&
+            (identical(other.diameter, diameter) ||
+                other.diameter == diameter) &&
+            (identical(other.fullname, fullname) ||
+                other.fullname == fullname));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        dateMin,
+        dateMax,
+        distMin,
+        distMax,
+        minDistMin,
+        minDistMax,
+        hMin,
+        hMax,
+        vInfMin,
+        vInfMax,
+        vRelMin,
+        vRelMax,
+        orbitClass,
+        pha,
+        nea,
+        commet,
+        neaCommet,
+        neo,
+        kind,
+        spk,
+        des,
+        body,
+        sort,
+        limit,
+        limitFrom,
+        totalOnly,
+        diameter,
+        fullname
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -597,124 +645,95 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
 
 abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
   factory _SbdbCadQueryParameters(
-      {String? dateMin,
-      String? dateMax,
-      String? distMin,
-      String? distMax,
-      String? minDistMin,
-      String? minDistMax,
-      String? hMin,
-      double? hMax,
-      double? vInfMin,
-      double? vInfMax,
-      double? vRelMin,
-      double? vRelMax,
-      @JsonKey(name: 'class') String? orbitClass,
-      bool? pha,
-      bool? nea,
-      bool? commet,
-      bool? neaCommet,
-      bool? neo,
-      String? kind,
-      int? spk,
-      String? des,
-      String? body,
-      String? sort,
-      double? limit,
-      double? limitFrom,
-      bool? totalOnly,
-      bool? diameter,
-      bool? fullname}) = _$_SbdbCadQueryParameters;
+      {final String? dateMin,
+      final String? dateMax,
+      final String? distMin,
+      final String? distMax,
+      final String? minDistMin,
+      final String? minDistMax,
+      final String? hMin,
+      final double? hMax,
+      final double? vInfMin,
+      final double? vInfMax,
+      final double? vRelMin,
+      final double? vRelMax,
+      @JsonKey(name: 'class') final String? orbitClass,
+      final bool? pha,
+      final bool? nea,
+      final bool? commet,
+      final bool? neaCommet,
+      final bool? neo,
+      final String? kind,
+      final int? spk,
+      final String? des,
+      final String? body,
+      final String? sort,
+      final double? limit,
+      final double? limitFrom,
+      final bool? totalOnly,
+      final bool? diameter,
+      final bool? fullname}) = _$_SbdbCadQueryParameters;
 
   factory _SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =
       _$_SbdbCadQueryParameters.fromJson;
 
   @override
   String? get dateMin;
-  set dateMin(String? value);
   @override
   String? get dateMax;
-  set dateMax(String? value);
   @override
   String? get distMin;
-  set distMin(String? value);
   @override
   String? get distMax;
-  set distMax(String? value);
   @override
   String? get minDistMin;
-  set minDistMin(String? value);
   @override
   String? get minDistMax;
-  set minDistMax(String? value);
   @override
   String? get hMin;
-  set hMin(String? value);
   @override
   double? get hMax;
-  set hMax(double? value);
   @override
   double? get vInfMin;
-  set vInfMin(double? value);
   @override
   double? get vInfMax;
-  set vInfMax(double? value);
   @override
   double? get vRelMin;
-  set vRelMin(double? value);
   @override
   double? get vRelMax;
-  set vRelMax(double? value);
   @override
   @JsonKey(name: 'class')
   String? get orbitClass;
-  @JsonKey(name: 'class')
-  set orbitClass(String? value);
   @override
   bool? get pha;
-  set pha(bool? value);
   @override
   bool? get nea;
-  set nea(bool? value);
   @override
   bool? get commet;
-  set commet(bool? value);
   @override
   bool? get neaCommet;
-  set neaCommet(bool? value);
   @override
   bool? get neo;
-  set neo(bool? value);
   @override
   String? get kind;
-  set kind(String? value);
   @override
   int? get spk;
-  set spk(int? value);
   @override
   String? get des;
-  set des(String? value);
   @override
   String? get body;
-  set body(String? value);
   @override
   String? get sort;
-  set sort(String? value);
   @override
   double? get limit;
-  set limit(double? value);
   @override
   double? get limitFrom;
-  set limitFrom(double? value);
   @override
   bool? get totalOnly;
-  set totalOnly(bool? value);
   @override
   bool? get diameter;
-  set diameter(bool? value);
   @override
   bool? get fullname;
-  set fullname(bool? value);
   @override
   @JsonKey(ignore: true)
   _$$_SbdbCadQueryParametersCopyWith<_$_SbdbCadQueryParameters> get copyWith =>
