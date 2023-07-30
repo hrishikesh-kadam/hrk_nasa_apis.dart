@@ -37,8 +37,8 @@ mixin _$SbdbCadQueryParameters {
   String? get orbitClass => throw _privateConstructorUsedError;
   bool? get pha => throw _privateConstructorUsedError;
   bool? get nea => throw _privateConstructorUsedError;
-  bool? get commet => throw _privateConstructorUsedError;
-  bool? get neaCommet => throw _privateConstructorUsedError;
+  bool? get comet => throw _privateConstructorUsedError;
+  bool? get neaComet => throw _privateConstructorUsedError;
   bool? get neo => throw _privateConstructorUsedError;
   String? get kind => throw _privateConstructorUsedError;
   int? get spk => throw _privateConstructorUsedError;
@@ -79,8 +79,8 @@ abstract class $SbdbCadQueryParametersCopyWith<$Res> {
       @JsonKey(name: 'class') String? orbitClass,
       bool? pha,
       bool? nea,
-      bool? commet,
-      bool? neaCommet,
+      bool? comet,
+      bool? neaComet,
       bool? neo,
       String? kind,
       int? spk,
@@ -123,8 +123,8 @@ class _$SbdbCadQueryParametersCopyWithImpl<$Res,
     Object? orbitClass = freezed,
     Object? pha = freezed,
     Object? nea = freezed,
-    Object? commet = freezed,
-    Object? neaCommet = freezed,
+    Object? comet = freezed,
+    Object? neaComet = freezed,
     Object? neo = freezed,
     Object? kind = freezed,
     Object? spk = freezed,
@@ -198,13 +198,13 @@ class _$SbdbCadQueryParametersCopyWithImpl<$Res,
           ? _value.nea
           : nea // ignore: cast_nullable_to_non_nullable
               as bool?,
-      commet: freezed == commet
-          ? _value.commet
-          : commet // ignore: cast_nullable_to_non_nullable
+      comet: freezed == comet
+          ? _value.comet
+          : comet // ignore: cast_nullable_to_non_nullable
               as bool?,
-      neaCommet: freezed == neaCommet
-          ? _value.neaCommet
-          : neaCommet // ignore: cast_nullable_to_non_nullable
+      neaComet: freezed == neaComet
+          ? _value.neaComet
+          : neaComet // ignore: cast_nullable_to_non_nullable
               as bool?,
       neo: freezed == neo
           ? _value.neo
@@ -278,8 +278,8 @@ abstract class _$$_SbdbCadQueryParametersCopyWith<$Res>
       @JsonKey(name: 'class') String? orbitClass,
       bool? pha,
       bool? nea,
-      bool? commet,
-      bool? neaCommet,
+      bool? comet,
+      bool? neaComet,
       bool? neo,
       String? kind,
       int? spk,
@@ -320,8 +320,8 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
     Object? orbitClass = freezed,
     Object? pha = freezed,
     Object? nea = freezed,
-    Object? commet = freezed,
-    Object? neaCommet = freezed,
+    Object? comet = freezed,
+    Object? neaComet = freezed,
     Object? neo = freezed,
     Object? kind = freezed,
     Object? spk = freezed,
@@ -395,13 +395,13 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
           ? _value.nea
           : nea // ignore: cast_nullable_to_non_nullable
               as bool?,
-      commet: freezed == commet
-          ? _value.commet
-          : commet // ignore: cast_nullable_to_non_nullable
+      comet: freezed == comet
+          ? _value.comet
+          : comet // ignore: cast_nullable_to_non_nullable
               as bool?,
-      neaCommet: freezed == neaCommet
-          ? _value.neaCommet
-          : neaCommet // ignore: cast_nullable_to_non_nullable
+      neaComet: freezed == neaComet
+          ? _value.neaComet
+          : neaComet // ignore: cast_nullable_to_non_nullable
               as bool?,
       neo: freezed == neo
           ? _value.neo
@@ -471,8 +471,8 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
       @JsonKey(name: 'class') this.orbitClass,
       this.pha,
       this.nea,
-      this.commet,
-      this.neaCommet,
+      this.comet,
+      this.neaComet,
       this.neo,
       this.kind,
       this.spk,
@@ -520,9 +520,9 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
   @override
   final bool? nea;
   @override
-  final bool? commet;
+  final bool? comet;
   @override
-  final bool? neaCommet;
+  final bool? neaComet;
   @override
   final bool? neo;
   @override
@@ -548,7 +548,7 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
 
   @override
   String toString() {
-    return 'SbdbCadQueryParameters(dateMin: $dateMin, dateMax: $dateMax, distMin: $distMin, distMax: $distMax, minDistMin: $minDistMin, minDistMax: $minDistMax, hMin: $hMin, hMax: $hMax, vInfMin: $vInfMin, vInfMax: $vInfMax, vRelMin: $vRelMin, vRelMax: $vRelMax, orbitClass: $orbitClass, pha: $pha, nea: $nea, commet: $commet, neaCommet: $neaCommet, neo: $neo, kind: $kind, spk: $spk, des: $des, body: $body, sort: $sort, limit: $limit, limitFrom: $limitFrom, totalOnly: $totalOnly, diameter: $diameter, fullname: $fullname)';
+    return 'SbdbCadQueryParameters(dateMin: $dateMin, dateMax: $dateMax, distMin: $distMin, distMax: $distMax, minDistMin: $minDistMin, minDistMax: $minDistMax, hMin: $hMin, hMax: $hMax, vInfMin: $vInfMin, vInfMax: $vInfMax, vRelMin: $vRelMin, vRelMax: $vRelMax, orbitClass: $orbitClass, pha: $pha, nea: $nea, comet: $comet, neaComet: $neaComet, neo: $neo, kind: $kind, spk: $spk, des: $des, body: $body, sort: $sort, limit: $limit, limitFrom: $limitFrom, totalOnly: $totalOnly, diameter: $diameter, fullname: $fullname)';
   }
 
   @override
@@ -574,9 +574,9 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
                 other.orbitClass == orbitClass) &&
             (identical(other.pha, pha) || other.pha == pha) &&
             (identical(other.nea, nea) || other.nea == nea) &&
-            (identical(other.commet, commet) || other.commet == commet) &&
-            (identical(other.neaCommet, neaCommet) ||
-                other.neaCommet == neaCommet) &&
+            (identical(other.comet, comet) || other.comet == comet) &&
+            (identical(other.neaComet, neaComet) ||
+                other.neaComet == neaComet) &&
             (identical(other.neo, neo) || other.neo == neo) &&
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.spk, spk) || other.spk == spk) &&
@@ -613,8 +613,8 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
         orbitClass,
         pha,
         nea,
-        commet,
-        neaCommet,
+        comet,
+        neaComet,
         neo,
         kind,
         spk,
@@ -660,8 +660,8 @@ abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
       @JsonKey(name: 'class') final String? orbitClass,
       final bool? pha,
       final bool? nea,
-      final bool? commet,
-      final bool? neaCommet,
+      final bool? comet,
+      final bool? neaComet,
       final bool? neo,
       final String? kind,
       final int? spk,
@@ -709,9 +709,9 @@ abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
   @override
   bool? get nea;
   @override
-  bool? get commet;
+  bool? get comet;
   @override
-  bool? get neaCommet;
+  bool? get neaComet;
   @override
   bool? get neo;
   @override

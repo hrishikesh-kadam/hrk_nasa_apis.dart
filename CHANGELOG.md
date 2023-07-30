@@ -1,3 +1,7 @@
+## 0.6.1
+
+- Fix `comet` and `nea-comet` keys of SbdbCadQueryParameters
+
 ## 0.6.0
 
 - Make `SbdbCadQueryParameters` immutable

@@ -28,8 +28,8 @@ _$_SbdbCadQueryParameters _$$_SbdbCadQueryParametersFromJson(
       orbitClass: json['class'] as String?,
       pha: json['pha'] as bool?,
       nea: json['nea'] as bool?,
-      commet: json['commet'] as bool?,
-      neaCommet: json['nea-commet'] as bool?,
+      comet: json['comet'] as bool?,
+      neaComet: json['nea-comet'] as bool?,
       neo: json['neo'] as bool?,
       kind: json['kind'] as String?,
       spk: json['spk'] as int?,
@@ -68,8 +68,8 @@ Map<String, dynamic> _$$_SbdbCadQueryParametersToJson(
   writeNotNull('class', instance.orbitClass);
   writeNotNull('pha', instance.pha);
   writeNotNull('nea', instance.nea);
-  writeNotNull('commet', instance.commet);
-  writeNotNull('nea-commet', instance.neaCommet);
+  writeNotNull('comet', instance.comet);
+  writeNotNull('nea-comet', instance.neaComet);
   writeNotNull('neo', instance.neo);
   writeNotNull('kind', instance.kind);
   writeNotNull('spk', instance.spk);
