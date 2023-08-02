@@ -34,7 +34,7 @@ _$_SbdbCadQueryParameters _$$_SbdbCadQueryParametersFromJson(
       kind: json['kind'] as String?,
       spk: json['spk'] as int?,
       des: json['des'] as String?,
-      body: json['body'] as String?,
+      body: $enumDecodeNullable(_$CloseApproachBodyEnumMap, json['body']),
       sort: json['sort'] as String?,
       limit: (json['limit'] as num?)?.toDouble(),
       limitFrom: (json['limit-from'] as num?)?.toDouble(),
@@ -74,7 +74,7 @@ Map<String, dynamic> _$$_SbdbCadQueryParametersToJson(
   writeNotNull('kind', instance.kind);
   writeNotNull('spk', instance.spk);
   writeNotNull('des', instance.des);
-  writeNotNull('body', instance.body);
+  writeNotNull('body', _$CloseApproachBodyEnumMap[instance.body]);
   writeNotNull('sort', instance.sort);
   writeNotNull('limit', instance.limit);
   writeNotNull('limit-from', instance.limitFrom);
@@ -83,3 +83,17 @@ Map<String, dynamic> _$$_SbdbCadQueryParametersToJson(
   writeNotNull('fullname', instance.fullname);
   return val;
 }
+
+const _$CloseApproachBodyEnumMap = {
+  CloseApproachBody.mercury: 'Merc',
+  CloseApproachBody.venus: 'Venus',
+  CloseApproachBody.earth: 'Earth',
+  CloseApproachBody.mars: 'Mars',
+  CloseApproachBody.jupiter: 'Juptr',
+  CloseApproachBody.saturn: 'Satrn',
+  CloseApproachBody.uranus: 'Urnus',
+  CloseApproachBody.neptune: 'Neptn',
+  CloseApproachBody.pluto: 'Pluto',
+  CloseApproachBody.moon: 'Moon',
+  CloseApproachBody.all: 'ALL',
+};

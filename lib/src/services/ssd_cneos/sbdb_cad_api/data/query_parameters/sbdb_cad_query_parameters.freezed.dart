@@ -43,7 +43,7 @@ mixin _$SbdbCadQueryParameters {
   String? get kind => throw _privateConstructorUsedError;
   int? get spk => throw _privateConstructorUsedError;
   String? get des => throw _privateConstructorUsedError;
-  String? get body => throw _privateConstructorUsedError;
+  CloseApproachBody? get body => throw _privateConstructorUsedError;
   String? get sort => throw _privateConstructorUsedError;
   double? get limit => throw _privateConstructorUsedError;
   double? get limitFrom => throw _privateConstructorUsedError;
@@ -85,7 +85,7 @@ abstract class $SbdbCadQueryParametersCopyWith<$Res> {
       String? kind,
       int? spk,
       String? des,
-      String? body,
+      CloseApproachBody? body,
       String? sort,
       double? limit,
       double? limitFrom,
@@ -225,7 +225,7 @@ class _$SbdbCadQueryParametersCopyWithImpl<$Res,
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as CloseApproachBody?,
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -284,7 +284,7 @@ abstract class _$$_SbdbCadQueryParametersCopyWith<$Res>
       String? kind,
       int? spk,
       String? des,
-      String? body,
+      CloseApproachBody? body,
       String? sort,
       double? limit,
       double? limitFrom,
@@ -422,7 +422,7 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as CloseApproachBody?,
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -532,7 +532,7 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
   @override
   final String? des;
   @override
-  final String? body;
+  final CloseApproachBody? body;
   @override
   final String? sort;
   @override
@@ -666,7 +666,7 @@ abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
       final String? kind,
       final int? spk,
       final String? des,
-      final String? body,
+      final CloseApproachBody? body,
       final String? sort,
       final double? limit,
       final double? limitFrom,
@@ -721,7 +721,7 @@ abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
   @override
   String? get des;
   @override
-  String? get body;
+  CloseApproachBody? get body;
   @override
   String? get sort;
   @override

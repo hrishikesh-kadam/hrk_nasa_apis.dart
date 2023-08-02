@@ -63,7 +63,8 @@ void main() {
         });
 
         test('body', () async {
-          final queryParameters = SbdbCadQueryParameters(body: 'ALL');
+          final queryParameters =
+              SbdbCadQueryParameters(body: CloseApproachBody.all);
           final Response<SbdbCadBody> response = await api.get(
             queryParameters: queryParameters.toJson(),
           );
@@ -77,10 +78,7 @@ void main() {
 
       test('400', () async {
         try {
-          final queryParameters = SbdbCadQueryParameters(body: 'Pandora');
-          await api.get(
-            queryParameters: queryParameters.toJson(),
-          );
+          await api.get(queryParameters: {'body': 'Pandora'});
         } on DioException catch (e) {
           expect(e.response, isNotNull);
           expect(e.response!.statusCode, 400);

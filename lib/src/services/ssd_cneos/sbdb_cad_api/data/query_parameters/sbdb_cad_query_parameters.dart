@@ -2,6 +2,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'close_approach_body.dart';
+
 part 'sbdb_cad_query_parameters.freezed.dart';
 part 'sbdb_cad_query_parameters.g.dart';
 
@@ -32,7 +34,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     String? kind,
     int? spk,
     String? des,
-    String? body,
+    CloseApproachBody? body,
     String? sort,
     double? limit,
     double? limitFrom,
