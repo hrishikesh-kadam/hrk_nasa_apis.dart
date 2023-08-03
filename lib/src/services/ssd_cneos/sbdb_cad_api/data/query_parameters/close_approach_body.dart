@@ -17,6 +17,8 @@ enum CloseApproachBody {
   uranus,
   @JsonValue('Neptn')
   neptune,
+
+  /// Mentioned in documentation, but returns 400 if used
   @JsonValue('Pluto')
   pluto,
   @JsonValue('Moon')

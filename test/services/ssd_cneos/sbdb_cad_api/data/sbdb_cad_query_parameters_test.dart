@@ -34,5 +34,59 @@ void main() {
         expect(sbdbCadQueryParameters.dateMin, dateMin);
       });
     });
+
+    group('copyWithSmallBody()', () {
+      late SbdbCadQueryParameters queryParameters;
+
+      setUp(() {
+        queryParameters = SbdbCadQueryParameters();
+      });
+
+      test('All', () {
+        for (final smallBody in SmallBody.values) {
+          queryParameters = queryParameters.copyWithSmallBody(smallBody);
+          if (smallBody == SbdbCadQueryParameters.defaultSmallBody) {
+            expectSmallBody(smallBody, null, queryParameters);
+          } else {
+            expectSmallBody(smallBody, true, queryParameters);
+          }
+          bool? value = false;
+          queryParameters = queryParameters.copyWithSmallBody(
+            smallBody,
+            value: value,
+          );
+          if (smallBody == SbdbCadQueryParameters.defaultSmallBody) {
+            expectSmallBody(smallBody, null, queryParameters);
+          } else {
+            expectSmallBody(smallBody, value, queryParameters);
+          }
+          value = null;
+          queryParameters = queryParameters.copyWithSmallBody(
+            smallBody,
+            value: value,
+          );
+          expectSmallBody(smallBody, null, queryParameters);
+        }
+      });
+    });
   });
+}
+
+expectSmallBody(
+  SmallBody smallBody,
+  bool? expected,
+  SbdbCadQueryParameters queryParameters,
+) {
+  switch (smallBody) {
+    case SmallBody.pha:
+      expect(queryParameters.pha, expected);
+    case SmallBody.nea:
+      expect(queryParameters.nea, expected);
+    case SmallBody.comet:
+      expect(queryParameters.comet, expected);
+    case SmallBody.neaComet:
+      expect(queryParameters.neaComet, expected);
+    case SmallBody.neo:
+      expect(queryParameters.neo, expected);
+  }
 }

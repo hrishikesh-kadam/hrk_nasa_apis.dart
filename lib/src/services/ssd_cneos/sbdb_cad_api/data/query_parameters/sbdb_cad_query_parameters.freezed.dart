@@ -454,7 +454,7 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.kebab)
-class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
+class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
   _$_SbdbCadQueryParameters(
       {this.dateMin,
       this.dateMax,
@@ -483,7 +483,8 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
       this.limitFrom,
       this.totalOnly,
       this.diameter,
-      this.fullname});
+      this.fullname})
+      : super._();
 
   factory _$_SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$$_SbdbCadQueryParametersFromJson(json);
@@ -643,7 +644,7 @@ class _$_SbdbCadQueryParameters implements _SbdbCadQueryParameters {
   }
 }
 
-abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
+abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
   factory _SbdbCadQueryParameters(
       {final String? dateMin,
       final String? dateMax,
@@ -673,6 +674,7 @@ abstract class _SbdbCadQueryParameters implements SbdbCadQueryParameters {
       final bool? totalOnly,
       final bool? diameter,
       final bool? fullname}) = _$_SbdbCadQueryParameters;
+  _SbdbCadQueryParameters._() : super._();
 
   factory _SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =
       _$_SbdbCadQueryParameters.fromJson;

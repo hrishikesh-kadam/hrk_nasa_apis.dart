@@ -3,12 +3,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'close_approach_body.dart';
+import 'small_body.dart';
 
 part 'sbdb_cad_query_parameters.freezed.dart';
 part 'sbdb_cad_query_parameters.g.dart';
 
 @freezed
 class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
+  const SbdbCadQueryParameters._();
+
   @JsonSerializable(
     fieldRename: FieldRename.kebab,
   )
@@ -45,4 +48,29 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
 
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
+
+  static const SmallBody defaultSmallBody = SmallBody.neo;
+  static const CloseApproachBody defaultCloseApproachBody =
+      CloseApproachBody.earth;
+
+  SbdbCadQueryParameters copyWithSmallBody(
+    SmallBody smallBody, {
+    bool? value = true,
+  }) {
+    // TODO(hrishikesh-kadam): unused_result lint is false positive
+    // Issue: https://github.com/dart-lang/sdk/issues/52314
+    // Remove the lint after the following fix is in stable
+    // https://github.com/dart-lang/sdk/commit/b0b393773fa7d7965c6c9ea3a501e93dc60812f9
+    return switch (smallBody) {
+      defaultSmallBody => this,
+      // ignore: unused_result
+      SmallBody.pha => copyWith(pha: value),
+      // ignore: unused_result
+      SmallBody.nea => copyWith(nea: value),
+      // ignore: unused_result
+      SmallBody.comet => copyWith(comet: value),
+      // ignore: unused_result
+      SmallBody.neaComet => copyWith(neaComet: value),
+    };
+  }
 }

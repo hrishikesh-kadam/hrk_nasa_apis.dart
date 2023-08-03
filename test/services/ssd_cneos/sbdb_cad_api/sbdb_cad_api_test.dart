@@ -7,6 +7,7 @@ import 'package:test/scaffolding.dart';
 void main() {
   group('$SbdbCadApi', () {
     late SbdbCadApi api;
+    late SbdbCadQueryParameters queryParameters;
     late Logger log;
     final Uri docUrl = Uri(
       scheme: SsdCneos.baseUrl.scheme,
@@ -21,6 +22,7 @@ void main() {
 
     setUp(() {
       api = SbdbCadApi();
+      queryParameters = SbdbCadQueryParameters();
     });
 
     group('get', () {
@@ -51,7 +53,7 @@ void main() {
         });
 
         test('fullname', () async {
-          final queryParameters = SbdbCadQueryParameters(fullname: true);
+          queryParameters = queryParameters.copyWith(fullname: true);
           final Response<SbdbCadBody> response = await api.get(
             queryParameters: queryParameters.toJson(),
           );
@@ -63,8 +65,9 @@ void main() {
         });
 
         test('body', () async {
-          final queryParameters =
-              SbdbCadQueryParameters(body: CloseApproachBody.all);
+          queryParameters = queryParameters.copyWith(
+            body: CloseApproachBody.all,
+          );
           final Response<SbdbCadBody> response = await api.get(
             queryParameters: queryParameters.toJson(),
           );
@@ -76,9 +79,20 @@ void main() {
         });
       });
 
+      test('$SmallBody', () async {
+        queryParameters = queryParameters.copyWithSmallBody(SmallBody.pha);
+        final Response<SbdbCadBody> response = await api.get(
+          queryParameters: queryParameters.toJson(),
+        );
+        expect(response.data, isNotNull);
+      });
+
       test('400', () async {
+        queryParameters = queryParameters.copyWith(
+          body: CloseApproachBody.pluto,
+        );
         try {
-          await api.get(queryParameters: {'body': 'Pandora'});
+          await api.get(queryParameters: queryParameters.toJson());
         } on DioException catch (e) {
           expect(e.response, isNotNull);
           expect(e.response!.statusCode, 400);

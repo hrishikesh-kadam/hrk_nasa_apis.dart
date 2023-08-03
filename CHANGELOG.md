@@ -1,3 +1,8 @@
+## 0.8.0
+
+- Serialize SmallBody
+- Add defaultSmallBody, defaultCloseApproachBody to SbdbCadQueryParameters
+
 ## 0.7.0
 
 - Serialize CloseApproachBody of SbdbCadQueryParameters
