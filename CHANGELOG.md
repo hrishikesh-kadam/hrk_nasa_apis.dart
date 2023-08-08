@@ -1,3 +1,7 @@
+## 0.9.0
+
+- Add copyWith(SmallBodySelector|DataOutput)
+
 ## 0.8.0
 
 - Serialize SmallBody

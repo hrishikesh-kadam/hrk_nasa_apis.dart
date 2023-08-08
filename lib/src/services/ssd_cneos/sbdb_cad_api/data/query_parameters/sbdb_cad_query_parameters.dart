@@ -3,7 +3,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'close_approach_body.dart';
+import 'data_output.dart';
 import 'small_body.dart';
+import 'small_body_selector.dart';
 
 part 'sbdb_cad_query_parameters.freezed.dart';
 part 'sbdb_cad_query_parameters.g.dart';
@@ -72,5 +74,35 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
       // ignore: unused_result
       SmallBody.neaComet => copyWith(neaComet: value),
     };
+  }
+
+  SbdbCadQueryParameters copyWithSmallBodySelector(
+    SmallBodySelector smallBodySelector, {
+    int? spkId,
+    String? desgination,
+  }) {
+    return switch (smallBodySelector) {
+      // ignore: unused_result
+      SmallBodySelector.spkId => copyWith(spk: spkId),
+      // ignore: unused_result
+      SmallBodySelector.designation => copyWith(des: desgination),
+    };
+  }
+
+  SbdbCadQueryParameters copyWithDataOutput(
+    Set<DataOutput> dataOutputSet,
+  ) {
+    SbdbCadQueryParameters queryparameters = this;
+    for (final dataOutput in dataOutputSet) {
+      queryparameters = switch (dataOutput) {
+        // ignore: unused_result
+        DataOutput.totalOnly => queryparameters.copyWith(totalOnly: true),
+        // ignore: unused_result
+        DataOutput.diameter => queryparameters.copyWith(diameter: true),
+        // ignore: unused_result
+        DataOutput.fullname => queryparameters.copyWith(fullname: true),
+      };
+    }
+    return queryparameters;
   }
 }

@@ -1,21 +1,31 @@
 import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 import 'package:test/test.dart';
 
+import '../../../../globals.dart';
+
 void main() {
   group('$SbdbCadQueryParameters', () {
-    const dateMin = '2023-07-01';
+    late SbdbCadQueryParameters queryParameters;
+    const dateMin = packageInception;
+    const spkId = hk2023SpkId;
+    const designation = hk2023Designation;
+
+    setUp(() {
+      queryParameters = SbdbCadQueryParameters();
+    });
+
     group('toJson()', () {
       test('empty', () {
-        final queryParameters = SbdbCadQueryParameters().toJson();
-        expect(queryParameters, isA<JsonMap>());
-        expect(queryParameters, isEmpty);
+        final json = queryParameters.toJson();
+        expect(json, isA<JsonMap>());
+        expect(json, isEmpty);
       });
 
       test('non-empty', () {
         final sbdbCadQueryParameters = SbdbCadQueryParameters(dateMin: dateMin);
-        final queryParameters = sbdbCadQueryParameters.toJson();
-        expect(queryParameters, isNotEmpty);
-        expect(queryParameters['date-min'], dateMin);
+        final json = sbdbCadQueryParameters.toJson();
+        expect(json, isNotEmpty);
+        expect(json['date-min'], dateMin);
       });
     });
 
@@ -26,22 +36,15 @@ void main() {
       });
 
       test('non-empty', () {
-        final queryParameters = {
+        final json = {
           'date-min': dateMin,
         };
-        final sbdbCadQueryParameters =
-            SbdbCadQueryParameters.fromJson(queryParameters);
+        final sbdbCadQueryParameters = SbdbCadQueryParameters.fromJson(json);
         expect(sbdbCadQueryParameters.dateMin, dateMin);
       });
     });
 
-    group('copyWithSmallBody()', () {
-      late SbdbCadQueryParameters queryParameters;
-
-      setUp(() {
-        queryParameters = SbdbCadQueryParameters();
-      });
-
+    group('copyWith$SmallBody()', () {
       test('All', () {
         for (final smallBody in SmallBody.values) {
           queryParameters = queryParameters.copyWithSmallBody(smallBody);
@@ -66,6 +69,66 @@ void main() {
             value: value,
           );
           expectSmallBody(smallBody, null, queryParameters);
+        }
+      });
+    });
+
+    group('copyWith$SmallBodySelector()', () {
+      test(SmallBodySelector.spkId.name, () {
+        queryParameters = queryParameters.copyWithSmallBodySelector(
+          SmallBodySelector.spkId,
+          spkId: spkId,
+        );
+        expect(queryParameters.spk, spkId);
+        expect(queryParameters.des, null);
+      });
+
+      test(SmallBodySelector.designation.name, () {
+        queryParameters = queryParameters.copyWithSmallBodySelector(
+          SmallBodySelector.designation,
+          desgination: designation,
+        );
+        expect(queryParameters.des, designation);
+        expect(queryParameters.spk, null);
+      });
+
+      test('All', () {
+        queryParameters = queryParameters.copyWithSmallBodySelector(
+          SmallBodySelector.spkId,
+          spkId: spkId,
+          desgination: designation,
+        );
+        expect(queryParameters.spk, spkId);
+        expect(queryParameters.des, null);
+      });
+    });
+
+    group('copyWith$DataOutput()', () {
+      test('All', () {
+        final dataOutputSetList = [
+          {DataOutput.totalOnly},
+          {DataOutput.diameter},
+          {DataOutput.fullname},
+          {DataOutput.diameter, DataOutput.fullname},
+          // API does return 200
+          {DataOutput.totalOnly, DataOutput.diameter, DataOutput.fullname},
+        ];
+        for (final dataOutputSet in dataOutputSetList) {
+          queryParameters = SbdbCadQueryParameters();
+          queryParameters = queryParameters.copyWithDataOutput(dataOutputSet);
+          for (final dataOutput in DataOutput.values) {
+            switch (dataOutput) {
+              case DataOutput.totalOnly:
+                expect(queryParameters.totalOnly,
+                    dataOutputSet.contains(dataOutput) ? true : null);
+              case DataOutput.diameter:
+                expect(queryParameters.diameter,
+                    dataOutputSet.contains(dataOutput) ? true : null);
+              case DataOutput.fullname:
+                expect(queryParameters.fullname,
+                    dataOutputSet.contains(dataOutput) ? true : null);
+            }
+          }
         }
       });
     });
