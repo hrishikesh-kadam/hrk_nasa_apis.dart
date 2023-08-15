@@ -188,7 +188,7 @@ class __$$_SbdbCadBodyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SbdbCadBody implements _SbdbCadBody {
-  _$_SbdbCadBody(
+  const _$_SbdbCadBody(
       {required this.signature,
       required this.count,
       required final List<SbdbCadData>? data,
@@ -326,7 +326,7 @@ class _$_SbdbCadBody implements _SbdbCadBody {
 }
 
 abstract class _SbdbCadBody implements SbdbCadBody {
-  factory _SbdbCadBody(
+  const factory _SbdbCadBody(
       {required final Signature signature,
       required final int count,
       required final List<SbdbCadData>? data,

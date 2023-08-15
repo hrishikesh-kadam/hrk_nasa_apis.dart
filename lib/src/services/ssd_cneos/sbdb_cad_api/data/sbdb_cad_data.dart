@@ -5,7 +5,7 @@ part 'sbdb_cad_data.g.dart';
 
 @freezed
 class SbdbCadData with _$SbdbCadData {
-  factory SbdbCadData({
+  const factory SbdbCadData({
     required String des,
     required String orbitId,
     required String jd,

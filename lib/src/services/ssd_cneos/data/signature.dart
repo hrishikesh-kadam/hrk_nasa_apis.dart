@@ -5,7 +5,7 @@ part 'signature.g.dart';
 
 @freezed
 class Signature with _$Signature {
-  factory Signature({
+  const factory Signature({
     required String version,
     required String source,
   }) = _Signature;

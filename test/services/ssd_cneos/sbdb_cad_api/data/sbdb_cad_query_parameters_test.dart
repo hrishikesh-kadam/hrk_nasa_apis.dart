@@ -11,7 +11,7 @@ void main() {
     const designation = hk2023Designation;
 
     setUp(() {
-      queryParameters = SbdbCadQueryParameters();
+      queryParameters = const SbdbCadQueryParameters();
     });
 
     group('toJson()', () {
@@ -22,7 +22,7 @@ void main() {
       });
 
       test('non-empty', () {
-        final sbdbCadQueryParameters = SbdbCadQueryParameters(dateMin: dateMin);
+        const sbdbCadQueryParameters = SbdbCadQueryParameters(dateMin: dateMin);
         final json = sbdbCadQueryParameters.toJson();
         expect(json, isNotEmpty);
         expect(json['date-min'], dateMin);
@@ -41,6 +41,56 @@ void main() {
         };
         final sbdbCadQueryParameters = SbdbCadQueryParameters.fromJson(json);
         expect(sbdbCadQueryParameters.dateMin, dateMin);
+      });
+    });
+
+    group('copyWith$DistanceRange()', () {
+      const defaultUnit = SbdbCadQueryParameters.defaultDistanceUnit;
+      final nonDefaultUnit = DistanceUnit.values.firstWhere(
+        (unit) => unit != SbdbCadQueryParameters.defaultDistanceUnit,
+      );
+
+      test('null value and unit', () {
+        const distanceRange = DistanceRange();
+        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        expect(queryParameters.distMin, null);
+        expect(queryParameters.distMax, null);
+      });
+
+      test('null value', () {
+        final distMin = Distance(unit: nonDefaultUnit);
+        final distMax = Distance(unit: nonDefaultUnit);
+        final distanceRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        expect(queryParameters.distMin, null);
+        expect(queryParameters.distMax, null);
+      });
+
+      test('null unit', () {
+        const distMin = Distance(value: 1);
+        const distMax = Distance(value: 2);
+        const distanceRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        expect(queryParameters.distMin, distMin.value.toString());
+        expect(queryParameters.distMax, distMax.value.toString());
+      });
+
+      test('defaultUnit', () {
+        const distMin = Distance(value: 1, unit: defaultUnit);
+        const distMax = Distance(value: 2, unit: defaultUnit);
+        const distanceRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        expect(queryParameters.distMin, distMin.value.toString());
+        expect(queryParameters.distMax, distMax.value.toString());
+      });
+
+      test('nonDefaultUnit', () {
+        final distMin = Distance(value: 1, unit: nonDefaultUnit);
+        final distMax = Distance(value: 2, unit: nonDefaultUnit);
+        final distanceRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        expect(queryParameters.distMin, distMin.toCompactString());
+        expect(queryParameters.distMax, distMax.toCompactString());
       });
     });
 
@@ -114,7 +164,7 @@ void main() {
           {DataOutput.totalOnly, DataOutput.diameter, DataOutput.fullname},
         ];
         for (final dataOutputSet in dataOutputSetList) {
-          queryParameters = SbdbCadQueryParameters();
+          queryParameters = const SbdbCadQueryParameters();
           queryParameters = queryParameters.copyWithDataOutput(dataOutputSet);
           for (final dataOutput in DataOutput.values) {
             switch (dataOutput) {

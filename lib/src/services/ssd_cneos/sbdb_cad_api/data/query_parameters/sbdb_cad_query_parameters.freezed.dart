@@ -455,7 +455,7 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.kebab)
 class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
-  _$_SbdbCadQueryParameters(
+  const _$_SbdbCadQueryParameters(
       {this.dateMin,
       this.dateMax,
       this.distMin,
@@ -645,7 +645,7 @@ class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
 }
 
 abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
-  factory _SbdbCadQueryParameters(
+  const factory _SbdbCadQueryParameters(
       {final String? dateMin,
       final String? dateMax,
       final String? distMin,
@@ -674,7 +674,7 @@ abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
       final bool? totalOnly,
       final bool? diameter,
       final bool? fullname}) = _$_SbdbCadQueryParameters;
-  _SbdbCadQueryParameters._() : super._();
+  const _SbdbCadQueryParameters._() : super._();
 
   factory _SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =
       _$_SbdbCadQueryParameters.fromJson;

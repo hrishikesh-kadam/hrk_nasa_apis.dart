@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hrk_batteries/hrk_batteries.dart';
 
 import 'close_approach_body.dart';
 import 'data_output.dart';
@@ -17,7 +18,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   @JsonSerializable(
     fieldRename: FieldRename.kebab,
   )
-  factory SbdbCadQueryParameters({
+  const factory SbdbCadQueryParameters({
     String? dateMin,
     String? dateMax,
     String? distMin,
@@ -51,9 +52,46 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
+  static const DistanceUnit defaultDistanceUnit = DistanceUnit.au;
+  static const Distance defaultDistMax = Distance(
+    value: 0.05,
+    unit: defaultDistanceUnit,
+  );
   static const SmallBody defaultSmallBody = SmallBody.neo;
   static const CloseApproachBody defaultCloseApproachBody =
       CloseApproachBody.earth;
+
+  SbdbCadQueryParameters copyWithDistanceRange(
+    DistanceRange distanceRange,
+  ) {
+    SbdbCadQueryParameters queryparameters = this;
+    if (distanceRange.start?.value != null) {
+      Distance distMin = distanceRange.start!;
+      String unit = '';
+      if (distMin.unit != null && distMin.unit != defaultDistanceUnit) {
+        unit = distMin.unit!.symbol;
+      }
+      queryparameters = queryparameters.copyWith(
+        distMin: '${distMin.value}$unit',
+      );
+    } else {
+      queryparameters = queryparameters.copyWith(distMin: null);
+    }
+    if (distanceRange.end?.value != null &&
+        distanceRange.end != defaultDistMax) {
+      Distance distMax = distanceRange.end!;
+      String unit = '';
+      if (distMax.unit != null && distMax.unit != defaultDistanceUnit) {
+        unit = distMax.unit!.symbol;
+      }
+      queryparameters = queryparameters.copyWith(
+        distMax: '${distMax.value}$unit',
+      );
+    } else {
+      queryparameters = queryparameters.copyWith(distMax: null);
+    }
+    return queryparameters;
+  }
 
   SbdbCadQueryParameters copyWithSmallBody(
     SmallBody smallBody, {

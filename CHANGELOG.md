@@ -1,3 +1,7 @@
+# 0.10.0
+
+- Add copyWithDistanceRange()
+
 ## 0.9.0
 
 - Add copyWith(SmallBodySelector|DataOutput)

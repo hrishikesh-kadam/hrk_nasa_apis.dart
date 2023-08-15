@@ -106,7 +106,7 @@ class __$$_SignatureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Signature implements _Signature {
-  _$_Signature({required this.version, required this.source});
+  const _$_Signature({required this.version, required this.source});
 
   factory _$_Signature.fromJson(Map<String, dynamic> json) =>
       _$$_SignatureFromJson(json);
@@ -149,7 +149,7 @@ class _$_Signature implements _Signature {
 }
 
 abstract class _Signature implements Signature {
-  factory _Signature(
+  const factory _Signature(
       {required final String version,
       required final String source}) = _$_Signature;
 

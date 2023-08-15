@@ -8,7 +8,7 @@ part 'sbdb_cad_body.g.dart';
 
 @freezed
 class SbdbCadBody with _$SbdbCadBody {
-  factory SbdbCadBody.two00({
+  const factory SbdbCadBody.two00({
     required Signature signature,
     required int count,
     required List<SbdbCadData>? data,

@@ -17,4 +17,5 @@ dart pub global run coverage:format_coverage \
   --lcov \
   --check-ignore
 
-lcov --list coverage/lcov.info
+lcov --list coverage/lcov.info \
+  | grep -v ".*|.*100%.*|.*|"

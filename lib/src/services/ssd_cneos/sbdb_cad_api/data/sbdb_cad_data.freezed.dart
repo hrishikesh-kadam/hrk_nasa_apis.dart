@@ -283,7 +283,7 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SbdbCadData implements _SbdbCadData {
-  _$_SbdbCadData(
+  const _$_SbdbCadData(
       {required this.des,
       required this.orbitId,
       required this.jd,
@@ -401,7 +401,7 @@ class _$_SbdbCadData implements _SbdbCadData {
 }
 
 abstract class _SbdbCadData implements SbdbCadData {
-  factory _SbdbCadData(
+  const factory _SbdbCadData(
       {required final String des,
       required final String orbitId,
       required final String jd,

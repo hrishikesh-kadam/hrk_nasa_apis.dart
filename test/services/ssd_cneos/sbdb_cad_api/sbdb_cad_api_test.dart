@@ -22,7 +22,7 @@ void main() {
 
     setUp(() {
       api = SbdbCadApi();
-      queryParameters = SbdbCadQueryParameters();
+      queryParameters = const SbdbCadQueryParameters();
     });
 
     group('get', () {
