@@ -45,14 +45,14 @@ void main() {
     });
 
     group('copyWith$DistanceRange()', () {
-      const defaultUnit = SbdbCadQueryParameters.defaultDistanceUnit;
+      const defaultUnit = SbdbCadQueryParameters.distUnitDefault;
       final nonDefaultUnit = DistanceUnit.values.firstWhere(
-        (unit) => unit != SbdbCadQueryParameters.defaultDistanceUnit,
+        (unit) => unit != defaultUnit,
       );
 
       test('null value and unit', () {
-        const distanceRange = DistanceRange();
-        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        const distRange = DistanceRange();
+        queryParameters = queryParameters.copyWithDistRange(distRange);
         expect(queryParameters.distMin, null);
         expect(queryParameters.distMax, null);
       });
@@ -60,8 +60,8 @@ void main() {
       test('null value', () {
         final distMin = Distance(unit: nonDefaultUnit);
         final distMax = Distance(unit: nonDefaultUnit);
-        final distanceRange = DistanceRange(start: distMin, end: distMax);
-        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        final distRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistRange(distRange);
         expect(queryParameters.distMin, null);
         expect(queryParameters.distMax, null);
       });
@@ -69,8 +69,8 @@ void main() {
       test('null unit', () {
         const distMin = Distance(value: 1);
         const distMax = Distance(value: 2);
-        const distanceRange = DistanceRange(start: distMin, end: distMax);
-        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        const distRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistRange(distRange);
         expect(queryParameters.distMin, distMin.value.toString());
         expect(queryParameters.distMax, distMax.value.toString());
       });
@@ -78,8 +78,8 @@ void main() {
       test('defaultUnit', () {
         const distMin = Distance(value: 1, unit: defaultUnit);
         const distMax = Distance(value: 2, unit: defaultUnit);
-        const distanceRange = DistanceRange(start: distMin, end: distMax);
-        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        const distRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistRange(distRange);
         expect(queryParameters.distMin, distMin.value.toString());
         expect(queryParameters.distMax, distMax.value.toString());
       });
@@ -87,8 +87,8 @@ void main() {
       test('nonDefaultUnit', () {
         final distMin = Distance(value: 1, unit: nonDefaultUnit);
         final distMax = Distance(value: 2, unit: nonDefaultUnit);
-        final distanceRange = DistanceRange(start: distMin, end: distMax);
-        queryParameters = queryParameters.copyWithDistanceRange(distanceRange);
+        final distRange = DistanceRange(start: distMin, end: distMax);
+        queryParameters = queryParameters.copyWithDistRange(distRange);
         expect(queryParameters.distMin, distMin.toCompactString());
         expect(queryParameters.distMax, distMax.toCompactString());
       });
@@ -98,7 +98,7 @@ void main() {
       test('All', () {
         for (final smallBody in SmallBody.values) {
           queryParameters = queryParameters.copyWithSmallBody(smallBody);
-          if (smallBody == SbdbCadQueryParameters.defaultSmallBody) {
+          if (smallBody == SbdbCadQueryParameters.smallBodyDefault) {
             expectSmallBody(smallBody, null, queryParameters);
           } else {
             expectSmallBody(smallBody, true, queryParameters);
@@ -108,7 +108,7 @@ void main() {
             smallBody,
             value: value,
           );
-          if (smallBody == SbdbCadQueryParameters.defaultSmallBody) {
+          if (smallBody == SbdbCadQueryParameters.smallBodyDefault) {
             expectSmallBody(smallBody, null, queryParameters);
           } else {
             expectSmallBody(smallBody, value, queryParameters);

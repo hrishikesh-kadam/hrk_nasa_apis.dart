@@ -52,23 +52,23 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
-  static const DistanceUnit defaultDistanceUnit = DistanceUnit.au;
-  static const Distance defaultDistMax = Distance(
+  static const DistanceUnit distUnitDefault = DistanceUnit.au;
+  static const Distance distMaxDefault = Distance(
     value: 0.05,
-    unit: defaultDistanceUnit,
+    unit: distUnitDefault,
   );
-  static const SmallBody defaultSmallBody = SmallBody.neo;
-  static const CloseApproachBody defaultCloseApproachBody =
+  static const SmallBody smallBodyDefault = SmallBody.neo;
+  static const CloseApproachBody closeApproachBodyDefault =
       CloseApproachBody.earth;
 
-  SbdbCadQueryParameters copyWithDistanceRange(
-    DistanceRange distanceRange,
+  SbdbCadQueryParameters copyWithDistRange(
+    DistanceRange distRange,
   ) {
     SbdbCadQueryParameters queryparameters = this;
-    if (distanceRange.start?.value != null) {
-      Distance distMin = distanceRange.start!;
+    if (distRange.start?.value != null) {
+      Distance distMin = distRange.start!;
       String unit = '';
-      if (distMin.unit != null && distMin.unit != defaultDistanceUnit) {
+      if (distMin.unit != null && distMin.unit != distUnitDefault) {
         unit = distMin.unit!.symbol;
       }
       queryparameters = queryparameters.copyWith(
@@ -77,11 +77,10 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     } else {
       queryparameters = queryparameters.copyWith(distMin: null);
     }
-    if (distanceRange.end?.value != null &&
-        distanceRange.end != defaultDistMax) {
-      Distance distMax = distanceRange.end!;
+    if (distRange.end?.value != null && distRange.end != distMaxDefault) {
+      Distance distMax = distRange.end!;
       String unit = '';
-      if (distMax.unit != null && distMax.unit != defaultDistanceUnit) {
+      if (distMax.unit != null && distMax.unit != distUnitDefault) {
         unit = distMax.unit!.symbol;
       }
       queryparameters = queryparameters.copyWith(
@@ -102,7 +101,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     // Remove the lint after the following fix is in stable
     // https://github.com/dart-lang/sdk/commit/b0b393773fa7d7965c6c9ea3a501e93dc60812f9
     return switch (smallBody) {
-      defaultSmallBody => this,
+      smallBodyDefault => this,
       // ignore: unused_result
       SmallBody.pha => copyWith(pha: value),
       // ignore: unused_result

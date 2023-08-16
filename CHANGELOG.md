@@ -1,3 +1,7 @@
+# 0.10.1
+
+- Rename variables
+
 # 0.10.0
 
 - Add copyWithDistanceRange()
