@@ -44,6 +44,72 @@ void main() {
       });
     });
 
+    group('copyWithDateRange()', () {
+      test('default', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault();
+        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, null);
+        expect(queryParameters.dateMax, null);
+      });
+
+      test('minDefault - 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault()
+            .subtract(const Duration(days: 1));
+        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, dateFormat.format(min));
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+
+      test('minDefault + 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault()
+            .add(const Duration(days: 1));
+        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, dateFormat.format(min));
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+
+      test('maxDefault - 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault();
+        final max = SbdbCadQueryParameters.getDateMaxDefault()
+            .subtract(const Duration(days: 1));
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, null);
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+
+      test('maxDefault + 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault();
+        final max = SbdbCadQueryParameters.getDateMaxDefault()
+            .add(const Duration(days: 1));
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, null);
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+
+      test('minDefault - 1, maxDefault - 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault()
+            .subtract(const Duration(days: 1));
+        final max = SbdbCadQueryParameters.getDateMaxDefault()
+            .subtract(const Duration(days: 1));
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, dateFormat.format(min));
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+
+      test('minDefault + 1, maxDefault + 1', () {
+        final min = SbdbCadQueryParameters.getDateMinDefault()
+            .add(const Duration(days: 1));
+        final max = SbdbCadQueryParameters.getDateMaxDefault()
+            .add(const Duration(days: 1));
+        queryParameters = queryParameters.copyWithDateRange(min, max);
+        expect(queryParameters.dateMin, dateFormat.format(min));
+        expect(queryParameters.dateMax, dateFormat.format(max));
+      });
+    });
+
     group('copyWith$DistanceRange()', () {
       const defaultUnit = SbdbCadQueryParameters.distUnitDefault;
       final nonDefaultUnit = DistanceUnit.values.firstWhere(

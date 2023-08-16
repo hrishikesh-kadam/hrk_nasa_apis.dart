@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
 
-final dateFormatter = DateFormat('yyyy-MM-dd');
+final dateFormat = DateFormat('yyyy-MM-dd');
 
-final dateTimeFormatter = DateFormat('yyyy-MM-ddTHH:mm:ss');
+final dateTimeFormat = DateFormat('yyyy-MM-ddTHH:mm:ss');

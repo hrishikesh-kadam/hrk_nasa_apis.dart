@@ -17,12 +17,20 @@ void main() async {
 
     // queryParameters example
     SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters(
-      dateMin: dateFormatter.format(DateTime(2023, 7, 1)),
       distMax: const Distance(
-        value: 2,
+        value: 10,
         unit: DistanceUnit.ld,
       ).toCompactString(),
+      pha: true,
+      fullname: true,
     );
+
+    // copyWith example
+    queryParameters = queryParameters.copyWithDateRange(
+      DateTime(2023, 7, 1),
+      DateTime(2023, 7, 31),
+    );
+
     response = await sbdbCadApi.get(
       queryParameters: queryParameters.toJson(),
     );

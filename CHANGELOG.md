@@ -1,6 +1,7 @@
-# 0.10.1
+# 0.11.0
 
-- Rename variables
+- Add copyWithDateRange() to SbdbCadQueryParameters
+- Rename variables and methods
 
 # 0.10.0
 

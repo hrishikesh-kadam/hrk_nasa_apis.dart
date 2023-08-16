@@ -3,6 +3,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hrk_batteries/hrk_batteries.dart';
 
+import '../../../../../globals.dart';
 import 'close_approach_body.dart';
 import 'data_output.dart';
 import 'small_body.dart';
@@ -52,6 +53,9 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
+  static DateTime getDateMinDefault() => DateTime.now();
+  static DateTime getDateMaxDefault() =>
+      DateTime.now().add(const Duration(days: 60));
   static const DistanceUnit distUnitDefault = DistanceUnit.au;
   static const Distance distMaxDefault = Distance(
     value: 0.05,
@@ -60,6 +64,24 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   static const SmallBody smallBodyDefault = SmallBody.neo;
   static const CloseApproachBody closeApproachBodyDefault =
       CloseApproachBody.earth;
+
+  SbdbCadQueryParameters copyWithDateRange(DateTime min, DateTime max) {
+    SbdbCadQueryParameters queryparameters = this;
+    final String minString = dateFormat.format(min);
+    if (minString == dateFormat.format(getDateMinDefault())) {
+      queryparameters = queryparameters.copyWith(dateMin: null);
+    } else {
+      queryparameters = queryparameters.copyWith(dateMin: minString);
+    }
+    final String maxString = dateFormat.format(max);
+    if (queryparameters.dateMin == null &&
+        maxString == dateFormat.format(getDateMaxDefault())) {
+      queryparameters = queryparameters.copyWith(dateMax: null);
+    } else {
+      queryparameters = queryparameters.copyWith(dateMax: maxString);
+    }
+    return queryparameters;
+  }
 
   SbdbCadQueryParameters copyWithDistRange(
     DistanceRange distRange,
