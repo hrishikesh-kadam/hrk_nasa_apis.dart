@@ -1,3 +1,7 @@
+# 0.11.1
+
+- Replace date default static methods with getter
+
 # 0.11.0
 
 - Add copyWithDateRange() to SbdbCadQueryParameters

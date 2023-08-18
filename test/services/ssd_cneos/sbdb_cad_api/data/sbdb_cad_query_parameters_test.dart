@@ -46,34 +46,34 @@ void main() {
 
     group('copyWithDateRange()', () {
       test('default', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault();
-        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        final min = SbdbCadQueryParameters.dateMinDefault;
+        final max = SbdbCadQueryParameters.dateMaxDefault;
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, null);
         expect(queryParameters.dateMax, null);
       });
 
       test('minDefault - 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault()
+        final min = SbdbCadQueryParameters.dateMinDefault
             .subtract(const Duration(days: 1));
-        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        final max = SbdbCadQueryParameters.dateMaxDefault;
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, dateFormat.format(min));
         expect(queryParameters.dateMax, dateFormat.format(max));
       });
 
       test('minDefault + 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault()
-            .add(const Duration(days: 1));
-        final max = SbdbCadQueryParameters.getDateMaxDefault();
+        final min =
+            SbdbCadQueryParameters.dateMinDefault.add(const Duration(days: 1));
+        final max = SbdbCadQueryParameters.dateMaxDefault;
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, dateFormat.format(min));
         expect(queryParameters.dateMax, dateFormat.format(max));
       });
 
       test('maxDefault - 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault();
-        final max = SbdbCadQueryParameters.getDateMaxDefault()
+        final min = SbdbCadQueryParameters.dateMinDefault;
+        final max = SbdbCadQueryParameters.dateMaxDefault
             .subtract(const Duration(days: 1));
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, null);
@@ -81,18 +81,18 @@ void main() {
       });
 
       test('maxDefault + 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault();
-        final max = SbdbCadQueryParameters.getDateMaxDefault()
-            .add(const Duration(days: 1));
+        final min = SbdbCadQueryParameters.dateMinDefault;
+        final max =
+            SbdbCadQueryParameters.dateMaxDefault.add(const Duration(days: 1));
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, null);
         expect(queryParameters.dateMax, dateFormat.format(max));
       });
 
       test('minDefault - 1, maxDefault - 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault()
+        final min = SbdbCadQueryParameters.dateMinDefault
             .subtract(const Duration(days: 1));
-        final max = SbdbCadQueryParameters.getDateMaxDefault()
+        final max = SbdbCadQueryParameters.dateMaxDefault
             .subtract(const Duration(days: 1));
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, dateFormat.format(min));
@@ -100,10 +100,10 @@ void main() {
       });
 
       test('minDefault + 1, maxDefault + 1', () {
-        final min = SbdbCadQueryParameters.getDateMinDefault()
-            .add(const Duration(days: 1));
-        final max = SbdbCadQueryParameters.getDateMaxDefault()
-            .add(const Duration(days: 1));
+        final min =
+            SbdbCadQueryParameters.dateMinDefault.add(const Duration(days: 1));
+        final max =
+            SbdbCadQueryParameters.dateMaxDefault.add(const Duration(days: 1));
         queryParameters = queryParameters.copyWithDateRange(min, max);
         expect(queryParameters.dateMin, dateFormat.format(min));
         expect(queryParameters.dateMax, dateFormat.format(max));

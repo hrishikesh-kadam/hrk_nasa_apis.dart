@@ -53,8 +53,8 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
-  static DateTime getDateMinDefault() => DateTime.now();
-  static DateTime getDateMaxDefault() =>
+  static DateTime get dateMinDefault => DateTime.now();
+  static DateTime get dateMaxDefault =>
       DateTime.now().add(const Duration(days: 60));
   static const DistanceUnit distUnitDefault = DistanceUnit.au;
   static const Distance distMaxDefault = Distance(
@@ -68,14 +68,14 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   SbdbCadQueryParameters copyWithDateRange(DateTime min, DateTime max) {
     SbdbCadQueryParameters queryparameters = this;
     final String minString = dateFormat.format(min);
-    if (minString == dateFormat.format(getDateMinDefault())) {
+    if (minString == dateFormat.format(dateMinDefault)) {
       queryparameters = queryparameters.copyWith(dateMin: null);
     } else {
       queryparameters = queryparameters.copyWith(dateMin: minString);
     }
     final String maxString = dateFormat.format(max);
     if (queryparameters.dateMin == null &&
-        maxString == dateFormat.format(getDateMaxDefault())) {
+        maxString == dateFormat.format(dateMaxDefault)) {
       queryparameters = queryparameters.copyWith(dateMax: null);
     } else {
       queryparameters = queryparameters.copyWith(dateMax: maxString);
