@@ -79,8 +79,9 @@ void main() {
         });
       });
 
-      test('$SmallBody', () async {
-        queryParameters = queryParameters.copyWithSmallBody(SmallBody.pha);
+      test('$SmallBodyFilter', () async {
+        queryParameters =
+            queryParameters.copyWithSmallBodyFilter(SmallBodyFilter.pha);
         final Response<SbdbCadBody> response = await api.get(
           queryParameters: queryParameters.toJson(),
         );

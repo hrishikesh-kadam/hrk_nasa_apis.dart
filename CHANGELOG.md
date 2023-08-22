@@ -1,6 +1,7 @@
 # 0.12.0
 
 - Drop time from date defaults
+- Rename SmallBody to SmallBodyFilter
 
 # 0.11.1
 

@@ -160,31 +160,34 @@ void main() {
       });
     });
 
-    group('copyWith$SmallBody()', () {
+    group('copyWith$SmallBodyFilter()', () {
       test('All', () {
-        for (final smallBody in SmallBody.values) {
-          queryParameters = queryParameters.copyWithSmallBody(smallBody);
-          if (smallBody == SbdbCadQueryParameters.smallBodyDefault) {
-            expectSmallBody(smallBody, null, queryParameters);
+        for (final smallBodyFilter in SmallBodyFilter.values) {
+          queryParameters =
+              queryParameters.copyWithSmallBodyFilter(smallBodyFilter);
+          if (smallBodyFilter ==
+              SbdbCadQueryParameters.smallBodyFilterDefault) {
+            expectSmallBodyFilter(smallBodyFilter, null, queryParameters);
           } else {
-            expectSmallBody(smallBody, true, queryParameters);
+            expectSmallBodyFilter(smallBodyFilter, true, queryParameters);
           }
           bool? value = false;
-          queryParameters = queryParameters.copyWithSmallBody(
-            smallBody,
+          queryParameters = queryParameters.copyWithSmallBodyFilter(
+            smallBodyFilter,
             value: value,
           );
-          if (smallBody == SbdbCadQueryParameters.smallBodyDefault) {
-            expectSmallBody(smallBody, null, queryParameters);
+          if (smallBodyFilter ==
+              SbdbCadQueryParameters.smallBodyFilterDefault) {
+            expectSmallBodyFilter(smallBodyFilter, null, queryParameters);
           } else {
-            expectSmallBody(smallBody, value, queryParameters);
+            expectSmallBodyFilter(smallBodyFilter, value, queryParameters);
           }
           value = null;
-          queryParameters = queryParameters.copyWithSmallBody(
-            smallBody,
+          queryParameters = queryParameters.copyWithSmallBodyFilter(
+            smallBodyFilter,
             value: value,
           );
-          expectSmallBody(smallBody, null, queryParameters);
+          expectSmallBodyFilter(smallBodyFilter, null, queryParameters);
         }
       });
     });
@@ -251,21 +254,21 @@ void main() {
   });
 }
 
-expectSmallBody(
-  SmallBody smallBody,
+expectSmallBodyFilter(
+  SmallBodyFilter smallBodyFilter,
   bool? expected,
   SbdbCadQueryParameters queryParameters,
 ) {
-  switch (smallBody) {
-    case SmallBody.pha:
+  switch (smallBodyFilter) {
+    case SmallBodyFilter.pha:
       expect(queryParameters.pha, expected);
-    case SmallBody.nea:
+    case SmallBodyFilter.nea:
       expect(queryParameters.nea, expected);
-    case SmallBody.comet:
+    case SmallBodyFilter.comet:
       expect(queryParameters.comet, expected);
-    case SmallBody.neaComet:
+    case SmallBodyFilter.neaComet:
       expect(queryParameters.neaComet, expected);
-    case SmallBody.neo:
+    case SmallBodyFilter.neo:
       expect(queryParameters.neo, expected);
   }
 }
