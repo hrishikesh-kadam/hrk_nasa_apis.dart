@@ -53,9 +53,9 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
-  static DateTime get dateMinDefault => DateTime.now();
+  static DateTime get dateMinDefault => HrkDateTime.today();
   static DateTime get dateMaxDefault =>
-      DateTime.now().add(const Duration(days: 60));
+      HrkDateTime.today().add(const Duration(days: 60));
   static const DistanceUnit distUnitDefault = DistanceUnit.au;
   static const Distance distMaxDefault = Distance(
     value: 0.05,

@@ -1,3 +1,7 @@
+# 0.12.0
+
+- Drop time from date defaults
+
 # 0.11.1
 
 - Replace date default static methods with getter
