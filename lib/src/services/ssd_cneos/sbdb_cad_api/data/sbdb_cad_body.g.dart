@@ -17,6 +17,7 @@ _$_SbdbCadBody _$$_SbdbCadBodyFromJson(Map<String, dynamic> json) =>
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => SbdbCadData.fromJson(e as Map<String, dynamic>))
           .toList(),
+      total: json['total'] as int?,
       rawBody: json['raw_body'] as Map<String, dynamic>?,
     );
 
@@ -33,6 +34,7 @@ Map<String, dynamic> _$$_SbdbCadBodyToJson(_$_SbdbCadBody instance) {
   }
 
   writeNotNull('data', instance.data);
+  writeNotNull('total', instance.total);
   writeNotNull('raw_body', instance.rawBody);
   return val;
 }

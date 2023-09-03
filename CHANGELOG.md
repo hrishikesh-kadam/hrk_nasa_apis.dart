@@ -1,3 +1,7 @@
+# 0.13.0
+
+- Add `total` to `SbdbCadBody`
+
 # 0.12.0
 
 - Drop time from date defaults

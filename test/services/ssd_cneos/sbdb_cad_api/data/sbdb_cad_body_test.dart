@@ -1,7 +1,7 @@
 import 'package:hrk_nasa_apis/hrk_nasa_apis.dart';
 import 'package:test/test.dart';
 
-import '../../../../globals.dart';
+import 'mock_data.dart';
 
 void main() {
   group('$SbdbCadBody', () {
@@ -14,8 +14,11 @@ void main() {
 
     group('fromJson()', () {
       group('200', () {
-        test('count == 0', () {
+        setUp(() {
           jsonBody['count'] = 0;
+        });
+
+        test('count == 0', () {
           final sbdbCadBody = SbdbCadBody.fromJson(jsonBody);
           expect(sbdbCadBody.signature.version, SbdbCadApi.version);
           expect(sbdbCadBody.count, 0);
@@ -49,6 +52,13 @@ void main() {
           final sbdbCadBody = SbdbCadBody.fromJson(transformedResponse);
           expect(sbdbCadBody.data!.first.des, hk2023Data.first);
           expect(sbdbCadBody.rawBody, rawBody);
+        });
+
+        test('total > 0', () {
+          jsonBody['total'] = 1;
+          final sbdbCadBody = SbdbCadBody.fromJson(jsonBody);
+          expect(sbdbCadBody.total, greaterThan(0));
+          expect(sbdbCadBody.count, 0);
         });
       });
     });

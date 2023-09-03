@@ -64,6 +64,17 @@ void main() {
           }
         });
 
+        test('total-only', () async {
+          queryParameters = queryParameters.copyWith(totalOnly: true);
+          final Response<SbdbCadBody> response = await api.get(
+            queryParameters: queryParameters.toJson(),
+          );
+          expect(response.data, isNotNull);
+          final sbdbCadBody = response.data!;
+          expect(sbdbCadBody.count, 0);
+          expect(sbdbCadBody.total, greaterThanOrEqualTo(0));
+        });
+
         test('body', () async {
           queryParameters = queryParameters.copyWith(
             body: CloseApproachBody.all,
