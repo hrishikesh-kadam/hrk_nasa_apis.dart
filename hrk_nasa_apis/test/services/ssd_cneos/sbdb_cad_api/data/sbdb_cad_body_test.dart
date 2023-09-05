@@ -30,7 +30,6 @@ void main() {
           expect(sbdbCadBody.count, greaterThan(0));
         });
 
-        /// https://ssd-api.jpl.nasa.gov/cad.api?des=2023%20HK&date-min=2023-04-20&date-max=2023-04-21
         test('data', () {
           jsonBody['count'] = 1;
           jsonBody['fields'] = fieldsList;
@@ -46,7 +45,7 @@ void main() {
           jsonBody['fields'] = fieldsList;
           jsonBody['data'] = [hk2023Data];
           final rawBody = JsonMap.from(jsonBody);
-          jsonBody['raw_body'] = JsonMap.from(jsonBody);
+          // jsonBody['raw_body'] = JsonMap.from(jsonBody);
           final transformedResponse =
               SbdbCadTransformer.transform200Response(jsonBody);
           final sbdbCadBody = SbdbCadBody.fromJson(transformedResponse);

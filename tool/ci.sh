@@ -2,19 +2,15 @@
 
 set -e -o pipefail
 
-dart pub upgrade
+PACKAGES=(
+  "hrk_nasa_apis"
+  "hrk_nasa_apis_test"
+)
 
-dart run build_runner build --delete-conflicting-outputs
-
-dart format --output none --set-exit-if-changed .
-
-dart analyze --fatal-infos
-
-tool/test.sh
-
-dart pub global activate pana
-dart pub global run pana --no-warning
-
-dart pub publish --dry-run
+for ((i=0; i < ${#PACKAGES[@]}; i++)); do
+  pushd "${PACKAGES[i]}" &> /dev/null
+  tool/ci.sh
+  popd &> /dev/null
+done
 
 git diff --stat --exit-code

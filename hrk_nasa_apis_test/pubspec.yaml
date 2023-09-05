@@ -1,0 +1,26 @@
+name: hrk_nasa_apis_test
+version: 0.1.0
+
+description: >-
+  A library containing test and mock data for hrk_nasa_apis package
+repository: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/tree/main/hrk_nasa_apis_test
+topics:
+  - nasa
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  hrk_nasa_apis: '>=0.13.0 <1.0.0'
+
+dependency_overrides:
+#   hrk_batteries:
+#     path: '../../hrk_batteries'
+  hrk_nasa_apis:
+    path: '../hrk_nasa_apis'
+
+dev_dependencies:
+  test: ^1.21.0
+  build_runner: ^2.4.5
+  hrk_analysis: '>=0.1.0 <1.0.0'
+  mockito: ^5.4.2

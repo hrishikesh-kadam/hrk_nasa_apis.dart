@@ -1,9 +1,9 @@
 name: hrk_nasa_apis
-version: 0.13.0
+version: 0.13.1
 
 description: >-
   A library to integrate NASA Open APIs based on dio HTTP client
-repository: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart
+repository: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/tree/main/hrk_nasa_apis
 topics:
   - nasa
 
@@ -20,7 +20,7 @@ dependencies:
 
 # dependency_overrides:
 #   hrk_batteries:
-#     path: '../hrk_batteries'
+#     path: '../../hrk_batteries'
 
 dev_dependencies:
   test: ^1.21.0
