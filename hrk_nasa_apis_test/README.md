@@ -1,4 +1,4 @@
-[![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis_test.dart/actions/workflows/ci.yaml)
+[![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
 [![pub package](https://img.shields.io/pub/v/hrk_nasa_apis_test.svg)](https://pub.dev/packages/hrk_nasa_apis_test)
 
 A library containing test and mock data for [hrk_nasa_apis] package.
