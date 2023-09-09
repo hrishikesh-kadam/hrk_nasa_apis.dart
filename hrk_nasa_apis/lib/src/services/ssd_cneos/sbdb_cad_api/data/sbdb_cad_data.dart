@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:intl/intl.dart';
 
 part 'sbdb_cad_data.freezed.dart';
 part 'sbdb_cad_data.g.dart';
@@ -9,7 +10,7 @@ class SbdbCadData with _$SbdbCadData {
     required String des,
     required String orbitId,
     required String jd,
-    required String cd,
+    @CloseApproachDateTimeConverter() required DateTime cd,
     required String dist,
     required String distMin,
     required String distMax,
@@ -27,4 +28,18 @@ class SbdbCadData with _$SbdbCadData {
 
   factory SbdbCadData.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadDataFromJson(json);
+}
+
+final closeApproachDateFormat = DateFormat('yyyy-MMM-dd HH:mm');
+
+class CloseApproachDateTimeConverter
+    implements JsonConverter<DateTime, String> {
+  const CloseApproachDateTimeConverter();
+
+  @override
+  DateTime fromJson(String dateString) =>
+      closeApproachDateFormat.parse(dateString);
+
+  @override
+  String toJson(DateTime dateTime) => closeApproachDateFormat.format(dateTime);
 }

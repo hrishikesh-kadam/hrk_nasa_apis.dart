@@ -1,3 +1,7 @@
+# 0.14.0
+
+- Serialize `cd` in `SbdbCadData`
+
 # 0.13.1
 
 - Tweakes required for `hrk_nasa_apis_test` package

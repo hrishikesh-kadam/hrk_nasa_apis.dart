@@ -23,7 +23,8 @@ mixin _$SbdbCadData {
   String get des => throw _privateConstructorUsedError;
   String get orbitId => throw _privateConstructorUsedError;
   String get jd => throw _privateConstructorUsedError;
-  String get cd => throw _privateConstructorUsedError;
+  @CloseApproachDateTimeConverter()
+  DateTime get cd => throw _privateConstructorUsedError;
   String get dist => throw _privateConstructorUsedError;
   String get distMin => throw _privateConstructorUsedError;
   String get distMax => throw _privateConstructorUsedError;
@@ -54,7 +55,7 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       {String des,
       String orbitId,
       String jd,
-      String cd,
+      @CloseApproachDateTimeConverter() DateTime cd,
       String dist,
       String distMin,
       String distMax,
@@ -113,7 +114,7 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       cd: null == cd
           ? _value.cd
           : cd // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       dist: null == dist
           ? _value.dist
           : dist // ignore: cast_nullable_to_non_nullable
@@ -174,7 +175,7 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       {String des,
       String orbitId,
       String jd,
-      String cd,
+      @CloseApproachDateTimeConverter() DateTime cd,
       String dist,
       String distMin,
       String distMax,
@@ -231,7 +232,7 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
       cd: null == cd
           ? _value.cd
           : cd // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       dist: null == dist
           ? _value.dist
           : dist // ignore: cast_nullable_to_non_nullable
@@ -287,7 +288,7 @@ class _$_SbdbCadData implements _SbdbCadData {
       {required this.des,
       required this.orbitId,
       required this.jd,
-      required this.cd,
+      @CloseApproachDateTimeConverter() required this.cd,
       required this.dist,
       required this.distMin,
       required this.distMax,
@@ -310,7 +311,8 @@ class _$_SbdbCadData implements _SbdbCadData {
   @override
   final String jd;
   @override
-  final String cd;
+  @CloseApproachDateTimeConverter()
+  final DateTime cd;
   @override
   final String dist;
   @override
@@ -405,7 +407,7 @@ abstract class _SbdbCadData implements SbdbCadData {
       {required final String des,
       required final String orbitId,
       required final String jd,
-      required final String cd,
+      @CloseApproachDateTimeConverter() required final DateTime cd,
       required final String dist,
       required final String distMin,
       required final String distMax,
@@ -428,7 +430,8 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   String get jd;
   @override
-  String get cd;
+  @CloseApproachDateTimeConverter()
+  DateTime get cd;
   @override
   String get dist;
   @override

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hrk_batteries/hrk_batteries.dart';
 
 import 'data/data.dart';
@@ -25,6 +26,10 @@ class SbdbCadTransformer extends BackgroundTransformer {
     if (json['count'] <= 0) {
       return json;
     }
+    return transformSbdbCadDataList(json);
+  }
+
+  static JsonMap transformSbdbCadDataList(JsonMap json) {
     final transformedJson = JsonMap.from(json);
     transformedJson.remove('fields');
     transformedJson.remove('data');
@@ -42,5 +47,33 @@ class SbdbCadTransformer extends BackgroundTransformer {
       transformedDataList.add(dataMap);
     }
     return transformedJson;
+  }
+
+  @visibleForTesting
+  static List<JsonMap> constructSbdbCadDataListJson(
+    List<String> fieldsList,
+    List<List<dynamic>> dataList,
+  ) {
+    final JsonMap json = {};
+    json['fields'] = fieldsList;
+    json['data'] = dataList;
+    final JsonMap transformedJson = transformSbdbCadDataList(json);
+    return transformedJson['data'];
+  }
+
+  @visibleForTesting
+  static List<SbdbCadData> constructSbdbCadDataList(
+    List<String> fieldsList,
+    List<List<dynamic>> dataList,
+  ) {
+    List<JsonMap> dataListJson = constructSbdbCadDataListJson(
+      fieldsList,
+      dataList,
+    );
+    List<SbdbCadData> sbdbCadDataList = [];
+    for (final dataJson in dataListJson) {
+      sbdbCadDataList.add(SbdbCadData.fromJson(dataJson));
+    }
+    return sbdbCadDataList;
   }
 }

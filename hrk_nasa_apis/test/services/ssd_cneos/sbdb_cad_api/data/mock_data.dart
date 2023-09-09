@@ -35,3 +35,14 @@ final hk2023Data = [
   '< 00:01',
   '27.19'
 ];
+
+final JsonMap hk2023DataJson = SbdbCadTransformer.constructSbdbCadDataListJson(
+  fieldsList,
+  [hk2023Data],
+).first;
+
+final SbdbCadData hk2023SbdbCadData =
+    SbdbCadTransformer.constructSbdbCadDataList(
+  fieldsList,
+  [hk2023Data],
+).first;
