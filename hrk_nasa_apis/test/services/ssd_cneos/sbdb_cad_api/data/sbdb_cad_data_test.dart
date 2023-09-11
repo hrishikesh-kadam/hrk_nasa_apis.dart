@@ -9,7 +9,7 @@ void main() {
       test('cd', () {
         expect(
           hk2023SbdbCadData.cd,
-          closeApproachDateFormat.parse(hk2023DataJson['cd']),
+          calendarDateFormat.parse(hk2023DataJson['cd']),
         );
       });
     });

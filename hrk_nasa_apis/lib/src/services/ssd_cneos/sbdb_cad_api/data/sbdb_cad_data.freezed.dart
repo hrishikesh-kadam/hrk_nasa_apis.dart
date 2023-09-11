@@ -23,7 +23,7 @@ mixin _$SbdbCadData {
   String get des => throw _privateConstructorUsedError;
   String get orbitId => throw _privateConstructorUsedError;
   String get jd => throw _privateConstructorUsedError;
-  @CloseApproachDateTimeConverter()
+  @CalendarDateTimeConverter()
   DateTime get cd => throw _privateConstructorUsedError;
   String get dist => throw _privateConstructorUsedError;
   String get distMin => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       {String des,
       String orbitId,
       String jd,
-      @CloseApproachDateTimeConverter() DateTime cd,
+      @CalendarDateTimeConverter() DateTime cd,
       String dist,
       String distMin,
       String distMax,
@@ -175,7 +175,7 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       {String des,
       String orbitId,
       String jd,
-      @CloseApproachDateTimeConverter() DateTime cd,
+      @CalendarDateTimeConverter() DateTime cd,
       String dist,
       String distMin,
       String distMax,
@@ -288,7 +288,7 @@ class _$_SbdbCadData implements _SbdbCadData {
       {required this.des,
       required this.orbitId,
       required this.jd,
-      @CloseApproachDateTimeConverter() required this.cd,
+      @CalendarDateTimeConverter() required this.cd,
       required this.dist,
       required this.distMin,
       required this.distMax,
@@ -311,7 +311,7 @@ class _$_SbdbCadData implements _SbdbCadData {
   @override
   final String jd;
   @override
-  @CloseApproachDateTimeConverter()
+  @CalendarDateTimeConverter()
   final DateTime cd;
   @override
   final String dist;
@@ -407,7 +407,7 @@ abstract class _SbdbCadData implements SbdbCadData {
       {required final String des,
       required final String orbitId,
       required final String jd,
-      @CloseApproachDateTimeConverter() required final DateTime cd,
+      @CalendarDateTimeConverter() required final DateTime cd,
       required final String dist,
       required final String distMin,
       required final String distMax,
@@ -430,7 +430,7 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   String get jd;
   @override
-  @CloseApproachDateTimeConverter()
+  @CalendarDateTimeConverter()
   DateTime get cd;
   @override
   String get dist;

@@ -10,7 +10,7 @@ class SbdbCadData with _$SbdbCadData {
     required String des,
     required String orbitId,
     required String jd,
-    @CloseApproachDateTimeConverter() required DateTime cd,
+    @CalendarDateTimeConverter() required DateTime cd,
     required String dist,
     required String distMin,
     required String distMax,
@@ -30,16 +30,14 @@ class SbdbCadData with _$SbdbCadData {
       _$SbdbCadDataFromJson(json);
 }
 
-final closeApproachDateFormat = DateFormat('yyyy-MMM-dd HH:mm');
+final calendarDateFormat = DateFormat('yyyy-MMM-dd HH:mm');
 
-class CloseApproachDateTimeConverter
-    implements JsonConverter<DateTime, String> {
-  const CloseApproachDateTimeConverter();
-
-  @override
-  DateTime fromJson(String dateString) =>
-      closeApproachDateFormat.parse(dateString);
+class CalendarDateTimeConverter implements JsonConverter<DateTime, String> {
+  const CalendarDateTimeConverter();
 
   @override
-  String toJson(DateTime dateTime) => closeApproachDateFormat.format(dateTime);
+  DateTime fromJson(String dateString) => calendarDateFormat.parse(dateString);
+
+  @override
+  String toJson(DateTime dateTime) => calendarDateFormat.format(dateTime);
 }
