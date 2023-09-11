@@ -9,7 +9,11 @@ class SbdbCadData with _$SbdbCadData {
   const factory SbdbCadData({
     required String des,
     required String orbitId,
+
+    /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Julian%20Date
     required String jd,
+
+    /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Barycentric%20Dynamic%20Time%20TDB
     @CalendarDateTimeConverter() required DateTime cd,
     required String dist,
     required String distMin,
