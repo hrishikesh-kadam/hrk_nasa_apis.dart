@@ -1,3 +1,7 @@
+# 0.15.0
+
+- Serialize distances in `SbdbCadData`
+
 # 0.14.1
 
 - Fix name of Calendar DateTime formatter, converter

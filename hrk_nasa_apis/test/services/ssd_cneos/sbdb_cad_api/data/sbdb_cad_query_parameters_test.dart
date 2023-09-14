@@ -112,7 +112,7 @@ void main() {
 
     group('copyWith$DistanceRange()', () {
       const defaultUnit = SbdbCadQueryParameters.distUnitDefault;
-      final nonDefaultUnit = DistanceUnit.values.firstWhere(
+      final nonDefaultUnit = DistanceUnit.all.firstWhere(
         (unit) => unit != defaultUnit,
       );
 

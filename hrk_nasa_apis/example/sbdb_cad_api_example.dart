@@ -19,7 +19,7 @@ void main() async {
     SbdbCadQueryParameters queryParameters = SbdbCadQueryParameters(
       distMax: const Distance(
         value: 10,
-        unit: DistanceUnit.ld,
+        unit: DistanceUnit.LD,
       ).toCompactString(),
       pha: true,
       fullname: true,

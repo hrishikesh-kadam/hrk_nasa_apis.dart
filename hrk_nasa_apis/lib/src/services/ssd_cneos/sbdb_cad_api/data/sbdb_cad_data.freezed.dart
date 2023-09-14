@@ -22,12 +22,22 @@ SbdbCadData _$SbdbCadDataFromJson(Map<String, dynamic> json) {
 mixin _$SbdbCadData {
   String get des => throw _privateConstructorUsedError;
   String get orbitId => throw _privateConstructorUsedError;
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Julian%20Date
   String get jd => throw _privateConstructorUsedError;
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Barycentric%20Dynamic%20Time%20TDB
   @CalendarDateTimeConverter()
   DateTime get cd => throw _privateConstructorUsedError;
-  String get dist => throw _privateConstructorUsedError;
-  String get distMin => throw _privateConstructorUsedError;
-  String get distMax => throw _privateConstructorUsedError;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get dist =>
+      throw _privateConstructorUsedError;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get distMin =>
+      throw _privateConstructorUsedError;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get distMax =>
+      throw _privateConstructorUsedError;
   String get vRel => throw _privateConstructorUsedError;
 
   /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
@@ -56,9 +66,9 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       String orbitId,
       String jd,
       @CalendarDateTimeConverter() DateTime cd,
-      String dist,
-      String distMin,
-      String distMax,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> dist,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> distMin,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> distMax,
       String vRel,
       String? vInf,
       String tSigmaF,
@@ -67,6 +77,10 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       String? diameter,
       String? diameterSigma,
       String? fullname});
+
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist;
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin;
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax;
 }
 
 /// @nodoc
@@ -118,15 +132,15 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       dist: null == dist
           ? _value.dist
           : dist // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       distMin: null == distMin
           ? _value.distMin
           : distMin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       distMax: null == distMax
           ? _value.distMax
           : distMax // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       vRel: null == vRel
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
@@ -161,6 +175,32 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
               as String?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist {
+    return $ValueUnitCopyWith<double, DistanceUnit, $Res>(_value.dist, (value) {
+      return _then(_value.copyWith(dist: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin {
+    return $ValueUnitCopyWith<double, DistanceUnit, $Res>(_value.distMin,
+        (value) {
+      return _then(_value.copyWith(distMin: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax {
+    return $ValueUnitCopyWith<double, DistanceUnit, $Res>(_value.distMax,
+        (value) {
+      return _then(_value.copyWith(distMax: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -176,9 +216,9 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       String orbitId,
       String jd,
       @CalendarDateTimeConverter() DateTime cd,
-      String dist,
-      String distMin,
-      String distMax,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> dist,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> distMin,
+      @DistanceConverter() ValueUnit<double, DistanceUnit> distMax,
       String vRel,
       String? vInf,
       String tSigmaF,
@@ -187,6 +227,13 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       String? diameter,
       String? diameterSigma,
       String? fullname});
+
+  @override
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist;
+  @override
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin;
+  @override
+  $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax;
 }
 
 /// @nodoc
@@ -236,15 +283,15 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
       dist: null == dist
           ? _value.dist
           : dist // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       distMin: null == distMin
           ? _value.distMin
           : distMin // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       distMax: null == distMax
           ? _value.distMax
           : distMax // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, DistanceUnit>,
       vRel: null == vRel
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
@@ -289,9 +336,9 @@ class _$_SbdbCadData implements _SbdbCadData {
       required this.orbitId,
       required this.jd,
       @CalendarDateTimeConverter() required this.cd,
-      required this.dist,
-      required this.distMin,
-      required this.distMax,
+      @DistanceConverter() required this.dist,
+      @DistanceConverter() required this.distMin,
+      @DistanceConverter() required this.distMax,
       required this.vRel,
       this.vInf,
       required this.tSigmaF,
@@ -308,17 +355,24 @@ class _$_SbdbCadData implements _SbdbCadData {
   final String des;
   @override
   final String orbitId;
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Julian%20Date
   @override
   final String jd;
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Barycentric%20Dynamic%20Time%20TDB
   @override
   @CalendarDateTimeConverter()
   final DateTime cd;
   @override
-  final String dist;
+  @DistanceConverter()
+  final ValueUnit<double, DistanceUnit> dist;
   @override
-  final String distMin;
+  @DistanceConverter()
+  final ValueUnit<double, DistanceUnit> distMin;
   @override
-  final String distMax;
+  @DistanceConverter()
+  final ValueUnit<double, DistanceUnit> distMax;
   @override
   final String vRel;
 
@@ -408,9 +462,11 @@ abstract class _SbdbCadData implements SbdbCadData {
       required final String orbitId,
       required final String jd,
       @CalendarDateTimeConverter() required final DateTime cd,
-      required final String dist,
-      required final String distMin,
-      required final String distMax,
+      @DistanceConverter() required final ValueUnit<double, DistanceUnit> dist,
+      @DistanceConverter()
+      required final ValueUnit<double, DistanceUnit> distMin,
+      @DistanceConverter()
+      required final ValueUnit<double, DistanceUnit> distMax,
       required final String vRel,
       final String? vInf,
       required final String tSigmaF,
@@ -428,16 +484,23 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   String get orbitId;
   @override
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Julian%20Date
   String get jd;
   @override
+
+  /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Barycentric%20Dynamic%20Time%20TDB
   @CalendarDateTimeConverter()
   DateTime get cd;
   @override
-  String get dist;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get dist;
   @override
-  String get distMin;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get distMin;
   @override
-  String get distMax;
+  @DistanceConverter()
+  ValueUnit<double, DistanceUnit> get distMax;
   @override
   String get vRel;
   @override
