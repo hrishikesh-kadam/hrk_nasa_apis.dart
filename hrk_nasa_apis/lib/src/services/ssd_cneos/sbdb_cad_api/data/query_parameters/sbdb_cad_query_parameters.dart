@@ -61,6 +61,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     value: 0.05,
     unit: distUnitDefault,
   );
+  static const VelocityUnit velocityUnitDefault = VelocityUnit.kmps;
   static const SmallBodyFilter smallBodyFilterDefault = SmallBodyFilter.neo;
   static const CloseApproachBody closeApproachBodyDefault =
       CloseApproachBody.earth;
@@ -114,19 +115,11 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     SmallBodyFilter smallBodyFilter, {
     bool? value = true,
   }) {
-    // TODO(hrishikesh-kadam): unused_result lint is false positive
-    // Issue: https://github.com/dart-lang/sdk/issues/52314
-    // Remove the lint after the following fix is in stable
-    // https://github.com/dart-lang/sdk/commit/b0b393773fa7d7965c6c9ea3a501e93dc60812f9
     return switch (smallBodyFilter) {
       smallBodyFilterDefault => this,
-      // ignore: unused_result
       SmallBodyFilter.pha => copyWith(pha: value),
-      // ignore: unused_result
       SmallBodyFilter.nea => copyWith(nea: value),
-      // ignore: unused_result
       SmallBodyFilter.comet => copyWith(comet: value),
-      // ignore: unused_result
       SmallBodyFilter.neaComet => copyWith(neaComet: value),
     };
   }
@@ -137,9 +130,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     String? desgination,
   }) {
     return switch (smallBodySelector) {
-      // ignore: unused_result
       SmallBodySelector.spkId => copyWith(spk: spkId),
-      // ignore: unused_result
       SmallBodySelector.designation => copyWith(des: desgination),
     };
   }
@@ -150,11 +141,8 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     SbdbCadQueryParameters queryparameters = this;
     for (final dataOutput in dataOutputSet) {
       queryparameters = switch (dataOutput) {
-        // ignore: unused_result
         DataOutput.totalOnly => queryparameters.copyWith(totalOnly: true),
-        // ignore: unused_result
         DataOutput.diameter => queryparameters.copyWith(diameter: true),
-        // ignore: unused_result
         DataOutput.fullname => queryparameters.copyWith(fullname: true),
       };
     }

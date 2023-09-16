@@ -19,8 +19,9 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
       dist: const DistanceConverter().fromJson(json['dist'] as String),
       distMin: const DistanceConverter().fromJson(json['dist_min'] as String),
       distMax: const DistanceConverter().fromJson(json['dist_max'] as String),
-      vRel: json['v_rel'] as String,
-      vInf: json['v_inf'] as String?,
+      vRel: const VelocityConverter().fromJson(json['v_rel'] as String),
+      vInf: _$JsonConverterFromJson<String, ValueUnit<double, VelocityUnit>>(
+          json['v_inf'], const VelocityConverter().fromJson),
       tSigmaF: json['t_sigma_f'] as String,
       body: json['body'] as String?,
       h: json['h'] as String?,
@@ -38,7 +39,7 @@ Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
     'dist': const DistanceConverter().toJson(instance.dist),
     'dist_min': const DistanceConverter().toJson(instance.distMin),
     'dist_max': const DistanceConverter().toJson(instance.distMax),
-    'v_rel': instance.vRel,
+    'v_rel': const VelocityConverter().toJson(instance.vRel),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -47,7 +48,10 @@ Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
     }
   }
 
-  writeNotNull('v_inf', instance.vInf);
+  writeNotNull(
+      'v_inf',
+      _$JsonConverterToJson<String, ValueUnit<double, VelocityUnit>>(
+          instance.vInf, const VelocityConverter().toJson));
   val['t_sigma_f'] = instance.tSigmaF;
   writeNotNull('body', instance.body);
   writeNotNull('h', instance.h);
@@ -56,3 +60,15 @@ Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
   writeNotNull('fullname', instance.fullname);
   return val;
 }
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

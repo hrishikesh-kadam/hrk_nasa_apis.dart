@@ -21,10 +21,10 @@ class SbdbCadData with _$SbdbCadData {
     @DistanceConverter() required Distance dist,
     @DistanceConverter() required Distance distMin,
     @DistanceConverter() required Distance distMax,
-    required String vRel,
+    @VelocityConverter() required Velocity vRel,
 
     /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
-    String? vInf,
+    @VelocityConverter() Velocity? vInf,
     required String tSigmaF,
     String? body,
     String? h,
@@ -62,4 +62,19 @@ class DistanceConverter implements JsonConverter<Distance, String> {
 
   @override
   String toJson(Distance distanceObject) => distanceObject.value.toString();
+}
+
+class VelocityConverter implements JsonConverter<Velocity, String> {
+  const VelocityConverter();
+
+  @override
+  Velocity fromJson(String velocityString) {
+    return Velocity(
+      value: double.parse(velocityString),
+      unit: SbdbCadQueryParameters.velocityUnitDefault,
+    );
+  }
+
+  @override
+  String toJson(Velocity velocityObject) => velocityObject.value.toString();
 }

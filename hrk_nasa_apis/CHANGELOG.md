@@ -2,6 +2,7 @@
 
 - Integrate hrk_batteries-0.8.0
 - Change arguments of `SbdbCadQueryParameters.copyWithDistRange()`
+- Serialize velocities in `SbdbCadData`
 
 # 0.15.0
 

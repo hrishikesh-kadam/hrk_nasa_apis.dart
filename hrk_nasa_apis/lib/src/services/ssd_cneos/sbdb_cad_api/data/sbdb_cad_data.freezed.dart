@@ -38,10 +38,14 @@ mixin _$SbdbCadData {
   @DistanceConverter()
   ValueUnit<double, DistanceUnit> get distMax =>
       throw _privateConstructorUsedError;
-  String get vRel => throw _privateConstructorUsedError;
+  @VelocityConverter()
+  ValueUnit<double, VelocityUnit> get vRel =>
+      throw _privateConstructorUsedError;
 
   /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
-  String? get vInf => throw _privateConstructorUsedError;
+  @VelocityConverter()
+  ValueUnit<double, VelocityUnit>? get vInf =>
+      throw _privateConstructorUsedError;
   String get tSigmaF => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
   String? get h => throw _privateConstructorUsedError;
@@ -69,8 +73,8 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       @DistanceConverter() ValueUnit<double, DistanceUnit> dist,
       @DistanceConverter() ValueUnit<double, DistanceUnit> distMin,
       @DistanceConverter() ValueUnit<double, DistanceUnit> distMax,
-      String vRel,
-      String? vInf,
+      @VelocityConverter() ValueUnit<double, VelocityUnit> vRel,
+      @VelocityConverter() ValueUnit<double, VelocityUnit>? vInf,
       String tSigmaF,
       String? body,
       String? h,
@@ -81,6 +85,8 @@ abstract class $SbdbCadDataCopyWith<$Res> {
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist;
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin;
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax;
+  $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel;
+  $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf;
 }
 
 /// @nodoc
@@ -144,11 +150,11 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       vRel: null == vRel
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, VelocityUnit>,
       vInf: freezed == vInf
           ? _value.vInf
           : vInf // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, VelocityUnit>?,
       tSigmaF: null == tSigmaF
           ? _value.tSigmaF
           : tSigmaF // ignore: cast_nullable_to_non_nullable
@@ -201,6 +207,27 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       return _then(_value.copyWith(distMax: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel {
+    return $ValueUnitCopyWith<double, VelocityUnit, $Res>(_value.vRel, (value) {
+      return _then(_value.copyWith(vRel: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf {
+    if (_value.vInf == null) {
+      return null;
+    }
+
+    return $ValueUnitCopyWith<double, VelocityUnit, $Res>(_value.vInf!,
+        (value) {
+      return _then(_value.copyWith(vInf: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -219,8 +246,8 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       @DistanceConverter() ValueUnit<double, DistanceUnit> dist,
       @DistanceConverter() ValueUnit<double, DistanceUnit> distMin,
       @DistanceConverter() ValueUnit<double, DistanceUnit> distMax,
-      String vRel,
-      String? vInf,
+      @VelocityConverter() ValueUnit<double, VelocityUnit> vRel,
+      @VelocityConverter() ValueUnit<double, VelocityUnit>? vInf,
       String tSigmaF,
       String? body,
       String? h,
@@ -234,6 +261,10 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin;
   @override
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax;
+  @override
+  $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel;
+  @override
+  $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf;
 }
 
 /// @nodoc
@@ -295,11 +326,11 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
       vRel: null == vRel
           ? _value.vRel
           : vRel // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ValueUnit<double, VelocityUnit>,
       vInf: freezed == vInf
           ? _value.vInf
           : vInf // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, VelocityUnit>?,
       tSigmaF: null == tSigmaF
           ? _value.tSigmaF
           : tSigmaF // ignore: cast_nullable_to_non_nullable
@@ -339,8 +370,8 @@ class _$_SbdbCadData implements _SbdbCadData {
       @DistanceConverter() required this.dist,
       @DistanceConverter() required this.distMin,
       @DistanceConverter() required this.distMax,
-      required this.vRel,
-      this.vInf,
+      @VelocityConverter() required this.vRel,
+      @VelocityConverter() this.vInf,
       required this.tSigmaF,
       this.body,
       this.h,
@@ -374,11 +405,13 @@ class _$_SbdbCadData implements _SbdbCadData {
   @DistanceConverter()
   final ValueUnit<double, DistanceUnit> distMax;
   @override
-  final String vRel;
+  @VelocityConverter()
+  final ValueUnit<double, VelocityUnit> vRel;
 
   /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
   @override
-  final String? vInf;
+  @VelocityConverter()
+  final ValueUnit<double, VelocityUnit>? vInf;
   @override
   final String tSigmaF;
   @override
@@ -467,8 +500,8 @@ abstract class _SbdbCadData implements SbdbCadData {
       required final ValueUnit<double, DistanceUnit> distMin,
       @DistanceConverter()
       required final ValueUnit<double, DistanceUnit> distMax,
-      required final String vRel,
-      final String? vInf,
+      @VelocityConverter() required final ValueUnit<double, VelocityUnit> vRel,
+      @VelocityConverter() final ValueUnit<double, VelocityUnit>? vInf,
       required final String tSigmaF,
       final String? body,
       final String? h,
@@ -502,11 +535,13 @@ abstract class _SbdbCadData implements SbdbCadData {
   @DistanceConverter()
   ValueUnit<double, DistanceUnit> get distMax;
   @override
-  String get vRel;
+  @VelocityConverter()
+  ValueUnit<double, VelocityUnit> get vRel;
   @override
 
   /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
-  String? get vInf;
+  @VelocityConverter()
+  ValueUnit<double, VelocityUnit>? get vInf;
   @override
   String get tSigmaF;
   @override

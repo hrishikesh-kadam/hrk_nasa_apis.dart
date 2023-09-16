@@ -125,7 +125,10 @@ void main() {
       test('defaultUnit', () {
         const distMin = Distance(value: 1, unit: defaultUnit);
         const distMax = Distance(value: 2, unit: defaultUnit);
-        queryParameters = queryParameters.copyWithDistanceRange(distMin, distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(
+          distMin,
+          distMax,
+        );
         expect(queryParameters.distMin, distMin.value.toString());
         expect(queryParameters.distMax, distMax.value.toString());
       });
@@ -133,7 +136,10 @@ void main() {
       test('nonDefaultUnit', () {
         final distMin = Distance(value: 1, unit: nonDefaultUnit);
         final distMax = Distance(value: 2, unit: nonDefaultUnit);
-        queryParameters = queryParameters.copyWithDistanceRange(distMin, distMax);
+        queryParameters = queryParameters.copyWithDistanceRange(
+          distMin,
+          distMax,
+        );
         expect(queryParameters.distMin, distMin.toCompactString());
         expect(queryParameters.distMax, distMax.toCompactString());
       });
