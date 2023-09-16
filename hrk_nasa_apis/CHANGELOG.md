@@ -1,3 +1,8 @@
+# 0.16.0
+
+- Integrate hrk_batteries-0.8.0
+- Change arguments of `SbdbCadQueryParameters.copyWithDistRange()`
+
 # 0.15.0
 
 - Serialize distances in `SbdbCadData`

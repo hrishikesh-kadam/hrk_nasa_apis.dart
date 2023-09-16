@@ -61,5 +61,5 @@ class DistanceConverter implements JsonConverter<Distance, String> {
   }
 
   @override
-  String toJson(Distance distanceObject) => distanceObject.value!.toString();
+  String toJson(Distance distanceObject) => distanceObject.value.toString();
 }

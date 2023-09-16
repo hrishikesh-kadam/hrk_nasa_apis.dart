@@ -83,30 +83,26 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     return queryparameters;
   }
 
-  SbdbCadQueryParameters copyWithDistRange(
-    DistanceRange distRange,
-  ) {
+  SbdbCadQueryParameters copyWithDistanceRange(Distance? min, Distance? max) {
     SbdbCadQueryParameters queryparameters = this;
-    if (distRange.start?.value != null) {
-      Distance distMin = distRange.start!;
+    if (min != null) {
       String unit = '';
-      if (distMin.unit != null && distMin.unit != distUnitDefault) {
-        unit = distMin.unit!.symbol;
+      if (min.unit != distUnitDefault) {
+        unit = min.unit.symbol;
       }
       queryparameters = queryparameters.copyWith(
-        distMin: '${distMin.value}$unit',
+        distMin: '${min.value}$unit',
       );
     } else {
       queryparameters = queryparameters.copyWith(distMin: null);
     }
-    if (distRange.end?.value != null && distRange.end != distMaxDefault) {
-      Distance distMax = distRange.end!;
+    if (max != null && max != distMaxDefault) {
       String unit = '';
-      if (distMax.unit != null && distMax.unit != distUnitDefault) {
-        unit = distMax.unit!.symbol;
+      if (max.unit != distUnitDefault) {
+        unit = max.unit.symbol;
       }
       queryparameters = queryparameters.copyWith(
-        distMax: '${distMax.value}$unit',
+        distMax: '${max.value}$unit',
       );
     } else {
       queryparameters = queryparameters.copyWith(distMax: null);
