@@ -20,6 +20,10 @@ void main() {
       test('Basic', () {
         testConverter(hk2023SbdbCadData, hk2023DataJson);
       });
+
+      test('All Fields', () {
+        testConverter(wnFive2001SbdbCadData, wnFive2001DataJson);
+      });
     });
   });
 }

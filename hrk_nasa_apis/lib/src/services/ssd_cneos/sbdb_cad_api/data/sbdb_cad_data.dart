@@ -28,25 +28,27 @@ class SbdbCadData with _$SbdbCadData {
     required String tSigmaF,
     String? body,
     String? h,
-    String? diameter,
-    String? diameterSigma,
+    @DiameterConverter() Distance? diameter,
+    @DiameterConverter() Distance? diameterSigma,
     String? fullname,
   }) = _SbdbCadData;
+
+  static final calendarDateFormat = DateFormat('yyyy-MMM-dd HH:mm');
 
   factory SbdbCadData.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadDataFromJson(json);
 }
 
-final calendarDateFormat = DateFormat('yyyy-MMM-dd HH:mm');
-
 class CalendarDateTimeConverter implements JsonConverter<DateTime, String> {
   const CalendarDateTimeConverter();
 
   @override
-  DateTime fromJson(String dateString) => calendarDateFormat.parse(dateString);
+  DateTime fromJson(String dateString) =>
+      SbdbCadData.calendarDateFormat.parse(dateString);
 
   @override
-  String toJson(DateTime dateTime) => calendarDateFormat.format(dateTime);
+  String toJson(DateTime dateTime) =>
+      SbdbCadData.calendarDateFormat.format(dateTime);
 }
 
 class DistanceConverter implements JsonConverter<Distance, String> {
@@ -77,4 +79,19 @@ class VelocityConverter implements JsonConverter<Velocity, String> {
 
   @override
   String toJson(Velocity velocityObject) => velocityObject.value.toString();
+}
+
+class DiameterConverter implements JsonConverter<Distance, String> {
+  const DiameterConverter();
+
+  @override
+  Distance fromJson(String diameterString) {
+    return Distance(
+      value: double.parse(diameterString),
+      unit: SbdbCadQueryParameters.diameterUnitDefault,
+    );
+  }
+
+  @override
+  String toJson(Distance diameterObject) => diameterObject.value.toString();
 }

@@ -1,3 +1,8 @@
+# 0.17.0
+
+- Serialize diameters in `SbdbCadData`
+- Add `SbdbCadQueryParameters.diameterUnitDefault`
+
 # 0.16.0
 
 - Integrate hrk_batteries-0.8.0

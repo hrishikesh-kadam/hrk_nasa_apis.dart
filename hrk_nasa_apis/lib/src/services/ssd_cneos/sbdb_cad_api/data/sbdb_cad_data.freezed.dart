@@ -49,8 +49,12 @@ mixin _$SbdbCadData {
   String get tSigmaF => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
   String? get h => throw _privateConstructorUsedError;
-  String? get diameter => throw _privateConstructorUsedError;
-  String? get diameterSigma => throw _privateConstructorUsedError;
+  @DiameterConverter()
+  ValueUnit<double, DistanceUnit>? get diameter =>
+      throw _privateConstructorUsedError;
+  @DiameterConverter()
+  ValueUnit<double, DistanceUnit>? get diameterSigma =>
+      throw _privateConstructorUsedError;
   String? get fullname => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -78,8 +82,8 @@ abstract class $SbdbCadDataCopyWith<$Res> {
       String tSigmaF,
       String? body,
       String? h,
-      String? diameter,
-      String? diameterSigma,
+      @DiameterConverter() ValueUnit<double, DistanceUnit>? diameter,
+      @DiameterConverter() ValueUnit<double, DistanceUnit>? diameterSigma,
       String? fullname});
 
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist;
@@ -87,6 +91,8 @@ abstract class $SbdbCadDataCopyWith<$Res> {
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax;
   $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel;
   $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf;
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameter;
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameterSigma;
 }
 
 /// @nodoc
@@ -170,11 +176,11 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, DistanceUnit>?,
       diameterSigma: freezed == diameterSigma
           ? _value.diameterSigma
           : diameterSigma // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, DistanceUnit>?,
       fullname: freezed == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
@@ -228,6 +234,32 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
       return _then(_value.copyWith(vInf: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameter {
+    if (_value.diameter == null) {
+      return null;
+    }
+
+    return $ValueUnitCopyWith<double, DistanceUnit, $Res>(_value.diameter!,
+        (value) {
+      return _then(_value.copyWith(diameter: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameterSigma {
+    if (_value.diameterSigma == null) {
+      return null;
+    }
+
+    return $ValueUnitCopyWith<double, DistanceUnit, $Res>(_value.diameterSigma!,
+        (value) {
+      return _then(_value.copyWith(diameterSigma: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -251,8 +283,8 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
       String tSigmaF,
       String? body,
       String? h,
-      String? diameter,
-      String? diameterSigma,
+      @DiameterConverter() ValueUnit<double, DistanceUnit>? diameter,
+      @DiameterConverter() ValueUnit<double, DistanceUnit>? diameterSigma,
       String? fullname});
 
   @override
@@ -265,6 +297,10 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
   $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel;
   @override
   $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf;
+  @override
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameter;
+  @override
+  $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameterSigma;
 }
 
 /// @nodoc
@@ -346,11 +382,11 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, DistanceUnit>?,
       diameterSigma: freezed == diameterSigma
           ? _value.diameterSigma
           : diameterSigma // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ValueUnit<double, DistanceUnit>?,
       fullname: freezed == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
@@ -375,8 +411,8 @@ class _$_SbdbCadData implements _SbdbCadData {
       required this.tSigmaF,
       this.body,
       this.h,
-      this.diameter,
-      this.diameterSigma,
+      @DiameterConverter() this.diameter,
+      @DiameterConverter() this.diameterSigma,
       this.fullname});
 
   factory _$_SbdbCadData.fromJson(Map<String, dynamic> json) =>
@@ -419,9 +455,11 @@ class _$_SbdbCadData implements _SbdbCadData {
   @override
   final String? h;
   @override
-  final String? diameter;
+  @DiameterConverter()
+  final ValueUnit<double, DistanceUnit>? diameter;
   @override
-  final String? diameterSigma;
+  @DiameterConverter()
+  final ValueUnit<double, DistanceUnit>? diameterSigma;
   @override
   final String? fullname;
 
@@ -505,8 +543,8 @@ abstract class _SbdbCadData implements SbdbCadData {
       required final String tSigmaF,
       final String? body,
       final String? h,
-      final String? diameter,
-      final String? diameterSigma,
+      @DiameterConverter() final ValueUnit<double, DistanceUnit>? diameter,
+      @DiameterConverter() final ValueUnit<double, DistanceUnit>? diameterSigma,
       final String? fullname}) = _$_SbdbCadData;
 
   factory _SbdbCadData.fromJson(Map<String, dynamic> json) =
@@ -549,9 +587,11 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   String? get h;
   @override
-  String? get diameter;
+  @DiameterConverter()
+  ValueUnit<double, DistanceUnit>? get diameter;
   @override
-  String? get diameterSigma;
+  @DiameterConverter()
+  ValueUnit<double, DistanceUnit>? get diameterSigma;
   @override
   String? get fullname;
   @override

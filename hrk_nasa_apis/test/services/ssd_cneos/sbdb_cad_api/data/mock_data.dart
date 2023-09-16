@@ -46,3 +46,53 @@ final SbdbCadData hk2023SbdbCadData =
   fieldsList,
   [hk2023Data],
 ).first;
+
+final allFieldsList = [
+  'des',
+  'orbit_id',
+  'jd',
+  'cd',
+  'dist',
+  'dist_min',
+  'dist_max',
+  'v_rel',
+  'v_inf',
+  't_sigma_f',
+  'body',
+  'h',
+  'diameter',
+  'diameter_sigma',
+  'fullname',
+];
+
+/// https://ssd-api.jpl.nasa.gov/cad.api?spk=20153814&date-min=2019-08-26&date-max=2019-08-28&dist-max=1&fullname=true&diameter=true
+/// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-0008445c-23e3-4ea0-b017-44c604f3a305
+final wnFive2001Data = [
+  '153814',
+  '187',
+  '2458722.802000192',
+  '2019-Aug-27 07:15',
+  '0.0975689265829486',
+  '0.0975689109067546',
+  '0.0975689422591427',
+  '8.34961023858581',
+  '8.34633894357542',
+  '< 00:01',
+  'Earth',
+  '18.29',
+  '0.932',
+  '0.011',
+  '153814 (2001 WN5)',
+];
+
+final JsonMap wnFive2001DataJson =
+    SbdbCadTransformer.constructSbdbCadDataListJson(
+  allFieldsList,
+  [wnFive2001Data],
+).first;
+
+final SbdbCadData wnFive2001SbdbCadData =
+    SbdbCadTransformer.constructSbdbCadDataList(
+  allFieldsList,
+  [wnFive2001Data],
+).first;

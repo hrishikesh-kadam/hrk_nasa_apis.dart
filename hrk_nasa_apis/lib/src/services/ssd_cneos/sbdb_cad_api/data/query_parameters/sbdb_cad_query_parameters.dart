@@ -62,6 +62,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
     unit: distUnitDefault,
   );
   static const VelocityUnit velocityUnitDefault = VelocityUnit.kmps;
+  static const DistanceUnit diameterUnitDefault = DistanceUnit.km;
   static const SmallBodyFilter smallBodyFilterDefault = SmallBodyFilter.neo;
   static const CloseApproachBody closeApproachBodyDefault =
       CloseApproachBody.earth;

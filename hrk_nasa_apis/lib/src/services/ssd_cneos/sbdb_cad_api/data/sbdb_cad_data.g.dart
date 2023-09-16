@@ -25,8 +25,12 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
       tSigmaF: json['t_sigma_f'] as String,
       body: json['body'] as String?,
       h: json['h'] as String?,
-      diameter: json['diameter'] as String?,
-      diameterSigma: json['diameter_sigma'] as String?,
+      diameter:
+          _$JsonConverterFromJson<String, ValueUnit<double, DistanceUnit>>(
+              json['diameter'], const DiameterConverter().fromJson),
+      diameterSigma:
+          _$JsonConverterFromJson<String, ValueUnit<double, DistanceUnit>>(
+              json['diameter_sigma'], const DiameterConverter().fromJson),
       fullname: json['fullname'] as String?,
     );
 
@@ -55,8 +59,14 @@ Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
   val['t_sigma_f'] = instance.tSigmaF;
   writeNotNull('body', instance.body);
   writeNotNull('h', instance.h);
-  writeNotNull('diameter', instance.diameter);
-  writeNotNull('diameter_sigma', instance.diameterSigma);
+  writeNotNull(
+      'diameter',
+      _$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
+          instance.diameter, const DiameterConverter().toJson));
+  writeNotNull(
+      'diameter_sigma',
+      _$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
+          instance.diameterSigma, const DiameterConverter().toJson));
   writeNotNull('fullname', instance.fullname);
   return val;
 }
