@@ -1,5 +1,5 @@
 name: hrk_nasa_apis_test
-version: 0.2.0
+version: 0.3.0
 
 description: >-
   A library containing test and mock data for hrk_nasa_apis package
@@ -12,7 +12,7 @@ environment:
 
 dependencies:
   dio: ^5.2.1+1
-  hrk_nasa_apis: '>=0.13.0 <1.0.0'
+  hrk_nasa_apis: '>=0.18.0 <1.0.0'
   mockito: ^5.4.2
 
 dependency_overrides:

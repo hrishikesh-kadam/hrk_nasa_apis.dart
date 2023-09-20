@@ -35,13 +35,22 @@ class _FakeResponse_0<T> extends _i1.SmartFake implements _i2.Response<T> {
 /// See the documentation for Mockito's code generation for more information.
 class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
   @override
-  _i4.Future<_i2.Response<_i3.SbdbCadBody>> get(
-          {Map<String, dynamic>? queryParameters}) =>
+  _i4.Future<_i2.Response<_i3.SbdbCadBody>> get({
+    Map<String, dynamic>? queryParameters,
+    _i2.Options? options,
+    _i2.CancelToken? cancelToken,
+    _i2.ProgressCallback? onReceiveProgress,
+  }) =>
       (super.noSuchMethod(
         Invocation.method(
           #get,
           [],
-          {#queryParameters: queryParameters},
+          {
+            #queryParameters: queryParameters,
+            #options: options,
+            #cancelToken: cancelToken,
+            #onReceiveProgress: onReceiveProgress,
+          },
         ),
         returnValue: _i4.Future<_i2.Response<_i3.SbdbCadBody>>.value(
             _FakeResponse_0<_i3.SbdbCadBody>(
@@ -49,7 +58,12 @@ class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
           Invocation.method(
             #get,
             [],
-            {#queryParameters: queryParameters},
+            {
+              #queryParameters: queryParameters,
+              #options: options,
+              #cancelToken: cancelToken,
+              #onReceiveProgress: onReceiveProgress,
+            },
           ),
         )),
         returnValueForMissingStub:
@@ -59,18 +73,20 @@ class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
           Invocation.method(
             #get,
             [],
-            {#queryParameters: queryParameters},
+            {
+              #queryParameters: queryParameters,
+              #options: options,
+              #cancelToken: cancelToken,
+              #onReceiveProgress: onReceiveProgress,
+            },
           ),
         )),
       ) as _i4.Future<_i2.Response<_i3.SbdbCadBody>>);
   @override
-  _i4.Future<_i2.Response<_i3.SbdbCadBody>> four04(
-          {Map<String, dynamic>? queryParameters}) =>
-      (super.noSuchMethod(
+  _i4.Future<_i2.Response<_i3.SbdbCadBody>> four04() => (super.noSuchMethod(
         Invocation.method(
           #four04,
           [],
-          {#queryParameters: queryParameters},
         ),
         returnValue: _i4.Future<_i2.Response<_i3.SbdbCadBody>>.value(
             _FakeResponse_0<_i3.SbdbCadBody>(
@@ -78,7 +94,6 @@ class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
           Invocation.method(
             #four04,
             [],
-            {#queryParameters: queryParameters},
           ),
         )),
         returnValueForMissingStub:
@@ -88,7 +103,6 @@ class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
           Invocation.method(
             #four04,
             [],
-            {#queryParameters: queryParameters},
           ),
         )),
       ) as _i4.Future<_i2.Response<_i3.SbdbCadBody>>);

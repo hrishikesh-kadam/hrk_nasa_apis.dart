@@ -31,20 +31,21 @@ class SbdbCadApi {
 
   Future<Response<SbdbCadBody>> get({
     Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
+    ProgressCallback? onReceiveProgress,
   }) async {
     return await _dio.get(
       '/${url.path}',
       queryParameters: queryParameters,
+      options: options,
+      cancelToken: cancelToken,
+      onReceiveProgress: onReceiveProgress,
     );
   }
 
   @visibleForTesting
-  Future<Response<SbdbCadBody>> four04({
-    Map<String, dynamic>? queryParameters,
-  }) async {
-    return await _dio.get(
-      '/cad.ap',
-      queryParameters: queryParameters,
-    );
+  Future<Response<SbdbCadBody>> four04() async {
+    return await _dio.get('/cad.ap');
   }
 }

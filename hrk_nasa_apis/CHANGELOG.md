@@ -1,3 +1,10 @@
+# 0.18.0
+
+- Open up more parameters from `SbdbCadApi.get()`
+  - `Options`
+  - `CancelToken`
+  - `ProgressCallback`
+
 # 0.17.0
 
 - Serialize diameters in `SbdbCadData`
