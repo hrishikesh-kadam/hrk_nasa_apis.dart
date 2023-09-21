@@ -1,3 +1,9 @@
+# 0.3.1
+
+- Fix `getMockedSbdbCadApi()`
+- Add test code
+- Track coverage
+
 # 0.3.0
 
 - Changes for hrk_nasa_apis-0.18.0

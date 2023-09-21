@@ -82,28 +82,4 @@ class MockSbdbCadApi extends _i1.Mock implements _i3.SbdbCadApi {
           ),
         )),
       ) as _i4.Future<_i2.Response<_i3.SbdbCadBody>>);
-  @override
-  _i4.Future<_i2.Response<_i3.SbdbCadBody>> four04() => (super.noSuchMethod(
-        Invocation.method(
-          #four04,
-          [],
-        ),
-        returnValue: _i4.Future<_i2.Response<_i3.SbdbCadBody>>.value(
-            _FakeResponse_0<_i3.SbdbCadBody>(
-          this,
-          Invocation.method(
-            #four04,
-            [],
-          ),
-        )),
-        returnValueForMissingStub:
-            _i4.Future<_i2.Response<_i3.SbdbCadBody>>.value(
-                _FakeResponse_0<_i3.SbdbCadBody>(
-          this,
-          Invocation.method(
-            #four04,
-            [],
-          ),
-        )),
-      ) as _i4.Future<_i2.Response<_i3.SbdbCadBody>>);
 }

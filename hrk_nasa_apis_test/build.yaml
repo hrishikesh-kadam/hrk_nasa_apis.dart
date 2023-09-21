@@ -1,6 +1,11 @@
 targets:
   $default:
     builders:
+      # Doesn't work for mockito files
+      # Workaround: use --remove flag on lcov directly
+      # source_gen|combining_builder:
+      #   options:
+      #     preamble: // coverage:ignore-file
       mockito|mockBuilder:
         generate_for:
           include:

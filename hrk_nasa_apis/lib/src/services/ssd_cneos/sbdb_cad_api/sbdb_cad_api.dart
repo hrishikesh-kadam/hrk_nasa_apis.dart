@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../ssd_cneos.dart';
 
@@ -42,10 +41,5 @@ class SbdbCadApi {
       cancelToken: cancelToken,
       onReceiveProgress: onReceiveProgress,
     );
-  }
-
-  @visibleForTesting
-  Future<Response<SbdbCadBody>> four04() async {
-    return await _dio.get('/cad.ap');
   }
 }

@@ -1,12 +1,12 @@
-[![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg)](https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart)
-[![pub package](https://img.shields.io/pub/v/hrk_nasa_apis.svg)](https://pub.dev/packages/hrk_nasa_apis)
+[![ci][ci-badge]][ci-link]
+[![hrk_nasa_apis pub package link][pub-badge-hrk_nasa_apis]][pub-link-hrk_nasa_apis]
+[![codecov badge hrk_nasa_apis][codecov-badge-hrk_nasa_apis]][codecov-link-hrk_nasa_apis]
 
-A library to integrate [NASA Open APIs] based on [`dio`] HTTP client.
+A library to integrate [NASA Open APIs] based on [dio] HTTP client.
 
 ## Features
 
-- Based on [`dio`] HTTP client
+- Based on [dio] HTTP client
 - NASA Open APIs implemented
   - [SBDB Close-Approach Data API]
 - Preserves original JSON Body
@@ -61,8 +61,13 @@ void main() async {
 }
 ```
 
-
+[ci-badge]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg
+[ci-link]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml
+[pub-badge-hrk_nasa_apis]: https://img.shields.io/pub/v/hrk_nasa_apis.svg
+[pub-link-hrk_nasa_apis]: https://pub.dev/packages/hrk_nasa_apis
+[codecov-badge-hrk_nasa_apis]: https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg?flag=hrk_nasa_apis
+[codecov-link-hrk_nasa_apis]: https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart
 [NASA Open APIs]: https://api.nasa.gov
-[`dio`]: https://pub.dev/packages/dio
+[dio]: https://pub.dev/packages/dio
 [SBDB Close-Approach Data API]: https://ssd-api.jpl.nasa.gov/doc/cad.html
 [Postman Public Workspace]: https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis

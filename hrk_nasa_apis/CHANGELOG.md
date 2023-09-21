@@ -1,3 +1,8 @@
+# 0.18.1
+
+- Remove `SbdbCadApi.four04()`
+- Fix codecov, add flags
+
 # 0.18.0
 
 - Open up more parameters from `SbdbCadApi.get()`

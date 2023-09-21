@@ -17,6 +17,9 @@ dart pub global run coverage:format_coverage \
   --lcov \
   --check-ignore
 
+lcov --remove coverage/lcov.info "*.mocks.dart" \
+  --output-file coverage/lcov.info
+
 lcov --list coverage/lcov.info \
   | grep -v ".*|.*100%.*|.*|"
 

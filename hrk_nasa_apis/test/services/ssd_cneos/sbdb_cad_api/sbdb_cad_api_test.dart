@@ -110,15 +110,6 @@ void main() {
           expect(e.response!.statusCode, 400);
         }
       });
-
-      test('404', () async {
-        try {
-          await api.four04();
-        } on DioException catch (e) {
-          expect(e.response, isNotNull);
-          expect(e.response!.statusCode, 404);
-        }
-      });
     });
   });
 }

@@ -1,14 +1,17 @@
-[![ci](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg)](https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml)
-[![pub package](https://img.shields.io/pub/v/hrk_nasa_apis_test.svg)](https://pub.dev/packages/hrk_nasa_apis_test)
+[![ci][ci-badge]][ci-link]
+[![hrk_nasa_apis_test pub package link][pub-badge-hrk_nasa_apis_test]][pub-link-hrk_nasa_apis_test]
+[![codecov badge hrk_nasa_apis_test][codecov-badge-hrk_nasa_apis_test]][codecov-link-hrk_nasa_apis]
 
-A library containing test and mock data for [hrk_nasa_apis] package.
+A library containing test and mock data for [hrk_nasa_apis][pub-link-hrk_nasa_apis] package.
 
 ## Features
 
 - [`getMockedDioResponse()`]
 - [`getMockedSbdbCadApi()`]
 - [`SbdbCadBodyExt`]
-  - `getSampleJsonRaw()`, `getSampleJsonMap()`, `getSample()`
+  - [`getSampleJsonRaw()`]
+  - [`getSampleJsonMap()`]
+  - [`getSample()`]
 
 ## Getting started
 
@@ -36,7 +39,16 @@ void main() async {
 ```
 
 
-[hrk_nasa_apis]: https://pub.dev/packages/hrk_nasa_apis
-[`getMockedDioResponse()`]: lib/src/dio/response.dart
-[`getMockedSbdbCadApi()`]: lib/src/services/ssd_cneos/sbdb_cad_api/sbdb_cad_api.dart
-[`SbdbCadBodyExt`]: lib/src/services/ssd_cneos/sbdb_cad_api/data/sbdb_cad_body/sbdb_cad_body.dart
+[ci-badge]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg
+[ci-link]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml
+[pub-badge-hrk_nasa_apis_test]: https://img.shields.io/pub/v/hrk_nasa_apis_test.svg
+[pub-link-hrk_nasa_apis_test]: https://pub.dev/packages/hrk_nasa_apis_test
+[codecov-badge-hrk_nasa_apis_test]: https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart/branch/main/graph/badge.svg?flag=hrk_nasa_apis_test
+[codecov-link-hrk_nasa_apis]: https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart
+[pub-link-hrk_nasa_apis]: https://pub.dev/packages/hrk_nasa_apis
+[`getMockedDioResponse()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/getMockedDioResponse.html
+[`getMockedSbdbCadApi()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/getMockedSbdbCadApi.html
+[`SbdbCadBodyExt`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt.html
+[`getSampleJsonRaw()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSampleJsonRaw.html
+[`getSampleJsonMap()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSampleJsonMap.html
+[`getSample()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSample.html

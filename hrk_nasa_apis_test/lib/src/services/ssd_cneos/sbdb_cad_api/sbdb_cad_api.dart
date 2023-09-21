@@ -14,9 +14,13 @@ SbdbCadApi getMockedSbdbCadApi({
   Response<SbdbCadBody>? getResponse,
 }) {
   final SbdbCadApi sbdbCadApi = MockSbdbCadApi();
-  when(sbdbCadApi.get()).thenAnswer((_) async => Future.value(getResponse));
-  when(sbdbCadApi.get(queryParameters: anyNamed('queryParameters')))
-      .thenAnswer((_) async => Future.value(getResponse));
+  // https://github.com/dart-lang/mockito#named-arguments
+  when(sbdbCadApi.get(
+    queryParameters: anyNamed('queryParameters'),
+    options: anyNamed('options'),
+    cancelToken: anyNamed('cancelToken'),
+    onReceiveProgress: anyNamed('onReceiveProgress'),
+  )).thenAnswer((_) async => Future.value(getResponse));
   return sbdbCadApi;
 }
 

@@ -42,5 +42,11 @@ jobs:
       - run: ./tool/ci.sh
       - uses: codecov/codecov-action@v3
         with:
-          files: coverage/lcov.info
-          name: ci-dispatch-${{ inputs.runner }}-${{ inputs.sdk }}
+          files: ./hrk_nasa_apis/coverage/lcov.info
+          flags: hrk_nasa_apis
+          name: ci-dispatch-hrk_nasa_apis-${{ inputs.runner }}-${{ inputs.sdk }}
+      - uses: codecov/codecov-action@v3
+        with:
+          files: ./hrk_nasa_apis_test/coverage/lcov.info
+          flags: hrk_nasa_apis_test
+          name: ci-dispatch-hrk_nasa_apis_test-${{ inputs.runner }}-${{ inputs.sdk }}
