@@ -1,3 +1,8 @@
+# 0.4.0
+
+- Encapsulate SbdbCadApi related top level functions in `SbdbCadApiExt`
+- Export `MockResponse`, `MockSbdbCadApi`
+
 # 0.3.1
 
 - Fix `getMockedSbdbCadApi()`
