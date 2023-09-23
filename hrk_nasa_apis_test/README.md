@@ -7,11 +7,8 @@ A library containing test and mock data for [hrk_nasa_apis][pub-link-hrk_nasa_ap
 ## Features
 
 - [`getMockedDioResponse()`]
-- [`getMockedSbdbCadApi()`]
+- [`SbdbCadApiExt`]
 - [`SbdbCadBodyExt`]
-  - [`getSampleJsonRaw()`]
-  - [`getSampleJsonMap()`]
-  - [`getSample()`]
 
 ## Getting started
 
@@ -56,8 +53,5 @@ void main() async {
 [codecov-link-hrk_nasa_apis]: https://codecov.io/gh/hrishikesh-kadam/hrk_nasa_apis.dart
 [pub-link-hrk_nasa_apis]: https://pub.dev/packages/hrk_nasa_apis
 [`getMockedDioResponse()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/getMockedDioResponse.html
-[`getMockedSbdbCadApi()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/getMockedSbdbCadApi.html
+[`SbdbCadApiExt`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadApiExt.html
 [`SbdbCadBodyExt`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt.html
-[`getSampleJsonRaw()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSampleJsonRaw.html
-[`getSampleJsonMap()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSampleJsonMap.html
-[`getSample()`]: https://pub.dev/documentation/hrk_nasa_apis_test/latest/hrk_nasa_apis_test/SbdbCadBodyExt/getSample.html
