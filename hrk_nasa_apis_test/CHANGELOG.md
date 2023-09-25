@@ -1,3 +1,7 @@
+# 0.5.0
+
+- Add throwsArgumentError tests
+
 # 0.4.1
 
 - Fix links in README.md

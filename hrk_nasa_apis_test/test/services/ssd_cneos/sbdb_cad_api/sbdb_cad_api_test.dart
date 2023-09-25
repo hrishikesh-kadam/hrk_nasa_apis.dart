@@ -97,5 +97,14 @@ void main() {
         expect(response.data!.count, greaterThan(0));
       });
     });
+
+    group('getSampleJsonRaw()', () {
+      test('throwsArgumentError', () {
+        expect(
+          () => SbdbCadApiExt.getSampleJsonRaw(''),
+          throwsArgumentError,
+        );
+      });
+    });
   });
 }
