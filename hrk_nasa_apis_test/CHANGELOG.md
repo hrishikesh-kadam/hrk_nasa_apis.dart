@@ -1,5 +1,6 @@
 # 0.5.0
 
+- Add more json to SbdbCadBodyExt.getSampleJsonRaw()
 - Add throwsArgumentError tests
 
 # 0.4.1

@@ -17,7 +17,7 @@ extension SbdbCadApiExt on SbdbCadApi {
     return switch (fileName) {
       'get/sample/400/0' =>
         '{"code":"400","message":"body not found","moreInfo":"https://ssd-api.jpl.nasa.gov/doc/cad.html"}',
-      _ => throw ArgumentError.value(fileName) // coverage:ignore-line
+      _ => throw ArgumentError.value(fileName)
     };
   }
 

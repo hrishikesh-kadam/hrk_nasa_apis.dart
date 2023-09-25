@@ -1,5 +1,5 @@
 name: hrk_nasa_apis_test
-version: 0.4.1
+version: 0.5.0
 
 description: >-
   A library containing test and mock data for hrk_nasa_apis package
