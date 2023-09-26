@@ -12,4 +12,6 @@ class Signature with _$Signature {
 
   factory Signature.fromJson(Map<String, dynamic> json) =>
       _$SignatureFromJson(json);
+
+  static const Map<String, String> fieldMap = _$$_SignatureFieldMap;
 }

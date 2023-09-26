@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
 // coverage:ignore-file
 
@@ -33,6 +33,24 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
               json['diameter_sigma'], const DiameterConverter().fromJson),
       fullname: json['fullname'] as String?,
     );
+
+const _$$_SbdbCadDataFieldMap = <String, String>{
+  'des': 'des',
+  'orbitId': 'orbit_id',
+  'jd': 'jd',
+  'cd': 'cd',
+  'dist': 'dist',
+  'distMin': 'dist_min',
+  'distMax': 'dist_max',
+  'vRel': 'v_rel',
+  'vInf': 'v_inf',
+  'tSigmaF': 't_sigma_f',
+  'body': 'body',
+  'h': 'h',
+  'diameter': 'diameter',
+  'diameterSigma': 'diameter_sigma',
+  'fullname': 'fullname',
+};
 
 Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
   final val = <String, dynamic>{

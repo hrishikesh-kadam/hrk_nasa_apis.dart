@@ -53,6 +53,9 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
   factory SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadQueryParametersFromJson(json);
 
+  static const Map<String, String> fieldMap =
+      _$$_SbdbCadQueryParametersFieldMap;
+
   static DateTime get dateMinDefault => HrkDateTime.today();
   static DateTime get dateMaxDefault =>
       HrkDateTime.today().add(const Duration(days: 60));

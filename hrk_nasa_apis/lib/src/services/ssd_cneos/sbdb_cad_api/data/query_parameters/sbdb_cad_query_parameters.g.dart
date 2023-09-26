@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
 // coverage:ignore-file
 
@@ -42,6 +42,37 @@ _$_SbdbCadQueryParameters _$$_SbdbCadQueryParametersFromJson(
       diameter: json['diameter'] as bool?,
       fullname: json['fullname'] as bool?,
     );
+
+const _$$_SbdbCadQueryParametersFieldMap = <String, String>{
+  'dateMin': 'date-min',
+  'dateMax': 'date-max',
+  'distMin': 'dist-min',
+  'distMax': 'dist-max',
+  'minDistMin': 'min-dist-min',
+  'minDistMax': 'min-dist-max',
+  'hMin': 'h-min',
+  'hMax': 'h-max',
+  'vInfMin': 'v-inf-min',
+  'vInfMax': 'v-inf-max',
+  'vRelMin': 'v-rel-min',
+  'vRelMax': 'v-rel-max',
+  'orbitClass': 'class',
+  'pha': 'pha',
+  'nea': 'nea',
+  'comet': 'comet',
+  'neaComet': 'nea-comet',
+  'neo': 'neo',
+  'kind': 'kind',
+  'spk': 'spk',
+  'des': 'des',
+  'body': 'body',
+  'sort': 'sort',
+  'limit': 'limit',
+  'limitFrom': 'limit-from',
+  'totalOnly': 'total-only',
+  'diameter': 'diameter',
+  'fullname': 'fullname',
+};
 
 Map<String, dynamic> _$$_SbdbCadQueryParametersToJson(
     _$_SbdbCadQueryParameters instance) {

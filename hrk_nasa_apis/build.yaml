@@ -6,6 +6,7 @@ targets:
           # pana not using analyzer rules from analysis_options.yaml
           ignore_for_file:
             - non_constant_identifier_names
+            - constant_identifier_names # json_serializable create_field_map
           preamble: // coverage:ignore-file
       # https://github.com/google/json_serializable.dart/tree/master/json_serializable#build-configuration
       # https://github.com/google/json_serializable.dart/blob/master/json_annotation/lib/src/json_serializable.dart
@@ -13,3 +14,4 @@ targets:
         options:
           field_rename: snake
           include_if_null: false
+          create_field_map: true

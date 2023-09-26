@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
 // coverage:ignore-file
 
@@ -20,6 +20,14 @@ _$_SbdbCadBody _$$_SbdbCadBodyFromJson(Map<String, dynamic> json) =>
       total: json['total'] as int?,
       rawBody: json['raw_body'] as Map<String, dynamic>?,
     );
+
+const _$$_SbdbCadBodyFieldMap = <String, String>{
+  'signature': 'signature',
+  'count': 'count',
+  'data': 'data',
+  'total': 'total',
+  'rawBody': 'raw_body',
+};
 
 Map<String, dynamic> _$$_SbdbCadBodyToJson(_$_SbdbCadBody instance) {
   final val = <String, dynamic>{

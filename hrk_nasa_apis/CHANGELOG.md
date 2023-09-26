@@ -1,3 +1,7 @@
+# 0.19.0
+
+- Enable create_field_map for json_serializable
+
 # 0.18.1
 
 - Remove `SbdbCadApi.four04()`
