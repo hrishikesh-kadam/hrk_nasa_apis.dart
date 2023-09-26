@@ -28,6 +28,13 @@ void main() {
         expect(sbdbCadBody.data, null);
       });
 
+      test('200/total-only-zero', () {
+        final sbdbCadBody = SbdbCadBodyExt.getSample('200/total-only-zero');
+        expect(sbdbCadBody.count, 0);
+        expect(sbdbCadBody.total, 0);
+        expect(sbdbCadBody.data, null);
+      });
+
       test('200/1', () {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/1');
         expect(sbdbCadBody.count, greaterThan(0));

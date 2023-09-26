@@ -1,3 +1,7 @@
+# 0.5.1
+
+- Add 200/total-only-zero.json to SbdbCadBodyExt.getSampleJsonRaw()
+
 # 0.5.0
 
 - Add more json to SbdbCadBodyExt.getSampleJsonRaw()
