@@ -255,11 +255,12 @@ class _$SbdbCadQueryParametersCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SbdbCadQueryParametersCopyWith<$Res>
+abstract class _$$SbdbCadQueryParametersImplCopyWith<$Res>
     implements $SbdbCadQueryParametersCopyWith<$Res> {
-  factory _$$_SbdbCadQueryParametersCopyWith(_$_SbdbCadQueryParameters value,
-          $Res Function(_$_SbdbCadQueryParameters) then) =
-      __$$_SbdbCadQueryParametersCopyWithImpl<$Res>;
+  factory _$$SbdbCadQueryParametersImplCopyWith(
+          _$SbdbCadQueryParametersImpl value,
+          $Res Function(_$SbdbCadQueryParametersImpl) then) =
+      __$$SbdbCadQueryParametersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -294,12 +295,13 @@ abstract class _$$_SbdbCadQueryParametersCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
+class __$$SbdbCadQueryParametersImplCopyWithImpl<$Res>
     extends _$SbdbCadQueryParametersCopyWithImpl<$Res,
-        _$_SbdbCadQueryParameters>
-    implements _$$_SbdbCadQueryParametersCopyWith<$Res> {
-  __$$_SbdbCadQueryParametersCopyWithImpl(_$_SbdbCadQueryParameters _value,
-      $Res Function(_$_SbdbCadQueryParameters) _then)
+        _$SbdbCadQueryParametersImpl>
+    implements _$$SbdbCadQueryParametersImplCopyWith<$Res> {
+  __$$SbdbCadQueryParametersImplCopyWithImpl(
+      _$SbdbCadQueryParametersImpl _value,
+      $Res Function(_$SbdbCadQueryParametersImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -334,7 +336,7 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
     Object? diameter = freezed,
     Object? fullname = freezed,
   }) {
-    return _then(_$_SbdbCadQueryParameters(
+    return _then(_$SbdbCadQueryParametersImpl(
       dateMin: freezed == dateMin
           ? _value.dateMin
           : dateMin // ignore: cast_nullable_to_non_nullable
@@ -454,8 +456,8 @@ class __$$_SbdbCadQueryParametersCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.kebab)
-class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
-  const _$_SbdbCadQueryParameters(
+class _$SbdbCadQueryParametersImpl extends _SbdbCadQueryParameters {
+  const _$SbdbCadQueryParametersImpl(
       {this.dateMin,
       this.dateMax,
       this.distMin,
@@ -486,8 +488,8 @@ class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
       this.fullname})
       : super._();
 
-  factory _$_SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =>
-      _$$_SbdbCadQueryParametersFromJson(json);
+  factory _$SbdbCadQueryParametersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SbdbCadQueryParametersImplFromJson(json);
 
   @override
   final String? dateMin;
@@ -556,7 +558,7 @@ class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SbdbCadQueryParameters &&
+            other is _$SbdbCadQueryParametersImpl &&
             (identical(other.dateMin, dateMin) || other.dateMin == dateMin) &&
             (identical(other.dateMax, dateMax) || other.dateMax == dateMax) &&
             (identical(other.distMin, distMin) || other.distMin == distMin) &&
@@ -632,13 +634,13 @@ class _$_SbdbCadQueryParameters extends _SbdbCadQueryParameters {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SbdbCadQueryParametersCopyWith<_$_SbdbCadQueryParameters> get copyWith =>
-      __$$_SbdbCadQueryParametersCopyWithImpl<_$_SbdbCadQueryParameters>(
-          this, _$identity);
+  _$$SbdbCadQueryParametersImplCopyWith<_$SbdbCadQueryParametersImpl>
+      get copyWith => __$$SbdbCadQueryParametersImplCopyWithImpl<
+          _$SbdbCadQueryParametersImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SbdbCadQueryParametersToJson(
+    return _$$SbdbCadQueryParametersImplToJson(
       this,
     );
   }
@@ -673,11 +675,11 @@ abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
       final double? limitFrom,
       final bool? totalOnly,
       final bool? diameter,
-      final bool? fullname}) = _$_SbdbCadQueryParameters;
+      final bool? fullname}) = _$SbdbCadQueryParametersImpl;
   const _SbdbCadQueryParameters._() : super._();
 
   factory _SbdbCadQueryParameters.fromJson(Map<String, dynamic> json) =
-      _$_SbdbCadQueryParameters.fromJson;
+      _$SbdbCadQueryParametersImpl.fromJson;
 
   @override
   String? get dateMin;
@@ -738,6 +740,6 @@ abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
   bool? get fullname;
   @override
   @JsonKey(ignore: true)
-  _$$_SbdbCadQueryParametersCopyWith<_$_SbdbCadQueryParameters> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SbdbCadQueryParametersImplCopyWith<_$SbdbCadQueryParametersImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

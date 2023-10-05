@@ -1,3 +1,7 @@
+# Unreleased
+
+- Integrate changes for freezed-2.4.3
+
 # 0.19.0
 
 - Enable create_field_map for json_serializable

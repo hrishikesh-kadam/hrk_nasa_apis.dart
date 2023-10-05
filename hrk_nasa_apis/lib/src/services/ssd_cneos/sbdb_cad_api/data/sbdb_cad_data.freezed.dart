@@ -263,11 +263,11 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
 }
 
 /// @nodoc
-abstract class _$$_SbdbCadDataCopyWith<$Res>
+abstract class _$$SbdbCadDataImplCopyWith<$Res>
     implements $SbdbCadDataCopyWith<$Res> {
-  factory _$$_SbdbCadDataCopyWith(
-          _$_SbdbCadData value, $Res Function(_$_SbdbCadData) then) =
-      __$$_SbdbCadDataCopyWithImpl<$Res>;
+  factory _$$SbdbCadDataImplCopyWith(
+          _$SbdbCadDataImpl value, $Res Function(_$SbdbCadDataImpl) then) =
+      __$$SbdbCadDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -304,11 +304,11 @@ abstract class _$$_SbdbCadDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SbdbCadDataCopyWithImpl<$Res>
-    extends _$SbdbCadDataCopyWithImpl<$Res, _$_SbdbCadData>
-    implements _$$_SbdbCadDataCopyWith<$Res> {
-  __$$_SbdbCadDataCopyWithImpl(
-      _$_SbdbCadData _value, $Res Function(_$_SbdbCadData) _then)
+class __$$SbdbCadDataImplCopyWithImpl<$Res>
+    extends _$SbdbCadDataCopyWithImpl<$Res, _$SbdbCadDataImpl>
+    implements _$$SbdbCadDataImplCopyWith<$Res> {
+  __$$SbdbCadDataImplCopyWithImpl(
+      _$SbdbCadDataImpl _value, $Res Function(_$SbdbCadDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -330,7 +330,7 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
     Object? diameterSigma = freezed,
     Object? fullname = freezed,
   }) {
-    return _then(_$_SbdbCadData(
+    return _then(_$SbdbCadDataImpl(
       des: null == des
           ? _value.des
           : des // ignore: cast_nullable_to_non_nullable
@@ -397,8 +397,8 @@ class __$$_SbdbCadDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SbdbCadData implements _SbdbCadData {
-  const _$_SbdbCadData(
+class _$SbdbCadDataImpl implements _SbdbCadData {
+  const _$SbdbCadDataImpl(
       {required this.des,
       required this.orbitId,
       required this.jd,
@@ -415,8 +415,8 @@ class _$_SbdbCadData implements _SbdbCadData {
       @DiameterConverter() this.diameterSigma,
       this.fullname});
 
-  factory _$_SbdbCadData.fromJson(Map<String, dynamic> json) =>
-      _$$_SbdbCadDataFromJson(json);
+  factory _$SbdbCadDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SbdbCadDataImplFromJson(json);
 
   @override
   final String des;
@@ -472,7 +472,7 @@ class _$_SbdbCadData implements _SbdbCadData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SbdbCadData &&
+            other is _$SbdbCadDataImpl &&
             (identical(other.des, des) || other.des == des) &&
             (identical(other.orbitId, orbitId) || other.orbitId == orbitId) &&
             (identical(other.jd, jd) || other.jd == jd) &&
@@ -516,12 +516,12 @@ class _$_SbdbCadData implements _SbdbCadData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SbdbCadDataCopyWith<_$_SbdbCadData> get copyWith =>
-      __$$_SbdbCadDataCopyWithImpl<_$_SbdbCadData>(this, _$identity);
+  _$$SbdbCadDataImplCopyWith<_$SbdbCadDataImpl> get copyWith =>
+      __$$SbdbCadDataImplCopyWithImpl<_$SbdbCadDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SbdbCadDataToJson(
+    return _$$SbdbCadDataImplToJson(
       this,
     );
   }
@@ -545,10 +545,10 @@ abstract class _SbdbCadData implements SbdbCadData {
       final String? h,
       @DiameterConverter() final ValueUnit<double, DistanceUnit>? diameter,
       @DiameterConverter() final ValueUnit<double, DistanceUnit>? diameterSigma,
-      final String? fullname}) = _$_SbdbCadData;
+      final String? fullname}) = _$SbdbCadDataImpl;
 
   factory _SbdbCadData.fromJson(Map<String, dynamic> json) =
-      _$_SbdbCadData.fromJson;
+      _$SbdbCadDataImpl.fromJson;
 
   @override
   String get des;
@@ -596,6 +596,6 @@ abstract class _SbdbCadData implements SbdbCadData {
   String? get fullname;
   @override
   @JsonKey(ignore: true)
-  _$$_SbdbCadDataCopyWith<_$_SbdbCadData> get copyWith =>
+  _$$SbdbCadDataImplCopyWith<_$SbdbCadDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

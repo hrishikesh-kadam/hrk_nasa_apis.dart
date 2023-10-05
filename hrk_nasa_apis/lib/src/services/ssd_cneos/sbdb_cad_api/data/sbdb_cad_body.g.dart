@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names, constant_identifier_names
-
 // coverage:ignore-file
 
 part of 'sbdb_cad_body.dart';
@@ -10,8 +8,8 @@ part of 'sbdb_cad_body.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SbdbCadBody _$$_SbdbCadBodyFromJson(Map<String, dynamic> json) =>
-    _$_SbdbCadBody(
+_$SbdbCadBodyImpl _$$SbdbCadBodyImplFromJson(Map<String, dynamic> json) =>
+    _$SbdbCadBodyImpl(
       signature: Signature.fromJson(json['signature'] as Map<String, dynamic>),
       count: json['count'] as int,
       data: (json['data'] as List<dynamic>?)
@@ -21,7 +19,7 @@ _$_SbdbCadBody _$$_SbdbCadBodyFromJson(Map<String, dynamic> json) =>
       rawBody: json['raw_body'] as Map<String, dynamic>?,
     );
 
-const _$$_SbdbCadBodyFieldMap = <String, String>{
+const _$$SbdbCadBodyImplFieldMap = <String, String>{
   'signature': 'signature',
   'count': 'count',
   'data': 'data',
@@ -29,7 +27,7 @@ const _$$_SbdbCadBodyFieldMap = <String, String>{
   'rawBody': 'raw_body',
 };
 
-Map<String, dynamic> _$$_SbdbCadBodyToJson(_$_SbdbCadBody instance) {
+Map<String, dynamic> _$$SbdbCadBodyImplToJson(_$SbdbCadBodyImpl instance) {
   final val = <String, dynamic>{
     'signature': instance.signature,
     'count': instance.count,

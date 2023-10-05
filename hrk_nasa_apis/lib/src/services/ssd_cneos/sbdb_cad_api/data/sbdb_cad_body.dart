@@ -19,5 +19,5 @@ class SbdbCadBody with _$SbdbCadBody {
   factory SbdbCadBody.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadBodyFromJson(json);
 
-  static const Map<String, String> fieldMap = _$$_SbdbCadBodyFieldMap;
+  static const Map<String, String> fieldMap = _$$SbdbCadBodyImplFieldMap;
 }

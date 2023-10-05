@@ -67,21 +67,22 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
 }
 
 /// @nodoc
-abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
-  factory _$$_SignatureCopyWith(
-          _$_Signature value, $Res Function(_$_Signature) then) =
-      __$$_SignatureCopyWithImpl<$Res>;
+abstract class _$$SignatureImplCopyWith<$Res>
+    implements $SignatureCopyWith<$Res> {
+  factory _$$SignatureImplCopyWith(
+          _$SignatureImpl value, $Res Function(_$SignatureImpl) then) =
+      __$$SignatureImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String version, String source});
 }
 
 /// @nodoc
-class __$$_SignatureCopyWithImpl<$Res>
-    extends _$SignatureCopyWithImpl<$Res, _$_Signature>
-    implements _$$_SignatureCopyWith<$Res> {
-  __$$_SignatureCopyWithImpl(
-      _$_Signature _value, $Res Function(_$_Signature) _then)
+class __$$SignatureImplCopyWithImpl<$Res>
+    extends _$SignatureCopyWithImpl<$Res, _$SignatureImpl>
+    implements _$$SignatureImplCopyWith<$Res> {
+  __$$SignatureImplCopyWithImpl(
+      _$SignatureImpl _value, $Res Function(_$SignatureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_SignatureCopyWithImpl<$Res>
     Object? version = null,
     Object? source = null,
   }) {
-    return _then(_$_Signature(
+    return _then(_$SignatureImpl(
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -105,11 +106,11 @@ class __$$_SignatureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Signature implements _Signature {
-  const _$_Signature({required this.version, required this.source});
+class _$SignatureImpl implements _Signature {
+  const _$SignatureImpl({required this.version, required this.source});
 
-  factory _$_Signature.fromJson(Map<String, dynamic> json) =>
-      _$$_SignatureFromJson(json);
+  factory _$SignatureImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SignatureImplFromJson(json);
 
   @override
   final String version;
@@ -125,7 +126,7 @@ class _$_Signature implements _Signature {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Signature &&
+            other is _$SignatureImpl &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.source, source) || other.source == source));
   }
@@ -137,12 +138,12 @@ class _$_Signature implements _Signature {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SignatureCopyWith<_$_Signature> get copyWith =>
-      __$$_SignatureCopyWithImpl<_$_Signature>(this, _$identity);
+  _$$SignatureImplCopyWith<_$SignatureImpl> get copyWith =>
+      __$$SignatureImplCopyWithImpl<_$SignatureImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SignatureToJson(
+    return _$$SignatureImplToJson(
       this,
     );
   }
@@ -151,10 +152,10 @@ class _$_Signature implements _Signature {
 abstract class _Signature implements Signature {
   const factory _Signature(
       {required final String version,
-      required final String source}) = _$_Signature;
+      required final String source}) = _$SignatureImpl;
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
-      _$_Signature.fromJson;
+      _$SignatureImpl.fromJson;
 
   @override
   String get version;
@@ -162,6 +163,6 @@ abstract class _Signature implements Signature {
   String get source;
   @override
   @JsonKey(ignore: true)
-  _$$_SignatureCopyWith<_$_Signature> get copyWith =>
+  _$$SignatureImplCopyWith<_$SignatureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

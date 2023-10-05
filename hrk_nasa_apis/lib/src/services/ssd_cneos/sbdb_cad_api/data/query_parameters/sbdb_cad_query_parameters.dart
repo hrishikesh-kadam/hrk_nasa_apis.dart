@@ -54,7 +54,7 @@ class SbdbCadQueryParameters with _$SbdbCadQueryParameters {
       _$SbdbCadQueryParametersFromJson(json);
 
   static const Map<String, String> fieldMap =
-      _$$_SbdbCadQueryParametersFieldMap;
+      _$$SbdbCadQueryParametersImplFieldMap;
 
   static DateTime get dateMinDefault => HrkDateTime.today();
   static DateTime get dateMaxDefault =>

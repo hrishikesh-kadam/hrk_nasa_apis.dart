@@ -38,7 +38,7 @@ class SbdbCadData with _$SbdbCadData {
   factory SbdbCadData.fromJson(Map<String, dynamic> json) =>
       _$SbdbCadDataFromJson(json);
 
-  static const Map<String, String> fieldMap = _$$_SbdbCadDataFieldMap;
+  static const Map<String, String> fieldMap = _$$SbdbCadDataImplFieldMap;
 }
 
 class CalendarDateTimeConverter implements JsonConverter<DateTime, String> {

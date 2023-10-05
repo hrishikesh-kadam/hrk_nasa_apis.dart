@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names, constant_identifier_names
-
 // coverage:ignore-file
 
 part of 'sbdb_cad_data.dart';
@@ -10,8 +8,8 @@ part of 'sbdb_cad_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
-    _$_SbdbCadData(
+_$SbdbCadDataImpl _$$SbdbCadDataImplFromJson(Map<String, dynamic> json) =>
+    _$SbdbCadDataImpl(
       des: json['des'] as String,
       orbitId: json['orbit_id'] as String,
       jd: json['jd'] as String,
@@ -34,7 +32,7 @@ _$_SbdbCadData _$$_SbdbCadDataFromJson(Map<String, dynamic> json) =>
       fullname: json['fullname'] as String?,
     );
 
-const _$$_SbdbCadDataFieldMap = <String, String>{
+const _$$SbdbCadDataImplFieldMap = <String, String>{
   'des': 'des',
   'orbitId': 'orbit_id',
   'jd': 'jd',
@@ -52,7 +50,7 @@ const _$$_SbdbCadDataFieldMap = <String, String>{
   'fullname': 'fullname',
 };
 
-Map<String, dynamic> _$$_SbdbCadDataToJson(_$_SbdbCadData instance) {
+Map<String, dynamic> _$$SbdbCadDataImplToJson(_$SbdbCadDataImpl instance) {
   final val = <String, dynamic>{
     'des': instance.des,
     'orbit_id': instance.orbitId,

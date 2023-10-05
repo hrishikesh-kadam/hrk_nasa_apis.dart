@@ -138,11 +138,11 @@ class _$SbdbCadBodyCopyWithImpl<$Res, $Val extends SbdbCadBody>
 }
 
 /// @nodoc
-abstract class _$$_SbdbCadBodyCopyWith<$Res>
+abstract class _$$SbdbCadBodyImplCopyWith<$Res>
     implements $SbdbCadBodyCopyWith<$Res> {
-  factory _$$_SbdbCadBodyCopyWith(
-          _$_SbdbCadBody value, $Res Function(_$_SbdbCadBody) then) =
-      __$$_SbdbCadBodyCopyWithImpl<$Res>;
+  factory _$$SbdbCadBodyImplCopyWith(
+          _$SbdbCadBodyImpl value, $Res Function(_$SbdbCadBodyImpl) then) =
+      __$$SbdbCadBodyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -157,11 +157,11 @@ abstract class _$$_SbdbCadBodyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SbdbCadBodyCopyWithImpl<$Res>
-    extends _$SbdbCadBodyCopyWithImpl<$Res, _$_SbdbCadBody>
-    implements _$$_SbdbCadBodyCopyWith<$Res> {
-  __$$_SbdbCadBodyCopyWithImpl(
-      _$_SbdbCadBody _value, $Res Function(_$_SbdbCadBody) _then)
+class __$$SbdbCadBodyImplCopyWithImpl<$Res>
+    extends _$SbdbCadBodyCopyWithImpl<$Res, _$SbdbCadBodyImpl>
+    implements _$$SbdbCadBodyImplCopyWith<$Res> {
+  __$$SbdbCadBodyImplCopyWithImpl(
+      _$SbdbCadBodyImpl _value, $Res Function(_$SbdbCadBodyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -173,7 +173,7 @@ class __$$_SbdbCadBodyCopyWithImpl<$Res>
     Object? total = freezed,
     Object? rawBody = freezed,
   }) {
-    return _then(_$_SbdbCadBody(
+    return _then(_$SbdbCadBodyImpl(
       signature: null == signature
           ? _value.signature
           : signature // ignore: cast_nullable_to_non_nullable
@@ -200,8 +200,8 @@ class __$$_SbdbCadBodyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SbdbCadBody implements _SbdbCadBody {
-  const _$_SbdbCadBody(
+class _$SbdbCadBodyImpl implements _SbdbCadBody {
+  const _$SbdbCadBodyImpl(
       {required this.signature,
       required this.count,
       final List<SbdbCadData>? data,
@@ -210,8 +210,8 @@ class _$_SbdbCadBody implements _SbdbCadBody {
       : _data = data,
         _rawBody = rawBody;
 
-  factory _$_SbdbCadBody.fromJson(Map<String, dynamic> json) =>
-      _$$_SbdbCadBodyFromJson(json);
+  factory _$SbdbCadBodyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SbdbCadBodyImplFromJson(json);
 
   @override
   final Signature signature;
@@ -248,7 +248,7 @@ class _$_SbdbCadBody implements _SbdbCadBody {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SbdbCadBody &&
+            other is _$SbdbCadBodyImpl &&
             (identical(other.signature, signature) ||
                 other.signature == signature) &&
             (identical(other.count, count) || other.count == count) &&
@@ -270,8 +270,8 @@ class _$_SbdbCadBody implements _SbdbCadBody {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SbdbCadBodyCopyWith<_$_SbdbCadBody> get copyWith =>
-      __$$_SbdbCadBodyCopyWithImpl<_$_SbdbCadBody>(this, _$identity);
+  _$$SbdbCadBodyImplCopyWith<_$SbdbCadBodyImpl> get copyWith =>
+      __$$SbdbCadBodyImplCopyWithImpl<_$SbdbCadBodyImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -337,7 +337,7 @@ class _$_SbdbCadBody implements _SbdbCadBody {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SbdbCadBodyToJson(
+    return _$$SbdbCadBodyImplToJson(
       this,
     );
   }
@@ -349,10 +349,10 @@ abstract class _SbdbCadBody implements SbdbCadBody {
       required final int count,
       final List<SbdbCadData>? data,
       final int? total,
-      required final Map<String, dynamic>? rawBody}) = _$_SbdbCadBody;
+      required final Map<String, dynamic>? rawBody}) = _$SbdbCadBodyImpl;
 
   factory _SbdbCadBody.fromJson(Map<String, dynamic> json) =
-      _$_SbdbCadBody.fromJson;
+      _$SbdbCadBodyImpl.fromJson;
 
   @override
   Signature get signature;
@@ -366,6 +366,6 @@ abstract class _SbdbCadBody implements SbdbCadBody {
   Map<String, dynamic>? get rawBody;
   @override
   @JsonKey(ignore: true)
-  _$$_SbdbCadBodyCopyWith<_$_SbdbCadBody> get copyWith =>
+  _$$SbdbCadBodyImplCopyWith<_$SbdbCadBodyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

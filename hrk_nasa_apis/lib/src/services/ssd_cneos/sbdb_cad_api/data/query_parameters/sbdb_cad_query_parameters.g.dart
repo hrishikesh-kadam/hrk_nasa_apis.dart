@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: non_constant_identifier_names, constant_identifier_names
-
 // coverage:ignore-file
 
 part of 'sbdb_cad_query_parameters.dart';
@@ -10,9 +8,9 @@ part of 'sbdb_cad_query_parameters.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SbdbCadQueryParameters _$$_SbdbCadQueryParametersFromJson(
+_$SbdbCadQueryParametersImpl _$$SbdbCadQueryParametersImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SbdbCadQueryParameters(
+    _$SbdbCadQueryParametersImpl(
       dateMin: json['date-min'] as String?,
       dateMax: json['date-max'] as String?,
       distMin: json['dist-min'] as String?,
@@ -43,7 +41,7 @@ _$_SbdbCadQueryParameters _$$_SbdbCadQueryParametersFromJson(
       fullname: json['fullname'] as bool?,
     );
 
-const _$$_SbdbCadQueryParametersFieldMap = <String, String>{
+const _$$SbdbCadQueryParametersImplFieldMap = <String, String>{
   'dateMin': 'date-min',
   'dateMax': 'date-max',
   'distMin': 'dist-min',
@@ -74,8 +72,8 @@ const _$$_SbdbCadQueryParametersFieldMap = <String, String>{
   'fullname': 'fullname',
 };
 
-Map<String, dynamic> _$$_SbdbCadQueryParametersToJson(
-    _$_SbdbCadQueryParameters instance) {
+Map<String, dynamic> _$$SbdbCadQueryParametersImplToJson(
+    _$SbdbCadQueryParametersImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
