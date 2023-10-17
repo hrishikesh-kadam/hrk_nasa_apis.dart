@@ -19,11 +19,8 @@ class SbdbCadApi {
       ..transformer = SbdbCadTransformer();
   }
 
-  static final Uri url = Uri(
-    scheme: SsdCneos.baseUrl.scheme,
-    host: SsdCneos.baseUrl.host,
-    path: 'cad.api',
-  );
+  static final Uri url = Uri.https(SsdCneos.url.authority, 'cad.api');
+  static final Uri docUrl = Uri.https(SsdCneos.url.authority, 'doc/cad.html');
   static const String displayName = 'SBDB Close-Approach Data API';
   static const String version = '1.5';
   late final Dio _dio;

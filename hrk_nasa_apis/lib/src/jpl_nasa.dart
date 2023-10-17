@@ -1,5 +1,5 @@
 import 'nasa_apis.dart';
 
 class JplNasa {
-  static const String domain = 'jpl.${NasaApis.domain}';
+  static final Uri url = Uri.https('jpl.${Nasa.url.authority}');
 }

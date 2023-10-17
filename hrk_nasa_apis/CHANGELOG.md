@@ -1,5 +1,6 @@
-# Unreleased
+# 0.20.0
 
+- Refactor domain String to Uri
 - Integrate changes for freezed-2.4.3
 
 # 0.19.0

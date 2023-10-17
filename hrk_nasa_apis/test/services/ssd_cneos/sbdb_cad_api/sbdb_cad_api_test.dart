@@ -9,11 +9,6 @@ void main() {
     late SbdbCadApi api;
     late SbdbCadQueryParameters queryParameters;
     late Logger log;
-    final Uri docUrl = Uri(
-      scheme: SsdCneos.baseUrl.scheme,
-      host: SsdCneos.baseUrl.host,
-      path: 'doc/cad.html',
-    );
 
     setUpAll(() {
       configureHrkLogging();
@@ -35,7 +30,7 @@ void main() {
             String message =
                 '${SbdbCadApi.displayName} version is now ${sbdbCadBody.signature.version}'
                 ', tested on ${SbdbCadApi.version}'
-                ', See $docUrl';
+                ', See ${SbdbCadApi.docUrl}';
             log.warning(message);
           }
           expect(sbdbCadBody.count, greaterThanOrEqualTo(0));
