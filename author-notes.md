@@ -2,6 +2,7 @@
 
 ## TODOs
 
+- https://github.com/linux-test-project/lcov/issues/247
 - Documentation points pana
 - CORS issue
 - Try for `package:hrk_nasa_apis/nasa_apis.dart`  

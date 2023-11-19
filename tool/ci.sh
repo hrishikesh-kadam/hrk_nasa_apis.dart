@@ -13,4 +13,5 @@ for ((i=0; i < ${#PACKAGES[@]}; i++)); do
   popd &> /dev/null
 done
 
-git diff --stat --exit-code
+git diff --stat
+git diff --exit-code --quiet ":(exclude)*.mocks.dart"
