@@ -1,3 +1,7 @@
+# 0.5.2
+
+- Integrate freezed-2.4.6 changes
+
 # 0.5.1
 
 - Add 200/total-only-zero.json to SbdbCadBodyExt.getSampleJsonRaw()

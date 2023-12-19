@@ -1,3 +1,7 @@
+# 0.20.1
+
+- Integrate freezed-2.4.6 changes
+
 # 0.20.0
 
 - Refactor domain String to Uri
