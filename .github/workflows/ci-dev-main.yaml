@@ -42,3 +42,4 @@ jobs:
           files: ./hrk_nasa_apis_test/coverage/lcov.info
           flags: hrk_nasa_apis_test
           name: ci-dev-main-hrk_nasa_apis_test-${{ matrix.runner }}-${{ matrix.sdk }}
+          token: ${{ secrets.CODECOV_TOKEN }}

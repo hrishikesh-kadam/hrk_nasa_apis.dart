@@ -50,3 +50,4 @@ jobs:
           files: ./hrk_nasa_apis_test/coverage/lcov.info
           flags: hrk_nasa_apis_test
           name: ci-dispatch-hrk_nasa_apis_test-${{ inputs.runner }}-${{ inputs.sdk }}
+          token: ${{ secrets.CODECOV_TOKEN }}
