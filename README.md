@@ -1,9 +1,9 @@
 [![ci][ci-badge]][ci-link]
 
-| package | pub | coverage |
-| --- | --- | --- |
-| [hrk_nasa_apis] | [![hrk_nasa_apis pub package link][pub-badge-hrk_nasa_apis]][pub-link-hrk_nasa_apis] | [![codecov badge hrk_nasa_apis][codecov-badge-hrk_nasa_apis]][codecov-link-hrk_nasa_apis] |
-| [hrk_nasa_apis_test] | [![hrk_nasa_apis_test pub package link][pub-badge-hrk_nasa_apis_test]][pub-link-hrk_nasa_apis_test] | [![codecov badge hrk_nasa_apis_test][codecov-badge-hrk_nasa_apis_test]][codecov-link-hrk_nasa_apis] |
+package              | pub                                                                                                 | coverage
+---                  | ---                                                                                                 | ---
+[hrk_nasa_apis]      | [![hrk_nasa_apis pub package link][pub-badge-hrk_nasa_apis]][pub-link-hrk_nasa_apis]                | [![codecov badge hrk_nasa_apis][codecov-badge-hrk_nasa_apis]][codecov-link-hrk_nasa_apis]
+[hrk_nasa_apis_test] | [![hrk_nasa_apis_test pub package link][pub-badge-hrk_nasa_apis_test]][pub-link-hrk_nasa_apis_test] | [![codecov badge hrk_nasa_apis_test][codecov-badge-hrk_nasa_apis_test]][codecov-link-hrk_nasa_apis]
 
 [ci-badge]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml/badge.svg
 [ci-link]: https://github.com/hrishikesh-kadam/hrk_nasa_apis.dart/actions/workflows/ci.yaml

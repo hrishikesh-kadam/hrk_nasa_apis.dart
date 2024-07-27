@@ -1,3 +1,9 @@
+# 1.0.0
+
+- Integrate freezed 2.5.5 changes
+- Integrate json_serializable 6.8.0 changes
+- Bump hrk_analysis, hrk_batteries to ^1.0.0
+
 # 0.20.1
 
 - Integrate freezed-2.4.6 changes

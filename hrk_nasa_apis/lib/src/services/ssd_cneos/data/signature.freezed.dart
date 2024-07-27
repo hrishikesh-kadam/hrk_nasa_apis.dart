@@ -23,8 +23,12 @@ mixin _$Signature {
   String get version => throw _privateConstructorUsedError;
   String get source => throw _privateConstructorUsedError;
 
+  /// Serializes this Signature to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Signature
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SignatureCopyWith<Signature> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Signature
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$SignatureImplCopyWithImpl<$Res>
       _$SignatureImpl _value, $Res Function(_$SignatureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Signature
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,11 +139,13 @@ class _$SignatureImpl implements _Signature {
             (identical(other.source, source) || other.source == source));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, version, source);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Signature
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SignatureImplCopyWith<_$SignatureImpl> get copyWith =>
@@ -161,8 +171,11 @@ abstract class _Signature implements Signature {
   String get version;
   @override
   String get source;
+
+  /// Create a copy of Signature
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SignatureImplCopyWith<_$SignatureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

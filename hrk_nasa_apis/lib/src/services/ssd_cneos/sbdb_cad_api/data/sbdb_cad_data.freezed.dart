@@ -57,8 +57,12 @@ mixin _$SbdbCadData {
       throw _privateConstructorUsedError;
   String? get fullname => throw _privateConstructorUsedError;
 
+  /// Serializes this SbdbCadData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SbdbCadDataCopyWith<SbdbCadData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -105,6 +109,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,6 +194,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     ) as $Val);
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get dist {
@@ -196,6 +204,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMin {
@@ -205,6 +215,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, DistanceUnit, $Res> get distMax {
@@ -214,6 +226,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, VelocityUnit, $Res> get vRel {
@@ -222,6 +236,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, VelocityUnit, $Res>? get vInf {
@@ -235,6 +251,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameter {
@@ -248,6 +266,8 @@ class _$SbdbCadDataCopyWithImpl<$Res, $Val extends SbdbCadData>
     });
   }
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ValueUnitCopyWith<double, DistanceUnit, $Res>? get diameterSigma {
@@ -311,6 +331,8 @@ class __$$SbdbCadDataImplCopyWithImpl<$Res>
       _$SbdbCadDataImpl _value, $Res Function(_$SbdbCadDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -493,7 +515,7 @@ class _$SbdbCadDataImpl implements _SbdbCadData {
                 other.fullname == fullname));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -513,7 +535,9 @@ class _$SbdbCadDataImpl implements _SbdbCadData {
       diameterSigma,
       fullname);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SbdbCadDataImplCopyWith<_$SbdbCadDataImpl> get copyWith =>
@@ -554,13 +578,13 @@ abstract class _SbdbCadData implements SbdbCadData {
   String get des;
   @override
   String get orbitId;
-  @override
 
   /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Julian%20Date
-  String get jd;
   @override
+  String get jd;
 
   /// https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/time.html#Barycentric%20Dynamic%20Time%20TDB
+  @override
   @CalendarDateTimeConverter()
   DateTime get cd;
   @override
@@ -575,9 +599,9 @@ abstract class _SbdbCadData implements SbdbCadData {
   @override
   @VelocityConverter()
   ValueUnit<double, VelocityUnit> get vRel;
-  @override
 
   /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  @override
   @VelocityConverter()
   ValueUnit<double, VelocityUnit>? get vInf;
   @override
@@ -594,8 +618,11 @@ abstract class _SbdbCadData implements SbdbCadData {
   ValueUnit<double, DistanceUnit>? get diameterSigma;
   @override
   String? get fullname;
+
+  /// Create a copy of SbdbCadData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SbdbCadDataImplCopyWith<_$SbdbCadDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

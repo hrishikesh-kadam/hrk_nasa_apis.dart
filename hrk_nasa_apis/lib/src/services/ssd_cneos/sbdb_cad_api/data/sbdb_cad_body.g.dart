@@ -11,11 +11,11 @@ part of 'sbdb_cad_body.dart';
 _$SbdbCadBodyImpl _$$SbdbCadBodyImplFromJson(Map<String, dynamic> json) =>
     _$SbdbCadBodyImpl(
       signature: Signature.fromJson(json['signature'] as Map<String, dynamic>),
-      count: json['count'] as int,
+      count: (json['count'] as num).toInt(),
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => SbdbCadData.fromJson(e as Map<String, dynamic>))
           .toList(),
-      total: json['total'] as int?,
+      total: (json['total'] as num?)?.toInt(),
       rawBody: json['raw_body'] as Map<String, dynamic>?,
     );
 

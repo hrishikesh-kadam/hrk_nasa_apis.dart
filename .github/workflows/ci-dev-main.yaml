@@ -20,10 +20,12 @@ jobs:
   ci-dev-main:
     name: CI on ${{ matrix.runner }} using Dart ${{ matrix.sdk }}
     runs-on: ${{ matrix.runner }}
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       matrix:
         runner: [ ubuntu-latest ]
         sdk: [ dev, main ]
+        experimental: [ true ]
 
     steps:
       - uses: actions/checkout@v4

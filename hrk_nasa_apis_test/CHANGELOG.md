@@ -1,3 +1,7 @@
+# 1.0.0
+
+- Bump hrk_analysis, hrk_nasa_apis to ^1.0.0
+
 # 0.5.2
 
 - Integrate freezed-2.4.6 changes

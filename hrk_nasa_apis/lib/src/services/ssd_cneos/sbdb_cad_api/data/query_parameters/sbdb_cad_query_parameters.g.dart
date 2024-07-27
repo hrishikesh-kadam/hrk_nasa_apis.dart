@@ -30,7 +30,7 @@ _$SbdbCadQueryParametersImpl _$$SbdbCadQueryParametersImplFromJson(
       neaComet: json['nea-comet'] as bool?,
       neo: json['neo'] as bool?,
       kind: json['kind'] as String?,
-      spk: json['spk'] as int?,
+      spk: (json['spk'] as num?)?.toInt(),
       des: json['des'] as String?,
       body: $enumDecodeNullable(_$CloseApproachBodyEnumMap, json['body']),
       sort: json['sort'] as String?,

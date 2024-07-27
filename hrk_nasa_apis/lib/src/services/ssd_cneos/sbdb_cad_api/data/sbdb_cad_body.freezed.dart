@@ -63,8 +63,13 @@ mixin _$SbdbCadBody {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SbdbCadBody to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SbdbCadBodyCopyWith<SbdbCadBody> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -95,6 +100,8 @@ class _$SbdbCadBodyCopyWithImpl<$Res, $Val extends SbdbCadBody>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,6 +135,8 @@ class _$SbdbCadBodyCopyWithImpl<$Res, $Val extends SbdbCadBody>
     ) as $Val);
   }
 
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res> get signature {
@@ -164,6 +173,8 @@ class __$$SbdbCadBodyImplCopyWithImpl<$Res>
       _$SbdbCadBodyImpl _value, $Res Function(_$SbdbCadBodyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -257,7 +268,7 @@ class _$SbdbCadBodyImpl implements _SbdbCadBody {
             const DeepCollectionEquality().equals(other._rawBody, _rawBody));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -267,7 +278,9 @@ class _$SbdbCadBodyImpl implements _SbdbCadBody {
       total,
       const DeepCollectionEquality().hash(_rawBody));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SbdbCadBodyImplCopyWith<_$SbdbCadBodyImpl> get copyWith =>
@@ -364,8 +377,11 @@ abstract class _SbdbCadBody implements SbdbCadBody {
   int? get total;
   @override
   Map<String, dynamic>? get rawBody;
+
+  /// Create a copy of SbdbCadBody
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SbdbCadBodyImplCopyWith<_$SbdbCadBodyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -51,8 +51,12 @@ mixin _$SbdbCadQueryParameters {
   bool? get diameter => throw _privateConstructorUsedError;
   bool? get fullname => throw _privateConstructorUsedError;
 
+  /// Serializes this SbdbCadQueryParameters to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SbdbCadQueryParameters
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SbdbCadQueryParametersCopyWith<SbdbCadQueryParameters> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -105,6 +109,8 @@ class _$SbdbCadQueryParametersCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SbdbCadQueryParameters
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,6 +310,8 @@ class __$$SbdbCadQueryParametersImplCopyWithImpl<$Res>
       $Res Function(_$SbdbCadQueryParametersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SbdbCadQueryParameters
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -597,7 +605,7 @@ class _$SbdbCadQueryParametersImpl extends _SbdbCadQueryParameters {
                 other.fullname == fullname));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -631,7 +639,9 @@ class _$SbdbCadQueryParametersImpl extends _SbdbCadQueryParameters {
         fullname
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SbdbCadQueryParameters
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SbdbCadQueryParametersImplCopyWith<_$SbdbCadQueryParametersImpl>
@@ -738,8 +748,11 @@ abstract class _SbdbCadQueryParameters extends SbdbCadQueryParameters {
   bool? get diameter;
   @override
   bool? get fullname;
+
+  /// Create a copy of SbdbCadQueryParameters
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SbdbCadQueryParametersImplCopyWith<_$SbdbCadQueryParametersImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
