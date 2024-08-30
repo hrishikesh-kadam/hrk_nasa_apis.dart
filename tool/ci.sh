@@ -14,4 +14,4 @@ for ((i=0; i < ${#PACKAGES[@]}; i++)); do
 done
 
 git diff --stat
-git diff --exit-code --quiet ":(exclude)*.mocks.dart"
+git diff --exit-code --quiet ':(exclude)*.mocks.dart'

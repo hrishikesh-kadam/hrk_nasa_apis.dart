@@ -1,3 +1,7 @@
+# 1.1.0
+
+- Bump hrk_batteries to ^2.0.0
+
 # 1.0.0
 
 - Integrate freezed 2.5.5 changes
