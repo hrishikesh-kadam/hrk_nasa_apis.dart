@@ -83,15 +83,15 @@ void main() {
             expect(sbdbCadBody.data!.first.body, isNotNull);
           }
         });
-      });
 
-      test('$SmallBodyFilter', () async {
-        queryParameters =
-            queryParameters.copyWithSmallBodyFilter(SmallBodyFilter.pha);
-        final Response<SbdbCadBody> response = await api.get(
-          queryParameters: queryParameters.toJson(),
-        );
-        expect(response.data, isNotNull);
+        test('$SmallBodyFilter', () async {
+          queryParameters =
+              queryParameters.copyWithSmallBodyFilter(SmallBodyFilter.pha);
+          final Response<SbdbCadBody> response = await api.get(
+            queryParameters: queryParameters.toJson(),
+          );
+          expect(response.data, isNotNull);
+        });
       });
 
       test('400', () async {

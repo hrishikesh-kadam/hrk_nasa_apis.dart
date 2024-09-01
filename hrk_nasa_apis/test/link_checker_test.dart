@@ -11,7 +11,11 @@ void main() {
       SbdbCadApi.docUrl,
     };
     for (final Uri link in links) {
-      expect(await _getStatusCode(link), 200);
+      expect(
+        await _getStatusCode(link),
+        200,
+        reason: 'Failed for $link',
+      );
     }
   });
 }
