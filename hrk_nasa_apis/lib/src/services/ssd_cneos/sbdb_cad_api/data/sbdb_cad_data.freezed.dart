@@ -42,7 +42,7 @@ mixin _$SbdbCadData {
   ValueUnit<double, VelocityUnit> get vRel =>
       throw _privateConstructorUsedError;
 
-  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  /// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/request/tggtgtr/v-inf-null-2023-nm
   @VelocityConverter()
   ValueUnit<double, VelocityUnit>? get vInf =>
       throw _privateConstructorUsedError;
@@ -466,7 +466,7 @@ class _$SbdbCadDataImpl implements _SbdbCadData {
   @VelocityConverter()
   final ValueUnit<double, VelocityUnit> vRel;
 
-  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  /// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/request/tggtgtr/v-inf-null-2023-nm
   @override
   @VelocityConverter()
   final ValueUnit<double, VelocityUnit>? vInf;
@@ -600,7 +600,7 @@ abstract class _SbdbCadData implements SbdbCadData {
   @VelocityConverter()
   ValueUnit<double, VelocityUnit> get vRel;
 
-  /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+  /// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/request/tggtgtr/v-inf-null-2023-nm
   @override
   @VelocityConverter()
   ValueUnit<double, VelocityUnit>? get vInf;

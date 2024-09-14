@@ -23,7 +23,7 @@ class SbdbCadData with _$SbdbCadData {
     @DistanceConverter() required Distance distMax,
     @VelocityConverter() required Velocity vRel,
 
-    /// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-c37a302c-170a-4beb-a368-7a472a79ea18
+    /// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/request/tggtgtr/v-inf-null-2023-nm
     @VelocityConverter() Velocity? vInf,
     required String tSigmaF,
     String? body,

@@ -70,4 +70,4 @@ void main() async {
 [NASA Open APIs]: https://api.nasa.gov
 [dio]: https://pub.dev/packages/dio
 [SBDB Close-Approach Data API]: https://ssd-api.jpl.nasa.gov/doc/cad.html
-[Postman Public Workspace]: https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis
+[Postman Public Workspace]: https://www.postman.com/hrishikesh-kadam/nasa-open-apis

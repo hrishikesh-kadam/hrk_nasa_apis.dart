@@ -5,7 +5,7 @@ import '../ssd_cneos.dart';
 export 'data/data.dart';
 export 'sbdb_cad_transformer.dart';
 
-/// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/collection/2540023-c2b59b2b-8b9c-40da-81c0-10f725fec38a
+/// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/collection/glw3vt8/sbdb-close-approach-data-api
 class SbdbCadApi {
   SbdbCadApi({
     Dio? dio,

@@ -66,7 +66,7 @@ final allFieldsList = [
 ];
 
 /// https://ssd-api.jpl.nasa.gov/cad.api?spk=20153814&date-min=2019-08-26&date-max=2019-08-28&dist-max=1&fullname=true&diameter=true
-/// https://www.postman.com/hrishikesh-kadam/workspace/nasa-open-apis/request/2540023-0008445c-23e3-4ea0-b017-44c604f3a305
+/// https://www.postman.com/hrishikesh-kadam/nasa-open-apis/request/ib168bq/all-fields-sample
 final wnFive2001Data = [
   '153814',
   '187',
