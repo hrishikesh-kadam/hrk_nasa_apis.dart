@@ -12,6 +12,8 @@ _$SbdbCadBodyImpl _$$SbdbCadBodyImplFromJson(Map<String, dynamic> json) =>
     _$SbdbCadBodyImpl(
       signature: Signature.fromJson(json['signature'] as Map<String, dynamic>),
       count: (json['count'] as num).toInt(),
+      fields:
+          (json['fields'] as List<dynamic>?)?.map((e) => e as String).toList(),
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => SbdbCadData.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -22,6 +24,7 @@ _$SbdbCadBodyImpl _$$SbdbCadBodyImplFromJson(Map<String, dynamic> json) =>
 const _$$SbdbCadBodyImplFieldMap = <String, String>{
   'signature': 'signature',
   'count': 'count',
+  'fields': 'fields',
   'data': 'data',
   'total': 'total',
   'rawBody': 'raw_body',
@@ -39,6 +42,7 @@ Map<String, dynamic> _$$SbdbCadBodyImplToJson(_$SbdbCadBodyImpl instance) {
     }
   }
 
+  writeNotNull('fields', instance.fields);
   writeNotNull('data', instance.data);
   writeNotNull('total', instance.total);
   writeNotNull('raw_body', instance.rawBody);

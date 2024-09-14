@@ -31,7 +31,6 @@ class SbdbCadTransformer extends BackgroundTransformer {
 
   static JsonMap transformSbdbCadDataList(JsonMap json) {
     final transformedJson = JsonMap.from(json);
-    transformedJson.remove('fields');
     transformedJson.remove('data');
     transformedJson['data'] = <JsonMap>[];
     List<dynamic> fields = json['fields'];

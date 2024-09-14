@@ -37,6 +37,7 @@ void main() {
           final transformedResponse =
               SbdbCadTransformer.transform200Response(jsonBody);
           final sbdbCadBody = SbdbCadBody.fromJson(transformedResponse);
+          expect(sbdbCadBody.fields, fieldsList);
           expect(sbdbCadBody.data!.first.des, hk2023Data.first);
         });
 
@@ -49,6 +50,7 @@ void main() {
           final transformedResponse =
               SbdbCadTransformer.transform200Response(jsonBody);
           final sbdbCadBody = SbdbCadBody.fromJson(transformedResponse);
+          expect(sbdbCadBody.fields, fieldsList);
           expect(sbdbCadBody.data!.first.des, hk2023Data.first);
           expect(sbdbCadBody.rawBody, rawBody);
         });

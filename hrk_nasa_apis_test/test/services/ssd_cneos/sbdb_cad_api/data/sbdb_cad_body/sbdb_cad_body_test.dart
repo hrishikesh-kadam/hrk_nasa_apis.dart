@@ -39,6 +39,7 @@ void main() {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/1');
         expect(sbdbCadBody.count, greaterThan(0));
         expect(sbdbCadBody.total, null);
+        expect(sbdbCadBody.fields, isNotEmpty);
         expect(sbdbCadBody.data, isNotNull);
         expect(sbdbCadBody.data!.length, greaterThan(0));
         expect(
@@ -63,6 +64,7 @@ void main() {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/body');
         expect(sbdbCadBody.count, greaterThan(0));
         expect(sbdbCadBody.total, null);
+        expect(sbdbCadBody.fields, isNotEmpty);
         expect(sbdbCadBody.data, isNotNull);
         expect(sbdbCadBody.data!.length, greaterThan(0));
         expect(
@@ -87,6 +89,7 @@ void main() {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/diameter');
         expect(sbdbCadBody.count, greaterThan(0));
         expect(sbdbCadBody.total, null);
+        expect(sbdbCadBody.fields, isNotEmpty);
         expect(sbdbCadBody.data, isNotNull);
         expect(sbdbCadBody.data!.length, greaterThan(0));
         expect(
@@ -111,6 +114,7 @@ void main() {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/fullname');
         expect(sbdbCadBody.count, greaterThan(0));
         expect(sbdbCadBody.total, null);
+        expect(sbdbCadBody.fields, isNotEmpty);
         expect(sbdbCadBody.data, isNotNull);
         expect(sbdbCadBody.data!.length, greaterThan(0));
         expect(
@@ -135,6 +139,7 @@ void main() {
         final sbdbCadBody = SbdbCadBodyExt.getSample('200/all-fields');
         expect(sbdbCadBody.count, greaterThan(0));
         expect(sbdbCadBody.total, null);
+        expect(sbdbCadBody.fields, isNotEmpty);
         expect(sbdbCadBody.data, isNotNull);
         expect(sbdbCadBody.data!.length, greaterThan(0));
         expect(

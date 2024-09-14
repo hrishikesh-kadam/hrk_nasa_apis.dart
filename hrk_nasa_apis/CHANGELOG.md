@@ -1,3 +1,7 @@
+# 1.2.0
+
+- Retain List<String>? fields in SbdbCadBody
+
 # 1.1.0
 
 - Bump hrk_batteries to ^2.0.0

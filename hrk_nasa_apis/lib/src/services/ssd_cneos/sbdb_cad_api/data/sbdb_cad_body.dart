@@ -11,6 +11,7 @@ class SbdbCadBody with _$SbdbCadBody {
   const factory SbdbCadBody.two00({
     required Signature signature,
     required int count,
+    List<String>? fields,
     List<SbdbCadData>? data,
     int? total,
     required JsonMap? rawBody,

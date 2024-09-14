@@ -35,9 +35,11 @@ void main() {
           }
           expect(sbdbCadBody.count, greaterThanOrEqualTo(0));
           if (sbdbCadBody.count == 0) {
+            expect(sbdbCadBody.fields, isNull);
             expect(sbdbCadBody.data, isNull);
             expect(sbdbCadBody.rawBody!['count'], 0);
           } else {
+            expect(sbdbCadBody.fields, isNotEmpty);
             expect(sbdbCadBody.data, isNotNull);
             expect(sbdbCadBody.data!.first.fullname, isNull);
             expect(sbdbCadBody.data!.first.body, isNull);
