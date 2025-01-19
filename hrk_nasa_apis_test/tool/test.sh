@@ -21,6 +21,6 @@ lcov --remove coverage/lcov.info "*.mocks.dart" \
   --output-file coverage/lcov.info
 
 lcov --list coverage/lcov.info \
-  | grep -v ".*|.*100%.*|.*|"
+  | grep -v ".*|.*100%.*|.*"
 
 ./tool/coverage/check-coverage-ignored.sh

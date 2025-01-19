@@ -18,6 +18,6 @@ dart pub global run coverage:format_coverage \
   --check-ignore
 
 lcov --list coverage/lcov.info \
-  | grep -v ".*|.*100%.*|.*|"
+  | grep -v ".*|.*100%.*|.*"
 
 ./tool/coverage/check-coverage-ignored.sh

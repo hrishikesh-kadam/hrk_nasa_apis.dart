@@ -30,21 +30,12 @@ const _$$SbdbCadBodyImplFieldMap = <String, String>{
   'rawBody': 'raw_body',
 };
 
-Map<String, dynamic> _$$SbdbCadBodyImplToJson(_$SbdbCadBodyImpl instance) {
-  final val = <String, dynamic>{
-    'signature': instance.signature,
-    'count': instance.count,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('fields', instance.fields);
-  writeNotNull('data', instance.data);
-  writeNotNull('total', instance.total);
-  writeNotNull('raw_body', instance.rawBody);
-  return val;
-}
+Map<String, dynamic> _$$SbdbCadBodyImplToJson(_$SbdbCadBodyImpl instance) =>
+    <String, dynamic>{
+      'signature': instance.signature,
+      'count': instance.count,
+      if (instance.fields case final value?) 'fields': value,
+      if (instance.data case final value?) 'data': value,
+      if (instance.total case final value?) 'total': value,
+      if (instance.rawBody case final value?) 'raw_body': value,
+    };

@@ -50,42 +50,33 @@ const _$$SbdbCadDataImplFieldMap = <String, String>{
   'fullname': 'fullname',
 };
 
-Map<String, dynamic> _$$SbdbCadDataImplToJson(_$SbdbCadDataImpl instance) {
-  final val = <String, dynamic>{
-    'des': instance.des,
-    'orbit_id': instance.orbitId,
-    'jd': instance.jd,
-    'cd': const CalendarDateTimeConverter().toJson(instance.cd),
-    'dist': const DistanceConverter().toJson(instance.dist),
-    'dist_min': const DistanceConverter().toJson(instance.distMin),
-    'dist_max': const DistanceConverter().toJson(instance.distMax),
-    'v_rel': const VelocityConverter().toJson(instance.vRel),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'v_inf',
-      _$JsonConverterToJson<String, ValueUnit<double, VelocityUnit>>(
-          instance.vInf, const VelocityConverter().toJson));
-  val['t_sigma_f'] = instance.tSigmaF;
-  writeNotNull('body', instance.body);
-  writeNotNull('h', instance.h);
-  writeNotNull(
-      'diameter',
-      _$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
-          instance.diameter, const DiameterConverter().toJson));
-  writeNotNull(
-      'diameter_sigma',
-      _$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
-          instance.diameterSigma, const DiameterConverter().toJson));
-  writeNotNull('fullname', instance.fullname);
-  return val;
-}
+Map<String, dynamic> _$$SbdbCadDataImplToJson(_$SbdbCadDataImpl instance) =>
+    <String, dynamic>{
+      'des': instance.des,
+      'orbit_id': instance.orbitId,
+      'jd': instance.jd,
+      'cd': const CalendarDateTimeConverter().toJson(instance.cd),
+      'dist': const DistanceConverter().toJson(instance.dist),
+      'dist_min': const DistanceConverter().toJson(instance.distMin),
+      'dist_max': const DistanceConverter().toJson(instance.distMax),
+      'v_rel': const VelocityConverter().toJson(instance.vRel),
+      if (_$JsonConverterToJson<String, ValueUnit<double, VelocityUnit>>(
+              instance.vInf, const VelocityConverter().toJson)
+          case final value?)
+        'v_inf': value,
+      't_sigma_f': instance.tSigmaF,
+      if (instance.body case final value?) 'body': value,
+      if (instance.h case final value?) 'h': value,
+      if (_$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
+              instance.diameter, const DiameterConverter().toJson)
+          case final value?)
+        'diameter': value,
+      if (_$JsonConverterToJson<String, ValueUnit<double, DistanceUnit>>(
+              instance.diameterSigma, const DiameterConverter().toJson)
+          case final value?)
+        'diameter_sigma': value,
+      if (instance.fullname case final value?) 'fullname': value,
+    };
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

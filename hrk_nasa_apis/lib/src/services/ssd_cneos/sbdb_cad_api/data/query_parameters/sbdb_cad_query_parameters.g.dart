@@ -73,45 +73,38 @@ const _$$SbdbCadQueryParametersImplFieldMap = <String, String>{
 };
 
 Map<String, dynamic> _$$SbdbCadQueryParametersImplToJson(
-    _$SbdbCadQueryParametersImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('date-min', instance.dateMin);
-  writeNotNull('date-max', instance.dateMax);
-  writeNotNull('dist-min', instance.distMin);
-  writeNotNull('dist-max', instance.distMax);
-  writeNotNull('min-dist-min', instance.minDistMin);
-  writeNotNull('min-dist-max', instance.minDistMax);
-  writeNotNull('h-min', instance.hMin);
-  writeNotNull('h-max', instance.hMax);
-  writeNotNull('v-inf-min', instance.vInfMin);
-  writeNotNull('v-inf-max', instance.vInfMax);
-  writeNotNull('v-rel-min', instance.vRelMin);
-  writeNotNull('v-rel-max', instance.vRelMax);
-  writeNotNull('class', instance.orbitClass);
-  writeNotNull('pha', instance.pha);
-  writeNotNull('nea', instance.nea);
-  writeNotNull('comet', instance.comet);
-  writeNotNull('nea-comet', instance.neaComet);
-  writeNotNull('neo', instance.neo);
-  writeNotNull('kind', instance.kind);
-  writeNotNull('spk', instance.spk);
-  writeNotNull('des', instance.des);
-  writeNotNull('body', _$CloseApproachBodyEnumMap[instance.body]);
-  writeNotNull('sort', instance.sort);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('limit-from', instance.limitFrom);
-  writeNotNull('total-only', instance.totalOnly);
-  writeNotNull('diameter', instance.diameter);
-  writeNotNull('fullname', instance.fullname);
-  return val;
-}
+        _$SbdbCadQueryParametersImpl instance) =>
+    <String, dynamic>{
+      if (instance.dateMin case final value?) 'date-min': value,
+      if (instance.dateMax case final value?) 'date-max': value,
+      if (instance.distMin case final value?) 'dist-min': value,
+      if (instance.distMax case final value?) 'dist-max': value,
+      if (instance.minDistMin case final value?) 'min-dist-min': value,
+      if (instance.minDistMax case final value?) 'min-dist-max': value,
+      if (instance.hMin case final value?) 'h-min': value,
+      if (instance.hMax case final value?) 'h-max': value,
+      if (instance.vInfMin case final value?) 'v-inf-min': value,
+      if (instance.vInfMax case final value?) 'v-inf-max': value,
+      if (instance.vRelMin case final value?) 'v-rel-min': value,
+      if (instance.vRelMax case final value?) 'v-rel-max': value,
+      if (instance.orbitClass case final value?) 'class': value,
+      if (instance.pha case final value?) 'pha': value,
+      if (instance.nea case final value?) 'nea': value,
+      if (instance.comet case final value?) 'comet': value,
+      if (instance.neaComet case final value?) 'nea-comet': value,
+      if (instance.neo case final value?) 'neo': value,
+      if (instance.kind case final value?) 'kind': value,
+      if (instance.spk case final value?) 'spk': value,
+      if (instance.des case final value?) 'des': value,
+      if (_$CloseApproachBodyEnumMap[instance.body] case final value?)
+        'body': value,
+      if (instance.sort case final value?) 'sort': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.limitFrom case final value?) 'limit-from': value,
+      if (instance.totalOnly case final value?) 'total-only': value,
+      if (instance.diameter case final value?) 'diameter': value,
+      if (instance.fullname case final value?) 'fullname': value,
+    };
 
 const _$CloseApproachBodyEnumMap = {
   CloseApproachBody.mercury: 'Merc',

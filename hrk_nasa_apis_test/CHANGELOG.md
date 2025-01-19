@@ -1,3 +1,8 @@
+# 1.1.0
+
+- Bump hrk_analysis to ^2.0.0
+- Integrate mockito 5.4.5 changes
+
 # 1.0.0
 
 - Bump hrk_analysis, hrk_nasa_apis to ^1.0.0

@@ -1,3 +1,8 @@
+# 1.3.0
+
+- Integrate json_serializable 6.9.0 changes
+- Bump hrk_analysis to ^2.0.0
+
 # 1.2.0
 
 - Retain List<String>? fields in SbdbCadBody
